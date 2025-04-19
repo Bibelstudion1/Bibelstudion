@@ -413,20 +413,39 @@
  
 
  
- <!-- Newsletter Signup -->
- <section class="bg-yellow-50 py-12 mt-12">
-    <div class="container mx-auto px-4 max-w-4xl">
-      <div class="text-center">
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">Få fler bibelstudietips direkt till din inkorg</h2>
-        <p class="text-gray-600 mb-6">Prenumerera på vårt nyhetsbrev och få regelbundna insikter och resurser för dina bibelstudier.</p>
-        <form class="max-w-md mx-auto flex">
-          <input type="email" placeholder="Din e-postadress" class="flex-grow px-4 py-2 rounded-l-md border border-r-0 border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
-          <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-r-md transition duration-300">Prenumerera</button>
-        </form>
-        <p class="text-xs text-gray-500 mt-2">Vi respekterar din integritet. Avsluta prenumerationen när som helst.</p>
-      </div>
+<!-- Responsive Newsletter Signup (Same layout on all devices) -->
+<section class="bg-yellow-50 py-8 sm:py-12 mt-8 sm:mt-12">
+  <div class="container mx-auto px-4 sm:px-6 max-w-2xl md:max-w-4xl">
+    <div class="text-center">
+      <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">
+        Få fler bibelstudietips direkt till din inkorg
+      </h2>
+      
+      <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
+        Prenumerera på vårt nyhetsbrev och få regelbundna insikter och resurser för dina bibelstudier.
+      </p>
+      
+      <!-- Form (stays in row layout on all devices) -->
+      <form class="max-w-xs xs:max-w-sm sm:max-w-md mx-auto flex">
+        <input 
+          type="email" 
+          placeholder="Din e-postadress" 
+          class="flex-grow min-w-0 px-3 sm:px-4 py-2 text-sm sm:text-base rounded-l-md border border-r-0 border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+        >
+        <button 
+          type="submit" 
+          class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 sm:px-6 py-2 text-sm sm:text-base rounded-r-md transition duration-300 whitespace-nowrap"
+        >
+          Prenumerera
+        </button>
+      </form>
+      
+      <p class="text-xs text-gray-500 mt-2 sm:mt-3">
+        Vi respekterar din integritet. Avsluta prenumerationen när som helst.
+      </p>
     </div>
-  </section>
+  </div>
+</section>
     
     <!-- Footer -->
     <footer class="bg-gray-800 text-white pt-12 pb-6">
