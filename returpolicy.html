@@ -51,6 +51,7 @@
   </style>
 </head>
 
+
 <body class="bg-gray-50 font-sans">
   <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
@@ -75,28 +76,31 @@
       <!-- Icons -->
       <div class="flex items-center space-x-4">
         <div class="relative hidden md:block">
-          <input type="text" placeholder="Sök produkter..."
+          <input type="text" placeholder="Sök produkter..." 
             class="search-input pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 w-64">
           <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
         </div>
         <a href="login.html" class="text-gray-800 hover:text-yellow-500 text-xl">
           <i class="far fa-user"></i>
         </a>
-        <a href="kundvagn.html " class="text-gray-800 hover:text-yellow-500 text-xl relative">
+        <a href="kundvagn.html" class="text-gray-800 hover:text-yellow-500 text-xl relative">
           <i class="fas fa-shopping-cart"></i>
-          <span id="cart-count"
+          <span id="cart-count" 
             class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
         </a>
-  
+
         <button class="md:hidden p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded-full transition-all duration-200" 
         id="mobileMenuButton" 
         aria-expanded="false" 
         aria-controls="mobileMenu"
         aria-label="Öppna meny">
-  <i class="fas fa-bars text-2xl transition-transform duration-300"></i>
-</button>
-</div>
-</div>
+          <i class="fas fa-bars text-2xl transition-transform duration-300"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+</body>
+
 
 <!-- Mobile Menu -->
 <div id="mobileMenu" class="fixed top-0 left-0 w-full bg-white shadow-xl z-50 transform -translate-y-full transition-transform duration-300 ease-out">
@@ -190,8 +194,8 @@
   });
 </script>
 
- <!-- Secondary Navigation -->
- <div class="bg-gray-800 text-white">
+<!-- Secondary Navigation -->
+<div class="bg-gray-800 text-white sticky top-16 z-40">
   <div class="container mx-auto px-4">
     <div class="flex overflow-x-auto space-x-8 py-3">
       <a href="populart-just-nu.html" class="whitespace-nowrap hover:text-yellow-400">Populärt just nu</a>
@@ -205,6 +209,8 @@
     </div>
   </div>
 </div>
+
+
 
   <!-- Main Content -->
   <main class="container mx-auto px-4 py-8">

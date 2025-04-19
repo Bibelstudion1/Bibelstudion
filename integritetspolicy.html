@@ -78,11 +78,11 @@
           <a href="om-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Om oss</a>
           <a href="kontakta-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kontakt</a>
         </nav>
-  
+
         <!-- Icons -->
         <div class="flex items-center space-x-4">
           <div class="relative hidden md:block">
-            <input type="text" placeholder="Sök produkter..."
+            <input type="text" placeholder="Sök produkter..." 
               class="search-input pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 w-64">
             <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
           </div>
@@ -91,19 +91,22 @@
           </a>
           <a href="kundvagn.html" class="text-gray-800 hover:text-yellow-500 text-xl relative">
             <i class="fas fa-shopping-cart"></i>
-            <span id="cart-count"
+            <span id="cart-count" 
               class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
           </a>
-         
+
           <button class="md:hidden p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded-full transition-all duration-200" 
           id="mobileMenuButton" 
           aria-expanded="false" 
           aria-controls="mobileMenu"
           aria-label="Öppna meny">
-    <i class="fas fa-bars text-2xl transition-transform duration-300"></i>
-  </button>
-  </div>
-  </div>
+            <i class="fas fa-bars text-2xl transition-transform duration-300"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+</body>
+
   
   <!-- Mobile Menu -->
   <div id="mobileMenu" class="fixed top-0 left-0 w-full bg-white shadow-xl z-50 transform -translate-y-full transition-transform duration-300 ease-out">
@@ -197,21 +200,23 @@
     });
   </script>
   
-     <!-- Secondary Navigation -->
-     <div class="bg-gray-800 text-white">
-      <div class="container mx-auto px-4">
-        <div class="flex overflow-x-auto space-x-8 py-3">
-          <a href="populart-just-nu.html" class="whitespace-nowrap hover:text-yellow-400">Populärt just nu</a>
-          <a href="#premium" class="whitespace-nowrap hover:text-yellow-400">Premium</a>
-          <a href="#bibles" class="whitespace-nowrap hover:text-yellow-400">Biblar</a>
-          <a href="#books" class="whitespace-nowrap hover:text-yellow-400">Böcker</a>
-          <a href="donera.html" class="whitespace-nowrap hover:text-yellow-400">Gåvor</a>
-          <a href="#accessories" class="whitespace-nowrap hover:text-yellow-400">Accessoarer</a>
-          <a href="blogginlagg.html" class="whitespace-nowrap hover:text-yellow-400">Blogginlägg</a>
-          <a href="#sale" class="whitespace-nowrap text-yellow-400 font-bold">REA</a>
-        </div>
+ <!-- Secondary Navigation -->
+<div class="bg-gray-800 text-white sticky top-16 z-40">
+    <div class="container mx-auto px-4">
+      <div class="flex overflow-x-auto space-x-8 py-3">
+        <a href="populart-just-nu.html" class="whitespace-nowrap hover:text-yellow-400">Populärt just nu</a>
+        <a href="#premium" class="whitespace-nowrap hover:text-yellow-400">Premium</a>
+        <a href="#bibles" class="whitespace-nowrap hover:text-yellow-400">Biblar</a>
+        <a href="#books" class="whitespace-nowrap hover:text-yellow-400">Böcker</a>
+        <a href="donera.html" class="whitespace-nowrap hover:text-yellow-400">Gåvor</a>
+        <a href="#accessories" class="whitespace-nowrap hover:text-yellow-400">Accessoarer</a>
+        <a href="blogginlagg.html" class="whitespace-nowrap hover:text-yellow-400">Blogginlägg</a>
+        <a href="#sale" class="whitespace-nowrap text-yellow-400 font-bold">REA</a>
       </div>
     </div>
+  </div>
+  
+
 
   <!-- Breadcrumb -->
   <div class="bg-gray-100 py-3">
