@@ -1023,8 +1023,8 @@
    
    
      </script>
-   
-   
+</body>
+</html>
    
    
    <!--Start of Tawk.to Script-->
@@ -1040,52 +1040,3 @@
    })();
    </script>
    <!--End of Tawk.to Script-->
-   
-   
-  <script>
-    // JavaScript för GDPR-kompatibel cookie-banner (exempel)
-    document.addEventListener('DOMContentLoaded', function() {
-      // Kolla om användaren redan har godkänt cookies
-      if (!localStorage.getItem('cookieConsent')) {
-        // Skapa och visa cookie-banner
-        const banner = document.createElement('div');
-        banner.id = 'cookie-banner';
-        banner.innerHTML = `
-          <div class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 z-50">
-            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
-              <p class="mb-2 md:mb-0">Vi använder cookies för att förbättra din upplevelse. Genom att fortsätta accepterar du vår användning av cookies.</p>
-              <div class="flex space-x-2">
-                <button id="accept-cookies" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded">Acceptera</button>
-                <button id="reject-cookies" class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded">Avvisa</button>
-                <a href="cookies.html" class="bg-transparent hover:underline text-white px-4 py-2 rounded">Läs mer</a>
-              </div>
-            </div>
-          </div>
-        `;
-        document.body.appendChild(banner);
-        
-        // Hantera knapptryckningar
-        document.getElementById('accept-cookies').addEventListener('click', function() {
-          localStorage.setItem('cookieConsent', 'true');
-          document.getElementById('cookie-banner').remove();
-          // Ladda in cookies/tjänster som kräver samtycke
-          loadAnalytics();
-        });
-        
-        document.getElementById('reject-cookies').addEventListener('click', function() {
-          localStorage.setItem('cookieConsent', 'false');
-          document.getElementById('cookie-banner').remove();
-        });
-      } else if (localStorage.getItem('cookieConsent') === 'true') {
-        // Ladda in cookies/tjänster som kräver samtycke
-        loadAnalytics();
-      }
-      
-      function loadAnalytics() {
-        // Här skulle du lägga till din analyskod (Google Analytics etc.)
-        console.log('Loading analytics...');
-      }
-    });
-  </script>
-</body>
-</html>
