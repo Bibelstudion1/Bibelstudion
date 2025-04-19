@@ -5,39 +5,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Upptäck de mest populära bibelstudierna och kristna resurserna just nu på Bibelstudion. Trendande ämnen, bästsäljande böcker och mest efterfrågade studiematerial för din andliga tillväxt.">
-  <meta name="keywords" content="populära bibelstudier, trendande kristna ämnen, bästsäljande bibelböcker, aktuella bibelkurser, topprankade andliga resurser">
+    content="Stöd Bibelstudions arbete med att sprida Guds Ord genom en donation. Välj mellan engångsgåvor, månadsgivande eller projektstöd för våra bibelstudieinitiativ.">
+  <meta name="keywords" content="donera till bibelstudier, kristna donationer, stöd andligt arbete, gåva till bibelutbildning, finansiera bibelkurser">
   <meta name="author" content="Bibelstudion">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <title>Populärt Just Nu - Trendande Bibelstudier & Kristna Resurser | Bibelstudion</title>
+  <title>Donera - Stöd Bibelstudions Arbete med att Sprida Guds Ord | Bibelstudion</title>
   <style>
-    .trending-card:hover {
+    .donation-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
 
-    .badge-trending {
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0.7; }
-      100% { opacity: 1; }
-    }
-
-    .section-title::after {
+    .nav-link::after {
       content: '';
       display: block;
-      width: 80px;
-      height: 3px;
+      width: 0;
+      height: 2px;
       background: #e9c46a;
-      margin: 10px auto;
+      transition: width 0.3s;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .progress-bar {
+      transition: width 2s ease-in-out;
+    }
+
+    .impact-item:hover {
+      transform: scale(1.05);
+    }
+
+    .payment-method:hover {
+      border-color: #e9c46a;
+      transform: scale(1.02);
     }
   </style>
 </head>
-
 
 <body class="bg-gray-50 font-sans">
   <!-- Header -->
@@ -196,298 +202,521 @@
     </div>
   </div>
 </div>
-  
 
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-blue-800 to-indigo-900 text-white py-16">
-    <div class="container mx-auto px-4 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Populärt Just Nu</h1>
-      <p class="text-xl md:text-2xl mb-8">Upptäck de mest trendande bibelstudierna och kristna resurserna</p>
-      <div class="flex justify-center">
-        <div class="relative w-full md:w-2/3">
-          <input type="text" placeholder="Sök bland populära studier..." 
-                 class="w-full py-3 px-6 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500">
-          <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-yellow-500 text-gray-800 p-2 rounded-full">
-            <i class="fas fa-search"></i>
+
+
+
+
+
+
+
+
+<div class="bibel-section">
+  <style>
+    .bibel-section {
+      --accent-färg: #1a1a1a;
+      --accent-ljus: #e0e0e0;
+      --bakgrund-mörk: #ffffff;
+      --bakgrund-ljus: #f8f8f8;
+      --text-färg: #333333;
+      --rubrik-färg: #0a0a0a;
+      --versnummer-färg: #7f8c8d;
+      --border-färg: #e0e0e0;
+      --highlight-färg: #f8e473;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .bibel-header {
+      text-align: center;
+      margin: 2rem 0;
+      color: var(--rubrik-färg);
+      font-size: 2rem;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .bibel-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(90deg, #e0a800, #f8e473);
+      border-radius: 2px;
+    }
+
+    .bibel-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .tool-btn {
+      padding: 0.5rem 1rem;
+      background: var(--bakgrund-ljus);
+      border: 1px solid var(--border-färg);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tool-btn:hover {
+      background: var(--accent-ljus);
+    }
+
+    .tool-btn.active {
+      background: var(--accent-färg);
+      color: white;
+    }
+
+    .bibel-navigering {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .bibel-select {
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--border-färg);
+      border-radius: 8px;
+      font-size: 1rem;
+      background: var(--bakgrund-ljus);
+      color: var(--text-färg);
+      appearance: none;
+      transition: all 0.2s ease;
+      min-width: 200px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1rem;
+    }
+
+    .bibel-select:focus {
+      outline: none;
+      border-color: var(--accent-färg);
+      box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.1);
+    }
+
+    .bibel-search {
+      flex-grow: 1;
+      position: relative;
+    }
+
+    .bibel-search-input {
+      width: 100%;
+      padding: 0.8rem 1rem 0.8rem 2.5rem;
+      border: 1px solid var(--border-färg);
+      border-radius: 8px;
+      font-size: 1rem;
+      background: var(--bakgrund-ljus);
+    }
+
+    .bibel-search-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--versnummer-färg);
+    }
+
+    .bibel-container {
+      width: 100%;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .bibel-text-header {
+      padding: 1rem 1.5rem;
+      background: var(--accent-färg);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .bibel-kapitelrubrik {
+      font-size: 1.5rem;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .bibel-text-content {
+      padding: 1.5rem;
+    }
+
+    .bibel-vers {
+      margin: 0 0 1rem;
+      padding-left: 2rem;
+      text-indent: -2rem;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .bibel-vers.highlighted {
+      background-color: var(--highlight-färg);
+      border-radius: 4px;
+    }
+
+    .bibel-versnummer {
+      color: var(--versnummer-färg);
+      font-size: 0.8em;
+      font-weight: 500;
+      margin-right: 0.5rem;
+      user-select: none;
+    }
+
+    .bibel-loading {
+      text-align: center;
+      padding: 3rem;
+      font-size: 1.1rem;
+      color: var(--accent-färg);
+    }
+
+    .bibel-error {
+      color: #d32f2f;
+      background: #ffebee;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #d32f2f;
+      margin: 1rem auto;
+    }
+
+    @media (max-width: 768px) {
+      .bibel-header {
+        font-size: 1.8rem;
+      }
+      
+      .bibel-text-content {
+        padding: 1rem;
+      }
+      
+      .bibel-vers {
+        padding-left: 1.5rem;
+        text-indent: -1.5rem;
+      }
+      
+      .bibel-navigering {
+        flex-direction: column;
+      }
+      
+      .bibel-select {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .bibel-text-content {
+        column-count: 2;
+        column-gap: 3rem;
+      }
+      
+      .bibel-kapitelrubrik {
+        column-span: all;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .bibel-text-content {
+        column-count: 3;
+      }
+    }
+  </style>
+
+  <h2 class="bibel-header">Bibelstudion</h2>
+  
+  <div class="bibel-tools">
+    <button class="tool-btn active" data-tool="read">
+      <i class="fas fa-book-open mr-2"></i>Läs
+    </button>
+    <button class="tool-btn" data-tool="study">
+      <i class="fas fa-highlighter mr-2"></i>Studera
+    </button>
+    <button class="tool-btn" data-tool="compare">
+      <i class="fas fa-columns mr-2"></i>Jämför
+    </button>
+  </div>
+  
+  <div class="bibel-navigering">
+    <select id="bibelBokVal" class="bibel-select">
+      <option value="">Välj bok</option>
+    </select>
+
+    <select id="bibelKapitelVal" class="bibel-select" disabled>
+      <option value="">Välj kapitel</option>
+    </select>
+    
+    <select id="bibelVersionVal" class="bibel-select">
+      <option value="SFB">Svenska Folkbibeln</option>
+      <option value="1917">Bibel 1917</option>
+      <option value="B2000">Bibel 2000</option>
+    </select>
+    
+    <div class="bibel-search">
+      <i class="fas fa-search bibel-search-icon"></i>
+      <input type="text" class="bibel-search-input" placeholder="Sök i Bibeln...">
+    </div>
+  </div>
+  
+  <div id="bibelInnehåll">
+    <div class="bibel-container">
+      <div class="bibel-text-header">
+        <h3 class="bibel-kapitelrubrik">Välkommen till Bibelstudion</h3>
+        <div>
+          <button class="tool-btn" style="background: transparent; color: white; border-color: rgba(255,255,255,0.3);">
+            <i class="fas fa-share-alt mr-2"></i>Dela
           </button>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Trending Now Section -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-800 section-title">Trendande Just Nu</h2>
-        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Dessa bibelstudier och resurser är bland de mest populära bland våra besökare denna vecka</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Trending Item 1 -->
-        <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md trending-card transition duration-300">
-          <div class="relative">
-            <img src="images/profetia-studier.jpg" alt="Bibelstudie om profetior och eskatologi med öppen bibel och anteckningsbok" class="w-full h-64 object-cover">
-            <div class="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold badge-trending">
-              #1 Trend
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center mb-2">
-              <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">Ny release</span>
-              <span class="ml-2 text-gray-500 text-sm">1,245 deltagare</span>
-            </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-2">Profetior i Vår Tid</h3>
-            <p class="text-gray-600 mb-4">En djupdykning i biblisk eskatologi och nutida händelser som uppfyller profetior.</p>
-            <div class="flex justify-between items-center">
-              <div class="flex items-center">
-                <i class="fas fa-star text-yellow-500"></i>
-                <span class="ml-1 text-gray-800 font-medium">4.9</span>
-                <span class="mx-2 text-gray-300">|</span>
-                <i class="fas fa-users text-blue-500"></i>
-                <span class="ml-1 text-gray-600">87 studiegrupper</span>
-              </div>
-              <a href="#" class="text-yellow-600 font-medium hover:text-yellow-700">Läs mer →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Trending Item 2 -->
-        <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md trending-card transition duration-300">
-          <div class="relative">
-            <img src="images/bon-studier.jpg" alt="Gruppstudie om bön med människor som håller varandra i händerna" class="w-full h-64 object-cover">
-            <div class="absolute top-2 right-2 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold badge-trending">
-              +78% Sökningar
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center mb-2">
-              <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Mest delade</span>
-              <span class="ml-2 text-gray-500 text-sm">982 deltagare</span>
-            </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-2">Bönens Transformationskraft</h3>
-            <p class="text-gray-600 mb-4">Upptäck hur bön kan förändra ditt liv och din relation med Gud genom praktiska övningar.</p>
-            <div class="flex justify-between items-center">
-              <div class="flex items-center">
-                <i class="fas fa-star text-yellow-500"></i>
-                <span class="ml-1 text-gray-800 font-medium">4.8</span>
-                <span class="mx-2 text-gray-300">|</span>
-                <i class="fas fa-users text-blue-500"></i>
-                <span class="ml-1 text-gray-600">64 studiegrupper</span>
-              </div>
-              <a href="#" class="text-yellow-600 font-medium hover:text-yellow-700">Läs mer →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Trending Item 3 -->
-        <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md trending-card transition duration-300">
-          <div class="relative">
-            <img src="images/psalm-23-studie.jpg" alt="Nära upp av Psalm 23 i en bibel med vacker natur i bakgrunden" class="w-full h-64 object-cover">
-            <div class="absolute top-2 right-2 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold badge-trending">
-              Ny favorit
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center mb-2">
-              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Bästsäljare</span>
-              <span class="ml-2 text-gray-500 text-sm">1,532 deltagare</span>
-            </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-2">Psalm 23: En Modern Tillämpning</h3>
-            <p class="text-gray-600 mb-4">En uppfriskande studie av den klassiska psalmen och hur den tillämpas i vardagen.</p>
-            <div class="flex justify-between items-center">
-              <div class="flex items-center">
-                <i class="fas fa-star text-yellow-500"></i>
-                <span class="ml-1 text-gray-800 font-medium">5.0</span>
-                <span class="mx-2 text-gray-300">|</span>
-                <i class="fas fa-users text-blue-500"></i>
-                <span class="ml-1 text-gray-600">112 studiegrupper</span>
-              </div>
-              <a href="#" class="text-yellow-600 font-medium hover:text-yellow-700">Läs mer →</a>
-            </div>
-          </div>
+      <div class="bibel-text-content">
+        <div class="bibel-loading">
+          <p>Välj en bok och kapitel från menyn ovan för att börja läsa Bibeln.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Most Popular Categories -->
-  <section class="py-16 bg-gray-100">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-800 section-title">Mest Populära Kategorier</h2>
-        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Dessa ämnesområden genererar mest engagemang bland våra besökare</p>
-      </div>
+  <script>
+    // Bible API Integration
+    const BIBEL_API_NYCKEL = '55c39916a8319d3772cc5b285f95b98d';
+    const BIBEL_ID = '65eec8e0b60e656b-01';
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <!-- Category 1 -->
-        <a href="#" class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition duration-300">
-          <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-            <i class="fas fa-book-open text-blue-600 text-2xl"></i>
-          </div>
-          <h3 class="font-bold text-gray-800 mb-2">Bibelböcker</h3>
-          <p class="text-sm text-gray-600">1,245 studier</p>
-        </a>
+    const svenskaBoknamn = {
+      'GEN': 'Första Moseboken', 'EXO': 'Andra Moseboken',
+      'LEV': 'Tredje Moseboken', 'NUM': 'Fjärde Moseboken',
+      'DEU': 'Femte Moseboken', 'JOS': 'Josua', 'JDG': 'Domarboken',
+      'RUT': 'Rut', '1SA': 'Första Samuelsboken', '2SA': 'Andra Samuelsboken',
+      '1KI': 'Första Konungaboken', '2KI': 'Andra Konungaboken',
+      '1CH': 'Första Krönikeboken', '2CH': 'Andra Krönikeboken',
+      'EZR': 'Esra', 'NEH': 'Nehemja', 'EST': 'Ester',
+      'JOB': 'Job', 'PSA': 'Psaltaren', 'PRO': 'Ordspråksboken',
+      'ECC': 'Predikaren', 'SNG': 'Höga Visan', 'ISA': 'Jesaja',
+      'JER': 'Jeremia', 'LAM': 'Klagovisorna', 'EZK': 'Hesekiel',
+      'DAN': 'Daniel', 'HOS': 'Hosea', 'JOL': 'Joel',
+      'AMO': 'Amos', 'OBA': 'Obadja', 'JON': 'Jona',
+      'MIC': 'Mika', 'NAM': 'Nahum', 'HAB': 'Habackuk',
+      'ZEP': 'Sefanja', 'HAG': 'Haggai', 'ZEC': 'Sakaria',
+      'MAL': 'Malaki', 'MAT': 'Matteus', 'MRK': 'Markus',
+      'LUK': 'Lukas', 'JHN': 'Johannes', 'ACT': 'Apostlagärningarna',
+      'ROM': 'Romarbrevet', '1CO': 'Första Korinthierbrevet',
+      '2CO': 'Andra Korinthierbrevet', 'GAL': 'Galaterbrevet',
+      'EPH': 'Efesierbrevet', 'PHP': 'Filipperbrevet',
+      'COL': 'Kolosserbrevet', '1TH': 'Första Thessalonikerbrevet',
+      '2TH': 'Andra Thessalonikerbrevet', '1TI': 'Första Timotheosbrevet',
+      '2TI': 'Andra Timotheosbrevet', 'TIT': 'Titusbrevet',
+      'PHM': 'Filemonbrevet', 'HEB': 'Hebreerbrevet',
+      'JAS': 'Jakobs brev', '1PE': 'Första Petrusbrevet',
+      '2PE': 'Andra Petrusbrevet', '1JN': 'Första Johannesbrevet',
+      '2JN': 'Andra Johannesbrevet', '3JN': 'Tredje Johannesbrevet',
+      'JUD': 'Judas brev', 'REV': 'Uppenbarelseboken'
+    };
 
-        <!-- Category 2 -->
-        <a href="#" class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition duration-300">
-          <div class="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-            <i class="fas fa-users text-green-600 text-2xl"></i>
-          </div>
-          <h3 class="font-bold text-gray-800 mb-2">Gruppstudier</h3>
-          <p class="text-sm text-gray-600">876 resurser</p>
-        </a>
+    // Initialize when section is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      initieraBibelBöcker();
+      setupBibelVerktyg();
+    });
 
-        <!-- Category 3 -->
-        <a href="#" class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition duration-300">
-          <div class="bg-yellow-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-            <i class="fas fa-microphone text-yellow-600 text-2xl"></i>
-          </div>
-          <h3 class="font-bold text-gray-800 mb-2">Podcasts</h3>
-          <p class="text-sm text-gray-600">342 avsnitt</p>
-        </a>
+    // Tool buttons functionality
+    function setupBibelVerktyg() {
+      const toolBtns = document.querySelectorAll('.bibel-section .tool-btn[data-tool]');
+      
+      toolBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          toolBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
 
-        <!-- Category 4 -->
-        <a href="#" class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition duration-300">
-          <div class="bg-purple-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-            <i class="fas fa-video text-purple-600 text-2xl"></i>
-          </div>
-          <h3 class="font-bold text-gray-800 mb-2">Video Kurser</h3>
-          <p class="text-sm text-gray-600">198 kurser</p>
-        </a>
-      </div>
-    </div>
-  </section>
+      // Verse highlighting
+      document.querySelector('.bibel-section').addEventListener('click', function(e) {
+        if (e.target.classList.contains('bibel-versnummer')) {
+          const verse = e.target.closest('.bibel-vers');
+          verse.classList.toggle('highlighted');
+        }
+      });
+    }
 
-  <!-- New Releases Section -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-800 section-title">Nya Releases</h2>
-        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Nyligen tillagda studier och resurser som redan skapar uppmärksamhet</p>
-      </div>
+    // Main Bible functions
+    async function initieraBibelBöcker() {
+      try {
+        const svar = await fetch(`https://api.scripture.api.bible/v1/bibles/${BIBEL_ID}/books`, {
+          headers: { 'api-key': BIBEL_API_NYCKEL }
+        });
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- New Release 1 -->
-        <div class="border border-gray-200 rounded-lg overflow-hidden hover:border-yellow-400 transition duration-300">
-          <img src="images/digital-bibelstudie.jpg" alt="Digital bibelstudie på surfplatta med kaffe och anteckningsbok bredvid" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded">Ny</span>
-            <h3 class="text-xl font-bold text-gray-800 mt-2 mb-2">Digital Bibelstudie Guide</h3>
-            <p class="text-gray-600 mb-4">Lär dig effektiva metoder för att studera Bibeln digitalt med moderna verktyg.</p>
-            <div class="flex items-center text-sm text-gray-500">
-              <i class="far fa-calendar-alt mr-2"></i>
-              <span>Lanserad 2 dagar sedan</span>
+        if (!svar.ok) throw new Error('Kunde inte hämta böcker');
+
+        const data = await svar.json();
+        fyllBibelBoklista(data.data);
+
+      } catch (fel) {
+        visaBibelFel(`Fel: ${fel.message}`);
+      }
+    }
+
+    function fyllBibelBoklista(böcker) {
+      const bokVal = document.getElementById('bibelBokVal');
+      bokVal.innerHTML = '<option value="">Välj bok</option>';
+
+      böcker.forEach(bok => {
+        const alternativ = document.createElement('option');
+        alternativ.value = bok.abbreviation;
+        alternativ.textContent = svenskaBoknamn[bok.abbreviation];
+        bokVal.appendChild(alternativ);
+      });
+
+      bokVal.addEventListener('change', async (e) => {
+        if (e.target.value) await hämtaBibelKapitel(e.target.value);
+      });
+    }
+
+    async function hämtaBibelKapitel(bokFörkortning) {
+      try {
+        const svar = await fetch(`https://api.scripture.api.bible/v1/bibles/${BIBEL_ID}/books/${bokFörkortning}/chapters`, {
+          headers: { 'api-key': BIBEL_API_NYCKEL }
+        });
+
+        if (!svar.ok) throw new Error('Kunde inte hämta kapitel');
+
+        const data = await svar.json();
+        fyllBibelKapitellista(data.data);
+
+      } catch (fel) {
+        visaBibelFel(`Fel: ${fel.message}`);
+      }
+    }
+
+    function fyllBibelKapitellista(kapitel) {
+      const kapitelVal = document.getElementById('bibelKapitelVal');
+      kapitelVal.innerHTML = '<option value="">Välj kapitel</option>';
+
+      kapitel.forEach(kap => {
+        const alternativ = document.createElement('option');
+        alternativ.value = kap.number;
+        alternativ.textContent = `Kapitel ${kap.number}`;
+        kapitelVal.appendChild(alternativ);
+      });
+
+      kapitelVal.disabled = false;
+      kapitelVal.addEventListener('change', async (e) => {
+        if (e.target.value) await visaBibelKapitel(document.getElementById('bibelBokVal').value, e.target.value);
+      });
+    }
+
+    async function visaBibelKapitel(bokFörkortning, kapitelNummer) {
+      try {
+        document.getElementById('bibelInnehåll').innerHTML = '<div class="bibel-loading">Laddar kapitel...</div>';
+        
+        const svar = await fetch(`https://api.scripture.api.bible/v1/bibles/${BIBEL_ID}/chapters/${bokFörkortning}.${kapitelNummer}?content-type=text`, {
+          headers: { 'api-key': BIBEL_API_NYCKEL }
+        });
+
+        if (!svar.ok) throw new Error('Kunde inte hämta kapitelinnehåll');
+
+        const data = await svar.json();
+        renderaBibelText(data.data);
+
+      } catch (fel) {
+        visaBibelFel(`Fel: ${fel.message}`);
+      }
+    }
+
+    function renderaBibelText(kapitelData) {
+      const innehållDiv = document.getElementById('bibelInnehåll');
+      const formateradText = `
+        <div class="bibel-container">
+          <div class="bibel-text-header">
+            <h3 class="bibel-kapitelrubrik">${svenskaBoknamn[kapitelData.bookId]} ${kapitelData.number}</h3>
+            <div>
+              <button class="tool-btn" style="background: transparent; color: white; border-color: rgba(255,255,255,0.3);">
+                <i class="fas fa-share-alt mr-2"></i>Dela
+              </button>
             </div>
           </div>
-        </div>
-
-        <!-- New Release 2 -->
-        <div class="border border-gray-200 rounded-lg overflow-hidden hover:border-yellow-400 transition duration-300">
-          <img src="images/familj-studier.jpg" alt="Familj som studerar bibeln tillsammans i vardagsrummet" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded">Ny</span>
-            <h3 class="text-xl font-bold text-gray-800 mt-2 mb-2">Familjebibelstudier</h3>
-            <p class="text-gray-600 mb-4">Anpassade studier för hela familjen med olika åldersgrupper i fokus.</p>
-            <div class="flex items-center text-sm text-gray-500">
-              <i class="far fa-calendar-alt mr-2"></i>
-              <span>Lanserad 1 vecka sedan</span>
-            </div>
+          <div class="bibel-text-content">
+            ${formateraBibelVerser(kapitelData.content)}
           </div>
         </div>
+      `;
 
-        <!-- New Release 3 -->
-        <div class="border border-gray-200 rounded-lg overflow-hidden hover:border-yellow-400 transition duration-300">
-          <img src="images/apostlagarningarna-studie.jpg" alt="Bibel öppen vid Apostlagärningarna med studieanteckningar" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded">Ny</span>
-            <h3 class="text-xl font-bold text-gray-800 mt-2 mb-2">Apostlagärningarna i Fokus</h3>
-            <p class="text-gray-600 mb-4">En 12-delad serie som utforskar den tidiga församlingen och dess relevans idag.</p>
-            <div class="flex items-center text-sm text-gray-500">
-              <i class="far fa-calendar-alt mr-2"></i>
-              <span>Lanserad 2 veckor sedan</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      innehållDiv.innerHTML = formateradText;
+      
+      // Add event listener to share button
+      document.querySelector('.bibel-text-header .fa-share-alt').closest('button').addEventListener('click', delaBibelKapitel);
+    }
 
-  <!-- Testimonials -->
-  <section class="py-16 bg-gray-100">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-800 section-title">Vad Andra Säger</h2>
-        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Läs vad våra användare tycker om våra populäraste studier</p>
-      </div>
+    function formateraBibelVerser(text) {
+      return text
+        .replace(/<span class="verse-number">(\d+)<\/span>/g, '<sup class="bibel-versnummer">$1</sup>')
+        .replace(/<p class="line">/g, '<p class="bibel-vers">')
+        .replace(/<\/?div[^>]*>/g, '')
+        .replace(/<p class="vers">/g, '<p class="bibel-vers">');
+    }
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Testimonial 1 -->
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <div class="flex items-center mb-4">
-            <img src="images/people-praying-religions-gathering.jpg" alt="Maria K. - Nöjd användare av Bibelstudions profetistudier" class="w-12 h-12 rounded-full object-cover">
-            <div class="ml-4">
-              <h4 class="font-bold text-gray-800">Maria K.</h4>
-              <div class="flex text-yellow-500">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-          </div>
-          <p class="text-gray-600 italic">"Profetior i Vår Tid-studien har förändrat mitt perspektiv helt. Materialet är så välgjort och lätt att följa, även för nybörjare."</p>
-          <div class="mt-4 pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">Studerade: Profetior i Vår Tid</span>
-          </div>
-        </div>
+    function delaBibelKapitel() {
+      const book = document.getElementById('bibelBokVal').value;
+      const chapter = document.getElementById('bibelKapitelVal').value;
+      const bookName = svenskaBoknamn[book];
+      
+      if (navigator.share) {
+        navigator.share({
+          title: `${bookName} ${chapter}`,
+          text: `Läs ${bookName} kapitel ${chapter} på Bibelstudion`,
+          url: window.location.href
+        }).catch(err => {
+          console.log('Error sharing:', err);
+        });
+      } else {
+        alert('Dela funktionen är inte tillgänglig i din webbläsare. Kopiera länken manuellt.');
+      }
+    }
 
-        <!-- Testimonial 2 -->
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <div class="flex items-center mb-4">
-            <img src="images/6.avif" alt="Anders L. - Deltagare i flera gruppstudier på Bibelstudion" class="w-12 h-12 rounded-full object-cover">
-            <div class="ml-4">
-              <h4 class="font-bold text-gray-800">Anders L.</h4>
-              <div class="flex text-yellow-500">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-          </div>
-          <p class="text-gray-600 italic">"Vi använder Familjebibelstudierna varje vecka. Barnen älskar aktiviteterna och vi vuxna får djupare insikter. Perfekt balans!"</p>
-          <div class="mt-4 pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">Studerade: Familjebibelstudier</span>
-          </div>
-        </div>
+    function visaBibelFel(meddelande) {
+      const innehållDiv = document.getElementById('bibelInnehåll');
+      innehållDiv.innerHTML = `<div class="bibel-error">${meddelande}</div>`;
+    }
+  </script>
+</div>
 
-        <!-- Testimonial 3 -->
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <div class="flex items-center mb-4">
-            <img src="images/blog_4_ed8752910d.jpg" alt="Elin S. - Aktiv medlem i digitala bibelstudiegrupper" class="w-12 h-12 rounded-full object-cover">
-            <div class="ml-4">
-              <h4 class="font-bold text-gray-800">Elin S.</h4>
-              <div class="flex text-yellow-500">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-            </div>
-          </div>
-          <p class="text-gray-600 italic">"Digital Bibelstudie Guide har revolutionerat min studietid. Alla tips om appar och metoder sparar mig så mycket tid och gör studierna mer effektiva."</p>
-          <div class="mt-4 pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">Studerade: Digital Bibelstudie Guide</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
 
 <!-- Responsive Newsletter Signup (Same layout on all devices) -->
 <section class="bg-yellow-50 py-8 sm:py-12 mt-8 sm:mt-12">
@@ -523,9 +752,8 @@
   </div>
 </section>
 
-  
-    <!-- Footer -->
-  <footer class="bg-gray-800 text-white pt-12 pb-6">
+ <!-- Footer -->
+ <footer class="bg-gray-800 text-white pt-12 pb-6">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         <!-- Footer Column 1 -->
@@ -994,12 +1222,99 @@
 
   </script>
 
+  <script>
+    // Donation Type Selection
+    document.querySelectorAll('.donation-type-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const type = this.dataset.type;
+        document.getElementById('donation-form-container').classList.remove('hidden');
+        document.getElementById('project-selection').classList.add('hidden');
+        
+        // Update form title based on type
+        let title = '';
+        if (type === 'one-time') {
+          title = 'Engångsdonation';
+        } else if (type === 'monthly') {
+          title = 'Månadsgivande';
+          document.getElementById('submit-btn-text').textContent = 'Starta Månadsgivande';
+        } else if (type === 'project') {
+          title = 'Projektstöd';
+          document.getElementById('project-selection').classList.remove('hidden');
+        }
+        document.getElementById('donation-form-title').textContent = title;
+        
+        // Scroll to form
+        document.getElementById('donation-form-container').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Amount Selection
+    document.querySelectorAll('.amount-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        // Remove active class from all buttons
+        document.querySelectorAll('.amount-btn').forEach(b => {
+          b.classList.remove('bg-yellow-500', 'text-gray-800', 'border-yellow-500');
+          b.classList.add('bg-gray-100', 'border-gray-300');
+        });
+        
+        // Add active class to clicked button
+        this.classList.remove('bg-gray-100', 'border-gray-300');
+        this.classList.add('bg-yellow-500', 'text-gray-800', 'border-yellow-500');
+        
+        // Handle custom amount
+        if (this.dataset.amount === 'custom') {
+          document.getElementById('custom-amount-container').classList.remove('hidden');
+          document.getElementById('custom-amount').focus();
+        } else {
+          document.getElementById('custom-amount-container').classList.add('hidden');
+        }
+      });
+    });
+
+    // Payment Method Toggle
+    document.querySelectorAll('input[name="payment-method"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+        if (this.value === 'credit-card') {
+          document.getElementById('credit-card-form').classList.remove('hidden');
+        } else {
+          document.getElementById('credit-card-form').classList.add('hidden');
+        }
+      });
+    });
+
+    // FAQ Toggle
+    document.querySelectorAll('.faq-toggle').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        const icon = this.querySelector('i');
+        
+        content.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+      });
+    });
+
+    // Form Submission
+    document.getElementById('donation-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Here you would normally process the payment
+      // For demo purposes, we'll just show the confirmation
+      
+      // Generate random reference
+      const ref = 'BS2023-' + Math.floor(10000 + Math.random() * 90000);
+      document.getElementById('donation-reference').textContent = 'Referensnummer: ' + ref;
+      
+      // Hide form and show confirmation
+      document.getElementById('donation-form-container').classList.add('hidden');
+      document.getElementById('confirmation').classList.remove('hidden');
+      
+      // Scroll to confirmation
+      document.getElementById('confirmation').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
 </body>
 
 </html>
-
-
-
 
 
 
