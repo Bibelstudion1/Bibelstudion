@@ -1,0 +1,205 @@
+/* Reset och grunder */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #2a6f3a;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  /* Header */
+  .site-header {
+    background-color: #2a6f3a;
+    color: white;
+    padding: 20px 0;
+    border-bottom: 3px solid #1e4d29;
+  }
+  
+  .site-header .logo a {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  
+  .main-nav a {
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .main-nav a:hover {
+    color: #bdf5cd;
+  }
+  
+  /* Sökfält */
+  .search-box {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search-box input {
+    padding: 8px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .search-box button {
+    padding: 8px 12px;
+    background-color: white;
+    color: #2a6f3a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search-box button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Hero */
+  .hero {
+    background: linear-gradient(rgba(42, 111, 58, 0.8), rgba(42, 111, 58, 0.8)), url('../images/hero-background.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    background-color: white;
+    color: #2a6f3a;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Artiklar */
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .articles-grid article {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+  }
+  
+  .articles-grid article:hover {
+    transform: translateY(-5px);
+  }
+  
+  .articles-grid img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .articles-grid h4 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
+  
+  /* Kategorier */
+  .category-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .category-list li a {
+    background-color: #2a6f3a;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .category-list li a:hover {
+    background-color: #3b8f4d;
+  }
+  
+  /* About */
+  .about-section {
+    background-color: #e8f5e9;
+    padding: 40px 20px;
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .about-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Footer */
+  .site-footer {
+    background-color: #2a6f3a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    color: white;
+    font-weight: 500;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  

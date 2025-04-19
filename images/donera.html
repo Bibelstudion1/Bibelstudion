@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Stöd Bibelstudions arbete med att sprida Guds Ord genom en donation. Välj mellan engångsgåvor, månadsgivande eller projektstöd för våra bibelstudieinitiativ.">
+  <meta name="keywords" content="donera till bibelstudier, kristna donationer, stöd andligt arbete, gåva till bibelutbildning, finansiera bibelkurser">
+  <meta name="author" content="Bibelstudion">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Donera - Stöd Bibelstudions Arbete med att Sprida Guds Ord | Bibelstudion</title>
+  <style>
+    .donation-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-link::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #e9c46a;
+      transition: width 0.3s;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .progress-bar {
+      transition: width 2s ease-in-out;
+    }
+
+    .impact-item:hover {
+      transform: scale(1.05);
+    }
+
+    .payment-method:hover {
+      border-color: #e9c46a;
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="startsidan.html" class="flex items-center">
+            <i class="fas fa-bible text-yellow-500 text-3xl mr-2"></i>
+            <span class="text-2xl font-bold text-gray-800">Bibel<span class="text-yellow-500">studion</span></span>
+          </a>
+        </div>
+  
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="startsidan.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Hem</a>
+          <a href="#shop" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Butik</a>
+          <a href="kategorier.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kategorier</a>
+          <a href="om-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Om oss</a>
+          <a href="kontakta-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kontakt</a>
+        </nav>
+  
+        <!-- Icons -->
+        <div class="flex items-center space-x-4">
+          <div class="relative hidden md:block">
+            <input type="text" placeholder="Sök produkter..."
+              class="search-input pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 w-64">
+            <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+          </div>
+          <a href="login.html" class="text-gray-800 hover:text-yellow-500 text-xl">
+            <i class="far fa-user"></i>
+          </a>
+          <a href="kundvagn.html" class="text-gray-800 hover:text-yellow-500 text-xl relative">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count"
+              class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+          </a>
+          <button class="md:hidden text-gray-800 text-2xl" id="mobileMenuButton">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+  
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg absolute w-full px-4 py-2">
+        <div class="flex flex-col space-y-3">
+          <a href="startsidan.html" class="text-gray-800 font-medium hover:text-yellow-500 py-2">Hem</a>
+          <a href="#shop" class="text-gray-800 font-medium hover:text-yellow-500 py-2">Butik</a>
+          <a href="#categories" class="text-gray-800 font-medium hover:text-yellow-500 py-2">Kategorier</a>
+          <a href="#about" class="text-gray-800 font-medium hover:text-yellow-500 py-2">Om oss</a>
+          <a href="#contact" class="text-gray-800 font-medium hover:text-yellow-500 py-2">Kontakt</a>
+          <div class="relative pt-2">
+            <input type="text" placeholder="Sök produkter..."
+              class="search-input pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 w-full">
+            <i class="fas fa-search absolute left-3 top-5 text-gray-400"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+     <!-- Secondary Navigation -->
+     <div class="bg-gray-800 text-white">
+      <div class="container mx-auto px-4">
+        <div class="flex overflow-x-auto space-x-8 py-3">
+          <a href="populart-just-nu.html" class="whitespace-nowrap hover:text-yellow-400">Populärt just nu</a>
+          <a href="#premium" class="whitespace-nowrap hover:text-yellow-400">Premium</a>
+          <a href="#bibles" class="whitespace-nowrap hover:text-yellow-400">Biblar</a>
+          <a href="#books" class="whitespace-nowrap hover:text-yellow-400">Böcker</a>
+          <a href="donera.html" class="whitespace-nowrap hover:text-yellow-400">Gåvor</a>
+          <a href="#accessories" class="whitespace-nowrap hover:text-yellow-400">Accessoarer</a>
+          <a href="blogginlagg.html" class="whitespace-nowrap hover:text-yellow-400">Blogginlägg</a>
+          <a href="#sale" class="whitespace-nowrap text-yellow-400 font-bold">REA</a>
+        </div>
+      </div>
+    </div>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-800 to-indigo-900 text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Stöd Bibelstudions Arbete</h1>
+      <p class="text-xl md:text-2xl mb-8">Din gåva hjälper oss att sprida Guds Ord till fler människor</p>
+      <div class="flex justify-center space-x-4">
+        <a href="#donate-now" class="bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300">
+          Donera Nu
+        </a>
+        <a href="#impact" class="bg-transparent hover:bg-blue-700 text-white font-bold py-3 px-8 border border-white rounded-full transition duration-300">
+          Se Vår Påverkan
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Stats -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800">Din Gåva Gör Skillnad</h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Här är hur dina donationer har hjälpt oss hittills</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Stat 1 -->
+        <div class="bg-gray-50 p-6 rounded-lg text-center">
+          <div class="text-5xl font-bold text-yellow-500 mb-4">1,245+</div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Bibelstudiegrupper</h3>
+          <p class="text-gray-600">Startade genom donationsstöd</p>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="bg-gray-50 p-6 rounded-lg text-center">
+          <div class="text-5xl font-bold text-yellow-500 mb-4">24,892</div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Studiematerial</h3>
+          <p class="text-gray-600">Distribuerade till behövande</p>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="bg-gray-50 p-6 rounded-lg text-center">
+          <div class="text-5xl font-bold text-yellow-500 mb-4">87%</div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Av Donationer</h3>
+          <p class="text-gray-600">Går direkt till programverksamhet</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Campaign -->
+  <section class="py-16 bg-gray-100" id="impact">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+          <img src="images/top-view-people-reading-together.jpg" alt="Glad grupp som studerar bibel tillsammans i ett utbildningsprojekt finansierat av donationer" class="rounded-lg shadow-md w-full">
+        </div>
+        <div class="md:w-1/2">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Vårt Nuvarande Projekt: Bibelstudier för Ungdomar</h2>
+          <p class="text-gray-600 mb-6">Vi arbetar för att utveckla anpassade bibelstudier för ungdomar i åldrarna 13-19. Ditt stöd hjälper oss att skapa relevant material och träna ledare som kan nå ut till denna viktiga målgrupp.</p>
+          
+          <div class="mb-6">
+            <div class="flex justify-between mb-2">
+              <span class="font-medium text-gray-800">Insamlingsmål: 8000 kr</span>
+              <span class="font-medium text-gray-800">12%</span>
+            </div>
+            <div class="w-full bg-gray-300 rounded-full h-4">
+              <div class="bg-yellow-500 h-4 rounded-full progress-bar" style="width: 12%"></div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+              <div class="text-2xl font-bold text-yellow-500 mb-2">187</div>
+              <p class="text-gray-600 text-sm">Donatorer</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+              <div class="text-2xl font-bold text-yellow-500 mb-2">42</div>
+              <p class="text-gray-600 text-sm">Dagar Kvar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Options -->
+  <section class="py-16 bg-white" id="donate-now">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800">Välj Donationsform</h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Din generositet möjliggör vårt fortsatta arbete med att sprida Guds Ord</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <!-- One-time Donation -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm donation-card transition duration-300">
+          <div class="text-center mb-6">
+            <div class="bg-yellow-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-hand-holding-heart text-yellow-500 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Engångsgåva</h3>
+            <p class="text-gray-600">Ett enstaka bidrag för att stödja vårt arbete</p>
+          </div>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+              <span class="text-gray-700">Full flexibilitet i belopp</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+              <span class="text-gray-700">Möjlighet att specificera projekt</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+              <span class="text-gray-700">Omedelbar påverkan</span>
+            </li>
+          </ul>
+          <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-bold py-3 px-4 rounded-lg transition duration-300 donation-type-btn" data-type="one-time">
+            Välj Engångsgåva
+          </button>
+        </div>
+
+        <!-- Monthly Donation -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm donation-card transition duration-300 border-2 border-yellow-400">
+          <div class="text-center mb-6">
+            <div class="bg-yellow-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-calendar-check text-yellow-500 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Månadsgivande</h3>
+            <p class="text-gray-600">Regelbundet stöd för långsiktig påverkan</p>
+          </div>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+              <span class="text-gray-700">Pålitlig inkomstkälla för oss</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+              <span class="text-gray-700">Låg administrativ kostnad</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+              <span class="text-gray-700">Möjlighet att ändra när som helst</span>
+            </li>
+          </ul>
+          <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-bold py-3 px-4 rounded-lg transition duration-300 donation-type-btn" data-type="monthly">
+            Välj Månadsgivande
+          </button>
+        </div>
+
+        <!-- Project Support -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm donation-card transition duration-300">
+          <div class="text-center mb-6">
+            <div class="bg-yellow-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+              <i class="fas fa-bullseye text-yellow-500 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Projektstöd</h3>
+            <p class="text-gray-600">Rikta din gåva till ett specifikt initiativ</p>
+          </div>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+              <span class="text-gray-700">Stöd det som ligger dig varmt om hjärtat</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+              <span class="text-gray-700">Få uppdateringar om projektets framsteg</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+              <span class="text-gray-700">Se direkt hur din gåva används</span>
+            </li>
+          </ul>
+          <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-bold py-3 px-4 rounded-lg transition duration-300 donation-type-btn" data-type="project">
+            Välj Projektstöd
+          </button>
+        </div>
+      </div>
+
+      <!-- Donation Form (Initially Hidden) -->
+      <div id="donation-form-container" class="hidden max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800 mb-6" id="donation-form-title">Din Donation</h3>
+        
+        <form id="donation-form">
+          <!-- Amount Selection -->
+          <div class="mb-8">
+            <label class="block text-gray-700 font-medium mb-3">Välj belopp (SEK)</label>
+            <div class="grid grid-cols-3 gap-3 mb-3">
+              <button type="button" class="amount-btn bg-gray-100 hover:bg-yellow-100 border border-gray-300 py-3 px-4 rounded-lg font-medium" data-amount="100">100 kr</button>
+              <button type="button" class="amount-btn bg-gray-100 hover:bg-yellow-100 border border-gray-300 py-3 px-4 rounded-lg font-medium" data-amount="250">250 kr</button>
+              <button type="button" class="amount-btn bg-gray-100 hover:bg-yellow-100 border border-gray-300 py-3 px-4 rounded-lg font-medium" data-amount="500">500 kr</button>
+              <button type="button" class="amount-btn bg-gray-100 hover:bg-yellow-100 border border-gray-300 py-3 px-4 rounded-lg font-medium" data-amount="1000">1,000 kr</button>
+              <button type="button" class="amount-btn bg-gray-100 hover:bg-yellow-100 border border-gray-300 py-3 px-4 rounded-lg font-medium" data-amount="2500">2,500 kr</button>
+              <button type="button" class="amount-btn bg-gray-100 hover:bg-yellow-100 border border-gray-300 py-3 px-4 rounded-lg font-medium" data-amount="custom">Anpassat</button>
+            </div>
+            <div id="custom-amount-container" class="hidden mt-3">
+              <input type="number" id="custom-amount" placeholder="Ange belopp i SEK" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500">
+            </div>
+          </div>
+
+          <!-- Project Selection (Conditional) -->
+          <div id="project-selection" class="mb-8 hidden">
+            <label class="block text-gray-700 font-medium mb-3">Välj projekt att stödja</label>
+            <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500">
+              <option value="">-- Välj projekt --</option>
+              <option value="youth">Bibelstudier för Ungdomar</option>
+              <option value="online">Digitala Bibelkurser</option>
+              <option value="materials">Studiematerial för Nybörjare</option>
+              <option value="leadership">Ledarskapsutbildning</option>
+              <option value="general">Generellt stöd (används där behovet är störst)</option>
+            </select>
+          </div>
+
+          <!-- Donor Information -->
+          <div class="mb-8">
+            <h4 class="text-lg font-semibold text-gray-800 mb-4">Dina Uppgifter</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label for="first-name" class="block text-gray-700 text-sm font-medium mb-1">Förnamn*</label>
+                <input type="text" id="first-name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500">
+              </div>
+              <div>
+                <label for="last-name" class="block text-gray-700 text-sm font-medium mb-1">Efternamn*</label>
+                <input type="text" id="last-name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500">
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-gray-700 text-sm font-medium mb-1">E-postadress*</label>
+              <input type="email" id="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500">
+            </div>
+            <div>
+              <label for="phone" class="block text-gray-700 text-sm font-medium mb-1">Telefon (valfritt)</label>
+              <input type="tel" id="phone" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500">
+            </div>
+          </div>
+
+          <!-- Payment Method -->
+          <div class="mb-8">
+            <h4 class="text-lg font-semibold text-gray-800 mb-4">Betalningsmetod</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="payment-method border border-gray-300 rounded-lg p-4 cursor-pointer hover:border-yellow-500 transition duration-300">
+                <div class="flex items-center">
+                  <input type="radio" id="credit-card" name="payment-method" value="credit-card" checked class="mr-3 h-5 w-5 text-yellow-500 focus:ring-yellow-500">
+                  <label for="credit-card" class="font-medium">Kreditkort</label>
+                </div>
+                <div class="flex mt-3">
+                  <img src="images/visa-mastercard.png" alt="Betalningsmetoder Visa och Mastercard logotyper" class="h-8 mr-2">
+                  <img src="images/swish.png" alt="Swish betalningsmetod logotyp" class="h-8">
+                </div>
+              </div>
+              <div class="payment-method border border-gray-300 rounded-lg p-4 cursor-pointer hover:border-yellow-500 transition duration-300">
+                <div class="flex items-center">
+                  <input type="radio" id="bank-transfer" name="payment-method" value="bank-transfer" class="mr-3 h-5 w-5 text-yellow-500 focus:ring-yellow-500">
+                  <label for="bank-transfer" class="font-medium">Banköverföring</label>
+                </div>
+                <div class="text-sm text-gray-600 mt-3">Faktura skickas till din e-post</div>
+              </div>
+            </div>
+
+            <!-- Credit Card Form (Conditional) -->
+            <div id="credit-card-form" class="mt-6">
+              <div class="mb-4">
+                <label for="card-number" class="block text-gray-700 text-sm font-medium mb-1">Kortnummer*</label>
+                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500">
+              </div>
+              <div class="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                  <label for="expiry-date" class="block text-gray-700 text-sm font-medium mb-1">Giltigt till*</label>
+                  <input type="text" id="expiry-date" placeholder="MM/ÅÅ" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500">
+                </div>
+                <div>
+                  <label for="cvv" class="block text-gray-700 text-sm font-medium mb-1">CVV*</label>
+                  <input type="text" id="cvv" placeholder="123" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tax Deductible -->
+          <div class="mb-8">
+            <div class="flex items-start">
+              <input type="checkbox" id="tax-deduction" class="mt-1 mr-3 h-5 w-5 text-yellow-500 focus:ring-yellow-500">
+              <label for="tax-deduction" class="text-gray-700">Jag vill ha en gåvokvitto för skatteavdrag (gäller för donationer över 200 kr)</label>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-bold py-4 px-6 rounded-lg text-lg transition duration-300 flex items-center justify-center">
+            <span id="submit-btn-text">Slutför Donation</span>
+            <i class="fas fa-lock ml-2"></i>
+          </button>
+
+          <!-- Security Info -->
+          <div class="mt-4 text-center text-sm text-gray-500">
+            <p>Alla transaktioner är säkra och krypterade. <a href="#" class="text-yellow-600 hover:underline">Läs vår integritetspolicy</a></p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Confirmation (Initially Hidden) -->
+      <div id="confirmation" class="hidden max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md text-center">
+        <div class="bg-green-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
+          <i class="fas fa-check text-green-500 text-3xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">Tack för din generositet!</h3>
+        <p class="text-gray-600 mb-6">Din donation har mottagits och kommer att användas för att sprida Guds Ord till fler människor. En bekräftelse har skickats till din e-postadress.</p>
+        <div class="bg-gray-50 p-4 rounded-lg mb-6 text-left">
+          <h4 class="font-semibold text-gray-800 mb-2">Donationssammanfattning:</h4>
+          <p class="text-gray-600" id="donation-summary">Engångsgåva på 500 kr</p>
+          <p class="text-gray-600" id="donation-reference">Referensnummer: BS2023-45678</p>
+        </div>
+        <a href="startsidan.html" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-bold py-3 px-6 rounded-lg transition duration-300">
+          Tillbaka till startsidan
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Stories -->
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800">Hur Donationer Gör Skillnad</h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Röster från dem som drabbats av vårt arbete</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Story 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <div class="flex items-start mb-4">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                 alt="Emma L. deltar i ungdomsbibelstudie - Glad tonåring med bibel i en kristen studiegrupp" 
+                 class="w-16 h-16 rounded-full object-cover mr-4">
+            <div>
+              <h4 class="font-bold text-gray-800">Emma L., 17 år</h4>
+              <p class="text-yellow-500 text-sm">Ungdomsbibelstudiegrupp</p>
+            </div>
+          </div>
+          <blockquote class="text-gray-600 italic pl-4 border-l-4 border-yellow-500">
+            "Jag var skeptisk till kristendom tills jag gick med i en bibelstudiegrupp för ungdomar. Tack vare donationer kunde denna grupp vara helt gratis. Nu har jag funnit en tro som ger mitt liv mening."
+          </blockquote>
+        </div>
+      
+        <!-- Story 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <div class="flex items-start mb-4">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                 alt="Pastor Anders M. leder bibelstudium - Medelålders man som undervisar från bibeln i församlingslokaler" 
+                 class="w-16 h-16 rounded-full object-cover mr-4">
+            <div>
+              <h4 class="font-bold text-gray-800">Pastor Anders M.</h4>
+              <p class="text-yellow-500 text-sm">Församlingsledare</p>
+            </div>
+          </div>
+          <blockquote class="text-gray-600 italic pl-4 border-l-4 border-yellow-500">
+            "Vår lilla församling har inte resurser att utveckla eget material. Tack vare Bibelstudions gratisresurser, finansierade av donationer, kan vi erbjuda kvalitetsstudier till våra medlemmar."
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800">Vanliga Frågor</h2>
+        <p class="text-gray-600 mt-4">Svar på vanliga frågor om donationer</p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ Item 1 -->
+        <div class="border border-gray-200 rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full text-left p-4 bg-gray-50 hover:bg-gray-100 transition duration-300 flex justify-between items-center">
+            <span class="font-medium text-gray-800">Kan jag få kvitto för min donation?</span>
+            <i class="fas fa-chevron-down text-yellow-500 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden p-4 text-gray-600">
+            <p>Ja, för donationer över 200 kr utfärdar vi gåvokvitton som är giltiga för skatteavdrag. Vid engångsgåvor skickas kvittot automatiskt till din e-postadress inom 2 arbetsdagar. För månadsgivare skickas en sammanställning i januari varje år.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="border border-gray-200 rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full text-left p-4 bg-gray-50 hover:bg-gray-100 transition duration-300 flex justify-between items-center">
+            <span class="font-medium text-gray-800">Hur används mina donationer?</span>
+            <i class="fas fa-chevron-down text-yellow-500 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden p-4 text-gray-600">
+            <p>87% av alla donationer går direkt till programverksamhet som utveckling av bibelstudiematerial, utbildning av ledare och distribution av resurser. Endast 13% används för administration och insamlingskostnader. Vid projektstöd används hela beloppet (100%) till det specifika projektet.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="border border-gray-200 rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full text-left p-4 bg-gray-50 hover:bg-gray-100 transition duration-300 flex justify-between items-center">
+            <span class="font-medium text-gray-800">Kan jag avbryta mitt månadsgivande?</span>
+            <i class="fas fa-chevron-down text-yellow-500 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden p-4 text-gray-600">
+            <p>Ja, du kan när som helst avbryta eller ändra ditt månadsgivande. Logga in på "Min Profil" eller kontakta vår donationssupport på donation@bibelstudion.se eller 08-123 456 78. Ändringar träder i kraft från och med nästa betalningsdatum.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="border border-gray-200 rounded-lg overflow-hidden">
+          <button class="faq-toggle w-full text-left p-4 bg-gray-50 hover:bg-gray-100 transition duration-300 flex justify-between items-center">
+            <span class="font-medium text-gray-800">Finns det något minimibelopp för donationer?</span>
+            <i class="fas fa-chevron-down text-yellow-500 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden p-4 text-gray-600">
+            <p>Nej, vi uppskattar alla bidrag oavsett storlek. Dock kan endast donationer om minst 200 kr ge rätt till skatteavdrag. För kreditkortsbetalningar tillämpas ett minimum på 50 kr på grund av transaktionskostnader.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   
+ <!-- Newsletter Signup -->
+ <section class="bg-yellow-50 py-12 mt-12">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <div class="text-center">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Få fler bibelstudietips direkt till din inkorg</h2>
+      <p class="text-gray-600 mb-6">Prenumerera på vårt nyhetsbrev och få regelbundna insikter och resurser för dina bibelstudier.</p>
+      <form class="max-w-md mx-auto flex">
+        <input type="email" placeholder="Din e-postadress" class="flex-grow px-4 py-2 rounded-l-md border border-r-0 border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+        <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-r-md transition duration-300">Prenumerera</button>
+      </form>
+      <p class="text-xs text-gray-500 mt-2">Vi respekterar din integritet. Avsluta prenumerationen när som helst.</p>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Footer -->
+ <footer class="bg-gray-800 text-white pt-12 pb-6">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <!-- Footer Column 1 -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-bible text-yellow-400 mr-2"></i>
+            <span>Bibel<span class="text-yellow-400">studion</span></span>
+          </h3>
+          <p class="text-gray-400 mb-4">Din plats för kristna produkter, böcker och resurser för din andliga resa.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+              <i class="fab fa-spotify"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Footer Column 2 -->
+        <div>
+          <h4 class="font-bold text-lg mb-4">Butik</h4>
+          <ul class="space-y-2">
+            <li><a href="Populart-just-nu.html" class="text-gray-400 hover:text-yellow-400 transition">Populärt just nu</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Nya produkter</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">REA</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Premium</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Alla produkter</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Column 3 -->
+        <div>
+          <h4 class="font-bold text-lg mb-4">Kundservice</h4>
+          <ul class="space-y-2">
+            <li><a href="kontakta-oss.html" class="text-gray-400 hover:text-yellow-400 transition">Kontakta oss</a></li>
+            <li><a href="vanliga-fragor.html" class="text-gray-400 hover:text-yellow-400 transition">Vanliga frågor</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Frakt & leverans</a></li>
+            <li><a href="returpolicy.html" class="text-gray-400 hover:text-yellow-400 transition">Returpolicy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Betalningsmetoder</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Column 4 -->
+        <div>
+          <h4 class="font-bold text-lg mb-4">Om Bibelstudion</h4>
+          <ul class="space-y-2">
+            <li><a href="om-oss.html" class="text-gray-400 hover:text-yellow-400 transition">Om oss</a></li>
+            <li><a href="om-oss.html" class="text-gray-400 hover:text-yellow-400 transition">Vår vision</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Jobba hos oss</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Press</a></li>
+            <li><a href="Donera.html" class="text-gray-400 hover:text-yellow-400 transition">Donera</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 pt-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Bibelstudion. Alla rättigheter reserverade.</p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-yellow-400 text-sm transition">Integritetspolicy</a>
+            <a href="#" class="text-gray-400 hover:text-yellow-400 text-sm transition">Användarvillkor</a>
+            <a href="#" class="text-gray-400 hover:text-yellow-400 text-sm transition">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Produktdata (simulerad databas) -->
+  <script>
+    // Produktdatabas
+    const products = [
+      {
+        id: 1,
+        title: "Studiebibel med noter",
+        price: 399,
+        originalPrice: 499,
+        description: "En komplett studiebibel med detaljerade noter och förklaringar till varje kapitel.",
+        category: "bibles",
+        stock: 15,
+        rating: 4.7,
+        reviews: 23,
+        images: [
+          "https://via.placeholder.com/500x500?text=Studiebibel",
+          "https://via.placeholder.com/500x500?text=Bibel+1",
+          "https://via.placeholder.com/500x500?text=Bibel+2",
+          "https://via.placeholder.com/500x500?text=Bibel+3"
+        ],
+        details: [
+          { label: "Författare", value: "Bibelkommissionen" },
+          { label: "Utgivningsår", value: "2022" },
+          { label: "Språk", value: "Svenska" },
+          { label: "Antal sidor", value: "1200" },
+          { label: "Bandtyp", value: "Hårdpärm" }
+        ],
+        similarProducts: [2, 3, 5]
+      },
+      {
+        id: 2,
+        title: "Bibel för barn",
+        price: 249,
+        originalPrice: 299,
+        description: "En färgglad och lättläst bibel speciellt anpassad för barn med illustrationer.",
+        category: "bibles",
+        stock: 8,
+        rating: 4.5,
+        reviews: 12,
+        images: [
+          "https://via.placeholder.com/500x500?text=Barnbibel",
+          "https://via.placeholder.com/500x500?text=Bibel+4",
+          "https://via.placeholder.com/500x500?text=Bibel+5",
+          "https://via.placeholder.com/500x500?text=Bibel+6"
+        ],
+        details: [
+          { label: "Författare", value: "Maria Karlsson" },
+          { label: "Utgivningsår", value: "2021" },
+          { label: "Språk", value: "Svenska" },
+          { label: "Antal sidor", value: "200" },
+          { label: "Bandtyp", value: "Häftad" }
+        ],
+        similarProducts: [1, 4, 6]
+      },
+      {
+        id: 3,
+        title: "Bönedagbok",
+        price: 149,
+        originalPrice: 179,
+        description: "En vacker dagbok för att dokumentera dina böner och Guds svar.",
+        category: "books",
+        stock: 22,
+        rating: 4.8,
+        reviews: 31,
+        images: [
+          "https://via.placeholder.com/500x500?text=Bönedagbok",
+          "https://via.placeholder.com/500x500?text=Dagbok+1",
+          "https://via.placeholder.com/500x500?text=Dagbok+2",
+          "https://via.placeholder.com/500x500?text=Dagbok+3"
+        ],
+        details: [
+          { label: "Författare", value: "Anna Pettersson" },
+          { label: "Utgivningsår", value: "2023" },
+          { label: "Språk", value: "Svenska" },
+          { label: "Antal sidor", value: "365" },
+          { label: "Bandtyp", value: "Häftad" }
+        ],
+        similarProducts: [4, 7, 8]
+      },
+      {
+        id: 4,
+        title: "Kristusarmband",
+        price: 199,
+        originalPrice: 249,
+        description: "Ett stilfullt armband med en liten Kristusfigur som charm.",
+        category: "accessories",
+        stock: 5,
+        rating: 4.3,
+        reviews: 18,
+        images: [
+          "https://via.placeholder.com/500x500?text=Kristusarmband",
+          "https://via.placeholder.com/500x500?text=Armband+1",
+          "https://via.placeholder.com/500x500?text=Armband+2",
+          "https://via.placeholder.com/500x500?text=Armband+3"
+        ],
+        details: [
+          { label: "Material", value: "Smyckesstål" },
+          { label: "Färg", value: "Silver" },
+          { label: "Storlek", value: "Justerbar" },
+          { label: "Vikt", value: "15g" }
+        ],
+        similarProducts: [5, 9, 10]
+      },
+      {
+        id: 5,
+        title: "Bibelomslag i läder",
+        price: 129,
+        originalPrice: 159,
+        description: "Ett elegant läderomslag som skyddar din bibel och ger den en personlig touch.",
+        category: "accessories",
+        stock: 12,
+        rating: 4.6,
+        reviews: 14,
+        images: [
+          "https://via.placeholder.com/500x500?text=Bibelomslag",
+          "https://via.placeholder.com/500x500?text=Omslag+1",
+          "https://via.placeholder.com/500x500?text=Omslag+2",
+          "https://via.placeholder.com/500x500?text=Omslag+3"
+        ],
+        details: [
+          { label: "Material", value: "Ekologiskt läder" },
+          { label: "Färg", value: "Brun" },
+          { label: "Passar till", value: "Standardbibelstorlek" },
+          { label: "Funktion", value: "Skydd och personlig stil" }
+        ],
+        similarProducts: [1, 2, 6]
+      },
+      {
+        id: 6,
+        title: "Bibelstudieguide",
+        price: 179,
+        originalPrice: 0,
+        description: "En praktisk guide för att fördjupa dina bibelstudier med frågor och reflektioner.",
+        category: "books",
+        stock: 7,
+        rating: 4.9,
+        reviews: 27,
+        images: [
+          "https://via.placeholder.com/500x500?text=Studieguide",
+          "https://via.placeholder.com/500x500?text=Guide+1",
+          "https://via.placeholder.com/500x500?text=Guide+2",
+          "https://via.placeholder.com/500x500?text=Guide+3"
+        ],
+        details: [
+          { label: "Författare", value: "David Bergman" },
+          { label: "Utgivningsår", value: "2022" },
+          { label: "Språk", value: "Svenska" },
+          { label: "Antal sidor", value: "250" },
+          { label: "Bandtyp", value: "Häftad" }
+        ],
+        similarProducts: [1, 3, 7]
+      },
+      {
+        id: 7,
+        title: "Kors i trä",
+        price: 349,
+        originalPrice: 399,
+        description: "Ett vackert handgjort träkors för hemmet eller som gåva.",
+        category: "gifts",
+        stock: 3,
+        rating: 4.7,
+        reviews: 9,
+        images: [
+          "https://via.placeholder.com/500x500?text=Träkors",
+          "https://via.placeholder.com/500x500?text=Kors+1",
+          "https://via.placeholder.com/500x500?text=Kors+2",
+          "https://via.placeholder.com/500x500?text=Kors+3"
+        ],
+        details: [
+          { label: "Material", value: "Ek" },
+          { label: "Färg", value: "Naturlig" },
+          { label: "Storlek", value: "30x20 cm" },
+          { label: "Vikt", value: "500g" }
+        ],
+        similarProducts: [8, 9, 10]
+      },
+      {
+        id: 8,
+        title: "Bibelpärmar",
+        price: 89,
+        originalPrice: 99,
+        description: "Praktiska pärmar för att organisera dina bibelstudiematerial.",
+        category: "accessories",
+        stock: 25,
+        rating: 4.2,
+        reviews: 11,
+        images: [
+          "https://via.placeholder.com/500x500?text=Bibelpärmar",
+          "https://via.placeholder.com/500x500?text=Pärmar+1",
+          "https://via.placeholder.com/500x500?text=Pärmar+2",
+          "https://via.placeholder.com/500x500?text=Pärmar+3"
+        ],
+        details: [
+          { label: "Material", value: "Kartong" },
+          { label: "Färg", value: "Svart" },
+          { label: "Antal", value: "3 st" },
+          { label: "Storlek", value: "A4" }
+        ],
+        similarProducts: [5, 6, 9]
+      },
+      {
+        id: 9,
+        title: "Böneljus",
+        price: 59,
+        originalPrice: 79,
+        description: "Ett set med fyra vackra ljus för att skapa en andlig stämning under bön.",
+        category: "gifts",
+        stock: 18,
+        rating: 4.4,
+        reviews: 16,
+        images: [
+          "https://via.placeholder.com/500x500?text=Böneljus",
+          "https://via.placeholder.com/500x500?text=Ljus+1",
+          "https://via.placeholder.com/500x500?text=Ljus+2",
+          "https://via.placeholder.com/500x500?text=Ljus+3"
+        ],
+        details: [
+          { label: "Material", value: "Bivax" },
+          { label: "Färg", value: "Beige" },
+          { label: "Antal", value: "4 st" },
+          { label: "Bränntid", value: "8 timmar/st" }
+        ],
+        similarProducts: [4, 7, 10]
+      },
+      {
+        id: 10,
+        title: "Bibelmarkörer",
+        price: 49,
+        originalPrice: 0,
+        description: "Ett set med sex vackra bibelmarkörer med bibelverser.",
+        category: "accessories",
+        stock: 30,
+        rating: 4.1,
+        reviews: 7,
+        images: [
+          "https://via.placeholder.com/500x500?text=Bibelmarkörer",
+          "https://via.placeholder.com/500x500?text=Markörer+1",
+          "https://via.placeholder.com/500x500?text=Markörer+2",
+          "https://via.placeholder.com/500x500?text=Markörer+3"
+        ],
+        details: [
+          { label: "Material", value: "Papper" },
+          { label: "Färg", value: "Olika färger" },
+          { label: "Antal", value: "6 st" },
+          { label: "Storlek", value: "5x15 cm" }
+        ],
+        similarProducts: [5, 8, 9]
+      }
+    ];
+
+    // Recensioner
+    const reviews = [
+      {
+        id: 1,
+        productId: 1,
+        author: "Lisa Andersson",
+        date: "2023-04-15",
+        rating: 5,
+        title: "Fantastisk studiebibel",
+        text: "Denna bibel har fördjupat min förståelse av Guds Ord på ett helt nytt sätt. Noterna är extremt hjälpsamma och välskrivna."
+      },
+      {
+        id: 2,
+        productId: 1,
+        author: "Johan Karlsson",
+        date: "2023-03-28",
+        rating: 4,
+        title: "Mycket bra men tyngd",
+        text: "Bibeln är verkligen omfattande med fantastiska noter. Enda nackdelen är att den är ganska tung att bära med sig."
+      },
+      {
+        id: 3,
+        productId: 3,
+        author: "Emma Nilsson",
+        date: "2023-05-02",
+        rating: 5,
+        title: "Underbar bönedagbok",
+        text: "Jag älskar att dokumentera mina böner och se hur Gud svarar över tid. Dagboken är vackert designad och hög kvalitet."
+      }
+    ];
+
+    // Kundvagn
+    let cart = [];
+
+    // Hämta kundvagn från localStorage om den finns
+    if (localStorage.getItem('cart')) {
+      cart = JSON.parse(localStorage.getItem('cart'));
+      updateCartCount();
+    }
+
+    // Aktuell sida
+    let currentPage = 'shop';
+    let currentProductId = null;
+
+    // Visa rätt sida baserad på URL-hash
+    function showPage() {
+      const hash = window.location.hash.substring(1);
+
+      // Dölj alla sidor först
+      document.querySelectorAll('[id$="-page"]').forEach(page => {
+        page.classList.add('hidden');
+      });
+
+      // Visa rätt sida baserad på hash
+      if (hash.startsWith('product-')) {
+        const productId = parseInt(hash.split('-')[1]);
+        showProductPage(productId);
+      } else if (hash === 'cart') {
+        showCartPage();
+      } else if (hash === 'checkout') {
+        showCheckoutPage();
+      } else if (hash === 'account') {
+        showAccountPage();
+      } else {
+        showShopPage();
+      }
+    }
+
+    // Visa butikssida
+    function showShopPage() {
+      currentPage = 'shop';
+      document.getElementById('shop-page').classList.remove('hidden');
+      renderProducts();
+    }
+
+    // Visa produktsida
+    function showProductPage(productId) {
+      currentPage = 'product';
+      currentProductId = productId;
+      document.getElementById('product-page').classList.remove('hidden');
+
+      const product = products.find(p => p.id === productId);
+      if (product) {
+        // Uppdatera produktinformation
+        document.getElementById('product-title').textContent = product.title;
+        document.getElementById('product-price').textContent = product.price + ' kr';
+
+        if (product.originalPrice) {
+          document.getElementById('product-original-price').textContent = product.originalPrice + ' kr';
+          document.getElementById('product-original-price').classList.remove('hidden');
+        } else {
+          document.getElementById('product-original-price').classList.add('hidden');
+        }
+
+        document.getElementById('product-description').textContent = product.description;
+        document.getElementById('product-stock').textContent = product.stock + ' i lager';
+
+        // Uppdatera bilder
+        const mainImage = document.getElementById('product-main-image');
+        mainImage.src = product.images[0];
+        mainImage.alt = product.title;
+
+        const thumbnails = document.querySelectorAll('#product-page .grid img');
+        thumbnails.forEach((thumb, index) => {
+          if (product.images[index]) {
+            thumb.src = product.images[index];
+            thumb.alt = product.title + ' ' + (index + 1);
+            thumb.parentElement.classList.remove('hidden');
+
+            thumb.parentElement.addEventListener('click', () => {
+              mainImage.src = product.images[index];
+            });
+          } else {
+            thumb.parentElement.classList.add('hidden');
+          }
+        });
+
+        // Uppdatera produktdetaljer
+        const detailsContainer = document.getElementById('product-details');
+        detailsContainer.innerHTML = '';
+
+        product.details.forEach(detail => {
+          const div = document.createElement('div');
+          div.className = 'flex mb-2';
+          div.innerHTML = `
+                        <span class="font-medium text-gray-700 w-1/3">${detail.label}</span>
+                        <span class="text-gray-600">${detail.value}</span>
+                    `;
+          detailsContainer.appendChild(div);
+        });
+
+        // Uppdatera betyg
+        const ratingContainer = document.querySelector('#product-page .flex.text-yellow-400');
+        ratingContainer.innerHTML = '';
+
+        const fullStars = Math.floor(product.rating);
+        const hasHalfStar = product.rating % 1 >= 0.5;
+
+        for (let i = 1
+
+
+  </script>
+
+  <script>
+    // Donation Type Selection
+    document.querySelectorAll('.donation-type-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const type = this.dataset.type;
+        document.getElementById('donation-form-container').classList.remove('hidden');
+        document.getElementById('project-selection').classList.add('hidden');
+        
+        // Update form title based on type
+        let title = '';
+        if (type === 'one-time') {
+          title = 'Engångsdonation';
+        } else if (type === 'monthly') {
+          title = 'Månadsgivande';
+          document.getElementById('submit-btn-text').textContent = 'Starta Månadsgivande';
+        } else if (type === 'project') {
+          title = 'Projektstöd';
+          document.getElementById('project-selection').classList.remove('hidden');
+        }
+        document.getElementById('donation-form-title').textContent = title;
+        
+        // Scroll to form
+        document.getElementById('donation-form-container').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Amount Selection
+    document.querySelectorAll('.amount-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        // Remove active class from all buttons
+        document.querySelectorAll('.amount-btn').forEach(b => {
+          b.classList.remove('bg-yellow-500', 'text-gray-800', 'border-yellow-500');
+          b.classList.add('bg-gray-100', 'border-gray-300');
+        });
+        
+        // Add active class to clicked button
+        this.classList.remove('bg-gray-100', 'border-gray-300');
+        this.classList.add('bg-yellow-500', 'text-gray-800', 'border-yellow-500');
+        
+        // Handle custom amount
+        if (this.dataset.amount === 'custom') {
+          document.getElementById('custom-amount-container').classList.remove('hidden');
+          document.getElementById('custom-amount').focus();
+        } else {
+          document.getElementById('custom-amount-container').classList.add('hidden');
+        }
+      });
+    });
+
+    // Payment Method Toggle
+    document.querySelectorAll('input[name="payment-method"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+        if (this.value === 'credit-card') {
+          document.getElementById('credit-card-form').classList.remove('hidden');
+        } else {
+          document.getElementById('credit-card-form').classList.add('hidden');
+        }
+      });
+    });
+
+    // FAQ Toggle
+    document.querySelectorAll('.faq-toggle').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        const icon = this.querySelector('i');
+        
+        content.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+      });
+    });
+
+    // Form Submission
+    document.getElementById('donation-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Here you would normally process the payment
+      // For demo purposes, we'll just show the confirmation
+      
+      // Generate random reference
+      const ref = 'BS2023-' + Math.floor(10000 + Math.random() * 90000);
+      document.getElementById('donation-reference').textContent = 'Referensnummer: ' + ref;
+      
+      // Hide form and show confirmation
+      document.getElementById('donation-form-container').classList.add('hidden');
+      document.getElementById('confirmation').classList.remove('hidden');
+      
+      // Scroll to confirmation
+      document.getElementById('confirmation').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+
+</html>
+
+
+
+
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/67b0bca7fb6773190d790aa1/1ik561s69';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
