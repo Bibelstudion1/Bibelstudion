@@ -52,11 +52,6 @@
 </head>
 
 
-<!-- Elfsight Cookie Consent -->
-<script src="https://static.elfsight.com/platform/platform.js" async></script>
-<div class="elfsight-app-2f5b1d86-536b-40ca-800e-ba36f0dfaab3" data-elfsight-app-lazy></div>
-
-
 <body class="bg-gray-50 font-sans">
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
@@ -593,9 +588,9 @@
         <div class="flex flex-col md:flex-row justify-between items-center">
           <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Bibelstudion. Alla rättigheter reserverade.</p>
           <div class="flex space-x-6">
-            <a href="#" class="text-gray-400 hover:text-yellow-400 text-sm transition">Integritetspolicy</a>
+            <a href="integritetspolicy.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Integritetspolicy</a>
             <a href="anvandarvillkor.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Användarvillkor</a>
-            <a href="#" class="text-gray-400 hover:text-yellow-400 text-sm transition">Cookies</a>
+            <a href="cookies.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Cookies</a>
           </div>
         </div>
       </div>
@@ -994,6 +989,102 @@
 
 
   </script>
+
+
+
+  <script>
+    // JavaScript för cookiehantering
+    document.addEventListener('DOMContentLoaded', function() {
+      // Funktion för att spara cookiepreferenser
+      function saveCookiePreferences(preferences) {
+        localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+        // Skapa en cookie som sparar inställningarna i 1 år
+        const date = new Date();
+        date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = `cookie_consent=${encodeURIComponent(JSON.stringify(preferences))};${expires};path=/;SameSite=Lax`;
+        
+        // Ladda in cookies baserat på preferenser
+        loadCookiesBasedOnPreferences(preferences);
+      }
+
+      // Funktion för att ladda cookies baserat på användarens preferenser
+      function loadCookiesBasedOnPreferences(preferences) {
+        if (preferences.analytics) {
+          // Ladda in analysverktyg (t.ex. Google Analytics)
+          console.log('Loading analytics cookies...');
+        }
+        if (preferences.marketing) {
+          // Ladda in marknadsföringsverktyg (t.ex. Facebook Pixel)
+          console.log('Loading marketing cookies...');
+        }
+      }
+
+      // Kolla om användaren redan har satt cookiepreferenser
+      const savedPreferences = localStorage.getItem('cookiePreferences');
+      if (!savedPreferences) {
+        // Visa cookie-banner om inga preferenser är sparade
+        const banner = document.createElement('div');
+        banner.id = 'cookie-banner';
+        banner.innerHTML = `
+          <div class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 z-50 shadow-lg">
+            <div class="container mx-auto">
+              <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
+                <div class="mb-4 md:mb-0 md:mr-4">
+                  <h3 class="font-bold text-lg mb-1">Vi använder cookies</h3>
+                  <p class="text-sm">Vi använder cookies för att förbättra din upplevelse på Bibelstudion. Nödvändiga cookies är alltid aktiverade, men du kan välja bort andra.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full sm:w-auto">
+                  <button id="accept-all-cookies" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded text-sm whitespace-nowrap">
+                    Acceptera alla
+                  </button>
+                  <button id="accept-selected-cookies" class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded text-sm whitespace-nowrap">
+                    Anpassa inställningar
+                  </button>
+                  <button id="reject-non-essential" class="bg-transparent border border-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded text-sm whitespace-nowrap">
+                    Endast nödvändiga
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+        document.body.appendChild(banner);
+
+        // Hantera knapptryckningar
+        document.getElementById('accept-all-cookies').addEventListener('click', function() {
+          const preferences = {
+            necessary: true,
+            preferences: true,
+            analytics: true,
+            marketing: true
+          };
+          saveCookiePreferences(preferences);
+          document.getElementById('cookie-banner').remove();
+        });
+
+        document.getElementById('accept-selected-cookies').addEventListener('click', function() {
+          // Här skulle du visa en modal med detaljerade inställningar
+          alert('I en full implementation skulle du här kunna välja specifika cookie-kategorier');
+        });
+
+        document.getElementById('reject-non-essential').addEventListener('click', function() {
+          const preferences = {
+            necessary: true,
+            preferences: false,
+            analytics: false,
+            marketing: false
+          };
+          saveCookiePreferences(preferences);
+          document.getElementById('cookie-banner').remove();
+        });
+      } else {
+        // Ladda cookies baserat på sparade preferenser
+        loadCookiesBasedOnPreferences(JSON.parse(savedPreferences));
+      }
+    });
+  </script>
+
 
 </body>
 

@@ -1,75 +1,97 @@
+
+
+
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="sv" dir="ltr" itemscope itemtype="http://schema.org/WebPage">
 <head>
+  <!-- SEO Meta-taggar -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookiepolicy | Bibelstudion - Användning av Cookies på vår Webbplats</title>
+  <meta name="description" content="Läs Bibelstudions cookiepolicy. Vi förklarar vilka cookies vi använder, deras syfte och hur du kan hantera dina cookie-inställningar. GDPR-kompatibel information.">
+  <meta name="keywords" content="bibelstudion cookiepolicy, cookies bibelstudier, GDPR cookies, hantera cookies, webbplats cookies, kristna webbplats cookies">
   
-  <!-- SEO Meta Tags -->
-  <title>Bibelstudieplats Hemma 2025: Skapa Din Andliga Oas | Bibelstudion</title>
-  <meta name="description" content="Upptäck hur du designar den perfekta bibelstudieplatsen hemma. Vår omfattande guide innehåller smarta lösningar för alla utrymmen, inredningstips och andlig inspiration för 2025.">
-  <meta name="keywords" content="bibelstudieplats hemma, bönhörna, andlig miljö, bibelstudieinspiration, skapa bönrum, kristen heminredning, bibelstudierum">
+  <!-- Social Media Meta -->
+  <meta property="og:title" content="Cookiepolicy | Bibelstudion - Vår Användning av Cookies">
+  <meta property="og:description" content="Läs hur Bibelstudion använder cookies för att förbättra din användarupplevelse och hur du kan kontrollera dina inställningar.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
   
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://www.bibelstudion.se/bibelstudieplats-hemma-inspiration-2025.html">
-  <meta property="og:title" content="Bibelstudieplats Hemma 2025: Skapa Din Andliga Oas | Bibelstudion">
-  <meta property="og:description" content="Din kompletta guide till en inspirerande bibelstudieplats hemma - oavsett utrymmesbegränsningar.">
-  <meta property="og:image" content="https://www.bibelstudion.se/images/bibelstudieplats-hemma-social.jpg">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Bibelstudieplats Hemma 2025: Skapa Din Andliga Oas | Bibelstudion">
-  <meta property="twitter:description" content="Din kompletta guide till en inspirerande bibelstudieplats hemma - oavsett utrymmesbegränsningar.">
-  <meta property="twitter:image" content="https://www.bibelstudion.se/images/bibelstudieplats-hemma-social.jpg">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.bibelstudion.se/cookies.html">
+  
+  <!-- CSS & Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
     .hero-gradient {
-    background: linear-gradient(135deg, rgba(22,78,99,0.9) 0%, rgba(233,196,106,0.85) 100%);
+      background: linear-gradient(135deg, rgba(38,70,83,0.95) 0%, rgba(42,157,143,0.9) 100%);
     }
-    .article-image {
-      height: 450px;
-      object-fit: cover;
-      object-position: center;
+    .content-section {
+      background-color: rgba(255,255,255,0.95);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
-    .inspiration-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    .term-section {
+      border-left: 4px solid #e9c46a;
     }
-    .step-number {
-      background-color: #e9c46a;
-      color: white;
-      width: 32px;
-      height: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
+    .term-title {
+      color: #2a9d8f;
+    }
+    ol.term-list {
+      counter-reset: item;
+    }
+    ol.term-list li {
+      counter-increment: item;
+      margin-bottom: 1rem;
+    }
+    ol.term-list li:before {
+      content: counters(item, ".") ". ";
       font-weight: bold;
+      color: #e9c46a;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
     }
     .highlight-box {
-      border-left: 4px solid #e9c46a;
-      background-color: #f8f9fa;
-      padding: 1.5rem;
+      background-color: #fff3cd;
+      border-left: 4px solid #ffc107;
     }
-    .article-content h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #2d3748;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #e9c46a;
-      padding-bottom: 0.5rem;
-    }
-    .article-content p {
+    .cookie-type {
+      border-radius: 8px;
+      overflow: hidden;
       margin-bottom: 1.5rem;
-      line-height: 1.7;
-      color: #4a5568;
+    }
+    .cookie-type-header {
+      padding: 1rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+    .cookie-type-content {
+      padding: 1rem;
+      background-color: #f8f9fa;
+    }
+    .cookie-necessary {
+      background-color: #e9f5e9;
+      border-left: 4px solid #4caf50;
+    }
+    .cookie-preferences {
+      background-color: #e3f2fd;
+      border-left: 4px solid #2196f3;
+    }
+    .cookie-analytics {
+      background-color: #fff8e1;
+      border-left: 4px solid #ffc107;
+    }
+    .cookie-marketing {
+      background-color: #fce4ec;
+      border-left: 4px solid #e91e63;
     }
   </style>
 </head>
+
+
 <body class="bg-gray-50 font-sans">
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
@@ -86,7 +108,7 @@
         <nav class="hidden md:flex space-x-8">
           <a href="index.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Hem</a>
           <a href="#shop" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Butik</a>
-          <a href="#categories" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kategorier</a>
+          <a href="kategorier.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kategorier</a>
           <a href="om-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Om oss</a>
           <a href="kontakta-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kontakt</a>
         </nav>
@@ -106,7 +128,7 @@
             <span id="cart-count"
               class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
           </a>
-          
+         
           <button class="md:hidden p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded-full transition-all duration-200" 
           id="mobileMenuButton" 
           aria-expanded="false" 
@@ -145,7 +167,7 @@
           <i class="fas fa-info-circle mr-3 text-gray-400 w-5 text-center"></i>
           <span>Om oss</span>
         </a>
-        <a href="kontakta-oss.html " class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+        <a href="kontakta-oss.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
           <i class="fas fa-envelope mr-3 text-gray-400 w-5 text-center"></i>
           <span>Kontakt</span>
         </a>
@@ -209,8 +231,8 @@
     });
   </script>
   
-    <!-- Secondary Navigation -->
-    <div class="bg-gray-800 text-white">
+     <!-- Secondary Navigation -->
+     <div class="bg-gray-800 text-white">
       <div class="container mx-auto px-4">
         <div class="flex overflow-x-auto space-x-8 py-3">
           <a href="populart-just-nu.html" class="whitespace-nowrap hover:text-yellow-400">Populärt just nu</a>
@@ -225,217 +247,380 @@
       </div>
     </div>
 
-  <!-- Breadcrumbs -->
-  <div class="container mx-auto px-4 py-4 text-sm">
-    <a href="index.html" class="text-gray-600 hover:text-yellow-500">Hem</a> > 
-    <a href="blogginlagg.html" class="text-gray-600 hover:text-yellow-500">Blogg</a> > 
-    <span class="text-gray-800">Bibelstudieplats Hemma</span>
+  <!-- Breadcrumb -->
+  <div class="bg-gray-100 py-3">
+    <div class="container mx-auto px-4">
+      <div class="breadcrumb text-sm text-gray-600">
+        <a href="index.html" class="text-yellow-600">Hem</a> 
+        <span class="mx-2">/</span>
+        <span>Cookiepolicy</span>
+      </div>
+    </div>
   </div>
 
   <!-- Main Content -->
-  <main class="container mx-auto px-4 py-8 max-w-4xl">
-    <article class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <!-- Featured Image with SEO-optimized ALT text -->
-      <img src="/images/Inspirerande bibelstudiemiljö med naturljus, gröna växter och en öppen bibel på ett träbord.jpeg" 
-           alt="Inspirerande bibelstudiehörna med bekväm fåtölj, träbord, öppen bibel, anteckningsbok och en kopp te i naturligt ljus med gröna växter" 
-           class="w-full article-image">
+  <main class="container mx-auto px-4 py-8">
+    <div class="content-section p-6 md:p-10 mb-8">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Cookiepolicy för Bibelstudion</h1>
       
-      <div class="p-6 md:p-8">
-        <!-- Article Meta -->
-        <div class="flex items-center mb-8">
-          <img src="/images/Sara Lindqvist rita poträt.jpeg" 
-               alt="Sara Lindqvist, inredningsexpert med fokus på andliga rum, står i en ljus studio" 
-               class="w-12 h-12 rounded-full mr-4 object-cover">
-          <div>
-            <p class="font-medium">Sara Lindqvist</p>
-            <p class="text-gray-600 text-sm">Inredningsexpert • Uppdaterad 15 juni 2025 • 15 min läsning</p>
+      <div class="prose max-w-none">
+        <p class="text-gray-700 mb-6">
+          Denna cookiepolicy förklarar hur Bibelstudion använder cookies och liknande tekniker på vår webbplats. Genom att använda vår webbplats godkänner du användningen av cookies i enlighet med denna policy, om du inte har ändrat dina webbläsarinställningar för att avvisa cookies.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+             alt="Digitala cookies på en skärm - Symboliserar webbplatscookies och datainsamling" 
+             class="w-full h-64 object-cover rounded-lg mb-8">
+
+        <!-- Section 1 -->
+        <div class="term-section pl-4 mb-8">
+          <h2 class="term-title text-2xl font-bold mb-4">1. Vad är cookies?</h2>
+          <ol class="term-list pl-6">
+            <li>
+              <strong>Definition</strong>: Cookies är små textfiler som placeras på din enhet (dator, surfplatta eller mobil) när du besöker en webbplats. De används ofta för att webbplatser ska fungera effektivt samt för att ge information till webbplatsens ägare.
+            </li>
+            <li>
+              <strong>Funktion</strong>: Cookies gör det möjligt för webbplatser att komma ihåg dina preferenser, förbättra användarupplevelsen och samla in information om hur webbplatsen används.
+            </li>
+            <li>
+              <strong>Livslängd</strong>: Vissa cookies är session cookies som bara finns under din besökstid, medan andra är permanenta och sparas under en längre tid.
+            </li>
+          </ol>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="term-section pl-4 mb-8">
+          <h2 class="term-title text-2xl font-bold mb-4">2. Vilka typer av cookies använder vi?</h2>
+          <p class="mb-4">Bibelstudion använder följande kategorier av cookies:</p>
+
+          <!-- Cookie Type 1 -->
+          <div class="cookie-type cookie-necessary">
+            <div class="cookie-type-header">
+              <i class="fas fa-shield-alt text-green-600 mr-2"></i>
+              <span>Nödvändiga cookies</span>
+            </div>
+            <div class="cookie-type-content">
+              <p>Dessa cookies är absolut nödvändiga för att webbplatsen ska fungera korrekt och kan inte stängas av i våra system. De används vanligtvis endast som svar på åtgärder du vidtar, såsom att ange dina preferenser för integritet, logga in eller fylla i formulär.</p>
+              <p class="mt-2"><strong>Exempel:</strong> Inloggnings-cookies, kundvagns-cookies, säkerhets-cookies.</p>
+            </div>
+          </div>
+
+          <!-- Cookie Type 2 -->
+          <div class="cookie-type cookie-preferences">
+            <div class="cookie-type-header">
+              <i class="fas fa-cog text-blue-500 mr-2"></i>
+              <span>Preferens-cookies</span>
+            </div>
+            <div class="cookie-type-content">
+              <p>Dessa cookies gör det möjligt för webbplatsen att komma ihåg val du gör (som ditt användarnamn, språk eller region du befinner dig i) och ger förbättrade, mer personliga funktioner.</p>
+              <p class="mt-2"><strong>Exempel:</strong> Språkpreferenser, tema-inställningar, layoutpreferenser.</p>
+            </div>
+          </div>
+
+          <!-- Cookie Type 3 -->
+          <div class="cookie-type cookie-analytics">
+            <div class="cookie-type-header">
+              <i class="fas fa-chart-bar text-yellow-600 mr-2"></i>
+              <span>Statistik-cookies</span>
+            </div>
+            <div class="cookie-type-content">
+              <p>Dessa cookies hjälper oss att förstå hur besökare interagerar med webbplatsen genom att samla in och rapportera information anonymt. Detta hjälper oss att förbättra webbplatsens struktur och innehåll.</p>
+              <p class="mt-2"><strong>Exempel:</strong> Google Analytics-cookies (med IP-anonymisering).</p>
+            </div>
+          </div>
+
+          <!-- Cookie Type 4 -->
+          <div class="cookie-type cookie-marketing">
+            <div class="cookie-type-header">
+              <i class="fas fa-ad text-pink-600 mr-2"></i>
+              <span>Marknadsföringscookies</span>
+            </div>
+            <div class="cookie-type-content">
+              <p>Dessa cookies används för att spåra besökare över webbplatser. Avsikten är att visa annonser som är relevanta och engagerande för den enskilda användaren och därmed mer värdefulla för utgivare och tredjepartsannonsörer.</p>
+              <p class="mt-2"><strong>Exempel:</strong> Facebook Pixel, Google Ads cookies (endast med ditt samtycke).</p>
+            </div>
+          </div>
+
+          <div class="highlight-box p-4 my-6">
+            <h3 class="font-bold text-lg mb-2">Samtycke enligt GDPR</h3>
+            <p class="text-gray-700">För cookies som inte är nödvändiga för webbplatsens grundläggande funktioner (särskilt statistik- och marknadsföringscookies) kräver vi ditt samtycke innan de placeras på din enhet. Du kan när som helst ändra eller återkalla ditt samtycke.</p>
           </div>
         </div>
-        <!-- Article Content -->
-<div class="article-content">
-    <p class="text-lg text-gray-700 mb-6">
-      I en tid av ständiga distraktioner är en avsiktligt skapad bibelstudieplats mer värdefull än någonsin. Denna guide tar dig genom allt från grundläggande principer till avancerade inredningstips för att skapa en plats som verkligen inspirerar till djupare studier.
-    </p>
-    <p class="text-lg text-gray-700 mb-6">
-      Börja med att välja en plats i ditt hem där du kan vara ostörd, gärna nära naturligt ljus. Det kan vara ett hörn av vardagsrummet, ett fönsterbord eller till och med ett särskilt utrymme i sovrummet. Det viktiga är att platsen känns helig och avsatt för bön, reflektion och bibelläsning.
-    </p>
-    <p class="text-lg text-gray-700 mb-6">
-      Investera i små detaljer som gör skillnad – en bekväm stol, ett litet bord, en mjuk filt och kanske en bibel med extra marginaler för anteckningar. Tänd ett ljus eller använd en liten lampa för att skapa en varm atmosfär. Gröna växter kan också bidra med lugn och liv till platsen.
-    </p>
-    <p class="text-lg text-gray-700 mb-6">
-      Slutligen, gör platsen personlig. Kanske en inspirerande bibelvers på väggen, din favoritpenna, eller en särskild anteckningsbok för dina insikter. När du skapar en miljö som speglar din tro och längtan efter Gud, blir det inte bara lättare att studera Bibeln – det blir något du längtar efter varje dag.
-    </p>
-  
 
-          <div class="highlight-box my-8">
-            <h3 class="font-bold text-lg mb-2">Varför en dedikerad bibelstudieplats?</h3>
-            <p class="text-gray-700">
-              En studie från <em>Journal of Environmental Psychology</em> (2024) visar att människor med en speciell plats för andliga aktiviteter är 73% mer konsekventa i sin praxis och upplever 60% mindre distraktioner under studietid.
-            </p>
+        <!-- Section 3 -->
+        <div class="term-section pl-4 mb-8">
+          <h2 class="term-title text-2xl font-bold mb-4">3. Specifika cookies vi använder</h2>
+          <p class="mb-4">Nedan listar vi de specifika cookies som används på Bibelstudion:</p>
+          
+          <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Cookie-namn</th>
+                  <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Typ</th>
+                  <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Syfte</th>
+                  <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Livslängd</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-900">sessionid</td>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">Nödvändig</td>
+                  <td class="px-4 py-2 text-sm text-gray-500">Håller reda på användarsessionen för inloggning</td>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">Session</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-900">csrftoken</td>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">Nödvändig</td>
+                  <td class="px-4 py-2 text-sm text-gray-500">Skydd mot CSRF-attacker</td>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">1 år</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-900">cookie_consent</td>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">Preferens</td>
+                  <td class="px-4 py-2 text-sm text-gray-500">Lagrar dina cookiepreferenser</td>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">1 år</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-900">_ga</td>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">Statistik</td>
+                  <td class="px-4 py-2 text-sm text-gray-500">Google Analytics - används för att skilja användare</td>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">2 år</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-900">_gid</td>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">Statistik</td>
+                  <td class="px-4 py-2 text-sm text-gray-500">Google Analytics - används för att skilja användare</td>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">24 timmar</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-900">_fbp</td>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">Marknadsföring</td>
+                  <td class="px-4 py-2 text-sm text-gray-500">Facebook Pixel - används för att visa relevanta annonser</td>
+                  <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">3 månader</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
-          <h2>5 Väsentliga Element för en Andlig Studiemiljö</h2>
-
-          <img src="/images/Fem viktiga element för en bibelstudieplats belysning, sittplats, förvaring, inspiration och verktyg uppradade på ett bord.jpeg" 
-               alt="Fem viktiga element för en bibelstudieplats: belysning, sittplats, förvaring, inspiration och verktyg uppradade på ett bord" 
-               class="w-full h-64 object-cover rounded-lg mb-6">
-
-          <p>En välplanerad bibelstudieplats består av fem nyckelelement som tillsammans skapar en optimal miljö för andlig närhet och fokus:</p>
-
-          <h3>1. Belysning som Främjar Fokus</h3>
-          <p>Den rätta belysningen är avgörande både praktiskt och atmosfäriskt. Naturligt ljus är idealiskt, men om det inte finns tillgängligt, välj varmvit LED-belysning (2700K-3000K) som är lätt för ögonen. En riktbar läslampa med dimbar styrka ger flexibilitet för olika tider på dygnet.</p>
-
-          <h3>2. Ergonomisk Komfort</h3>
-          <p>Din sittplats bör vara bekväm nog för långa studier men inte så mjuk att den gör dig sömnig. En bra tumregel är att höjden ska låta dina fötter vara platta på golvet med knän i 90 graders vinkel. Överväg en stol med ländryggstöd eller en stöttande kudde.</p>
-
-          <h3>3. Organiserad Förvaring</h3>
-          <p>Ha dina studiematerial väl organiserade men lätt tillgängliga. En liten hylla, en väska med fack eller en låda under bordet kan rymma dina böcker, anteckningsblock och pennor. För små utrymmen fungerar väggfästa hyllor eller en väska som kan tas fram vid behov utmärkt.</p>
-
-          <h3>4. Andlig Inspiration</h3>
-          <p>Inkludera element som hjälper dig fokusera på Gud. Det kan vara en enkel tavla med en favoritvers, ett litet kors eller en växt som symboliserar tillväxt. Välj saker som är meningsfulla för dig personligen.</p>
-
-          <h3>5. Praktiska Studievärktoyg</h3>
-          <p>Ha dina essentiella studievärktoyg redo: en pålitlig bibelöversättning, anteckningsbok, pennor/markörer och eventuellt en konkordans eller kommentar. För digitala verktyg, överväg en surfplatta dedikerad för studier utan distraktioner.</p>
-
-          <div class="highlight-box my-8">
-            <h3 class="font-bold text-lg mb-2">Expertens Tips</h3>
-            <p class="text-gray-700 mb-2">
-              "För små utrymmen, skapa en 'studieväska' med dina essentiella föremål. En väska med bibel, journal och pennor kan omvandla vilken plats som helst till din bibelstudieplats."
-            </p>
-            <p class="text-gray-600 text-sm">- Emma Forsberg, inredningsarkitekt</p>
-          </div>
-
-          <h2>3 Inspirerande Designalternativ</h2>
-
-          <div class="grid md:grid-cols-3 gap-6 mb-8">
-            <div class="inspiration-card transition duration-300">
-              <img src="/images/Modern minimalistisk bibelstudieplats med svart skrivbordslampa, vit bibel och grön växt som ackcent.jpeg" 
-                   alt="Modern minimalistisk bibelstudieplats med svart skrivbordslampa, vit bibel och grön växt som ackcent" 
-                   class="w-full h-48 object-cover rounded-t-lg">
-              <div class="bg-white p-4 rounded-b-lg">
-                <h3 class="font-bold mb-2">Modern Minimalism</h3>
-                <p class="text-gray-700 text-sm">Ren design för maximalt fokus, perfekt för små lägenheter.</p>
-              </div>
-            </div>
-            <div class="inspiration-card transition duration-300">
-              <img src="/images/A rustic Bible study scene with aged wooden table, a leather-bound Bible, and an old-fashioned oil lamp casting a warm glow, set in a cozy cabin during a snowy winter evening..jpeg" 
-                   alt="Rustik bibelstudieplats med åldrad träyta, lädervarad bibel och gammaldags oljelampa" 
-                   class="w-full h-48 object-cover rounded-t-lg">
-              <div class="bg-white p-4 rounded-b-lg">
-                <h3 class="font-bold mb-2">Rustik Charm</h3>
-                <p class="text-gray-700 text-sm">Varm och inbjudande med naturmaterial och mjuka texturer.</p>
-              </div>
-            </div>
-            <div class="inspiration-card transition duration-300">
-              <img src="/images/Barnvänlig bibelhörna med lågt bord, färgglada bilderbibler och enkla bönkort.jpeg" 
-                   alt="Barnvänlig bibelhörna med lågt bord, färgglada bilderbibler och enkla bönkort" 
-                   class="w-full h-48 object-cover rounded-t-lg">
-              <div class="bg-white p-4 rounded-b-lg">
-                <h3 class="font-bold mb-2">Familjevänlig</h3>
-                <p class="text-gray-700 text-sm">Inkluderar barn i andliga rutiner på deras nivå.</p>
-              </div>
-            </div>
-          </div>
-
-          <h2>Andliga Dimensioner av Din Studieplats</h2>
-
-          <p>Din bibelstudieplats är mer än bara fysisk - den är en portal till andlig närhet. Här är några sätt att fördjupa den andliga dimensionen:</p>
-
-          <ul class="list-disc pl-6 mb-6 text-gray-700">
-            <li class="mb-2"><strong>Dedikera platsen i bön:</strong> Be specifikt om att denna plats ska vara en mötesplats med Gud</li>
-            <li class="mb-2"><strong>Skapa en bönbokshylla:</strong> Ha en liten samling av dina favoritböner eller bönböcker nära till hands</li>
-            <li class="mb-2"><strong>Använd symboler:</strong> Ett enkelt kors, ljus eller annat symboliskt föremål kan hjälpa dig fokusera</li>
-            <li class="mb-2"><strong>Månadens vers:</strong> Håll en bibelvers synlig som tema för månaden och låt den forma din studietid</li>
-          </ul>
-
-          <div class="border-t border-gray-200 mt-8 pt-6">
-            <h3 class="text-xl font-bold mb-4">Ditt Nästa Steg</h3>
-            <p class="text-gray-700 mb-4">
-              Välj ett element från denna guide att implementera denna vecka. Kom ihåg att den perfekta bibelstudieplatsen är den som fungerar för dig och din unika situation.
-            </p>
-            <a href="#kommentarer" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-2 px-6 rounded-md transition duration-300">
-              Dela din studiekrok
-            </a>
-          </div>
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+               alt="Lås och tangentbord - Symboliserar datasäkerhet och integritet vid cookiehantering" 
+               class="w-full h-64 object-cover rounded-lg my-6">
         </div>
-      </div>
-    </article>
 
-    <!-- Related Articles -->
-    <section class="mt-12">
-      <h2 class="text-2xl font-bold text-gray-800 mb-6">Relaterade Artiklar</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-     <article class="bg-white rounded-lg shadow-md overflow-hidden article-card transition duration-300">
-        <img src="/images/Engagerad bibelstudiegrupp som diskuterar kring ett bord med öppna biblar och anteckningar.jpeg" 
-             alt="Engagerad bibelstudiegrupp som diskuterar kring ett bord med öppna biblar och anteckningar" 
-             class="w-full h-48 object-cover">
-        <div class="p-6">
-          <span class="text-sm text-gray-500">18 februari 2023 • Gemenskap</span>
-          <h3 class="text-xl font-bold my-3">Så Startar du en Meningsfull Bibelstudiegrupp</h3>
-          <p class="text-gray-700 mb-4">
-            Praktiska tips för att skapa en gemenskap där alla känner sig delaktiga och inspirerade.
+        <!-- Section 4 -->
+        <div class="term-section pl-4 mb-8">
+          <h2 class="term-title text-2xl font-bold mb-4">4. Hantera dina cookie-inställningar</h2>
+          <ol class="term-list pl-6">
+            <li>
+              <strong>Cookie-banner</strong>: Vid första besöket på vår webbplats visas en cookie-banner där du kan ange dina preferenser för olika cookie-kategorier. Du kan när som helst återkalla eller ändra ditt samtycke.
+            </li>
+            <li>
+              <strong>Webbläsarinställningar</strong>: De flesta webbläsare låter dig hantera cookies via inställningarna. Vanliga alternativ inkluderar:
+              <ul class="list-disc pl-6 mt-2">
+                <li>Acceptera eller avvisa alla cookies</li>
+                <li>Acceptera endast vissa typer av cookies</li>
+                <li>Meddela dig varje gång en cookie skickas</li>
+                <li>Blockera alla cookies</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Verktyg från tredje part</strong>: Vissa verktyg som Google Analytics Opt-out Browser Add-on låter dig välja bort specifika analysverktyg.
+            </li>
+            <li>
+              <strong>Påverkan på funktionalitet</strong>: Observera att om du väljer att blockera nödvändiga cookies kan vissa delar av webbplatsen inte fungera korrekt.
+            </li>
+          </ol>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="term-section pl-4 mb-8">
+          <h2 class="term-title text-2xl font-bold mb-4">5. Cookies och personuppgifter</h2>
+          <ol class="term-list pl-6">
+            <li>
+              <strong>Anonymisering</strong>: Vi strävar efter att anonymisera eller pseudonymisera data som samlas in via cookies när det är möjligt, särskilt för analysändamål.
+            </li>
+            <li>
+              <strong>Personuppgifter</strong>: Vissa cookies kan innehålla eller kopplas till personuppgifter. All sådan behandling sker i enlighet med vår <a href="integritetspolicy.html" class="text-yellow-600 hover:underline">integritetspolicy</a> och GDPR.
+            </li>
+            <li>
+              <strong>Datadelning</strong>: Data från cookies kan delas med betrodda tredjepartsleverantörer (t.ex. analysverktyg) enligt de avtal vi har med dem.
+            </li>
+          </ol>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="term-section pl-4 mb-8">
+          <h2 class="term-title text-2xl font-bold mb-4">6. Förändringar av denna cookiepolicy</h2>
+          <ol class="term-list pl-6">
+            <li>
+              Vi kan uppdatera denna policy för att reflektera ändringar i vår användning av cookies eller ny lagstiftning. Den senaste versionen finns alltid tillgänglig på vår webbplats.
+            </li>
+            <li>
+              Vid betydande ändringar kommer vi att meddela dig via en tydlig notis på webbplatsen eller via e-post om du är registrerad användare.
+            </li>
+            <li>
+              Denna policy uppdaterades senast den 15 november 2023.
+            </li>
+          </ol>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="term-section pl-4 mb-8">
+          <h2 class="term-title text-2xl font-bold mb-4">7. Kontaktuppgifter</h2>
+          <p>För frågor om denna cookiepolicy eller vår användning av cookies, vänligen kontakta:</p>
+          <address class="not-italic mt-4 pl-4 border-l-2 border-yellow-500">
+            <strong>Bibelstudion AB</strong><br>
+            Dataskyddsombud<br>
+            E-post: <a href="mailto:dataskydd@bibelstudion.se" class="text-yellow-600 hover:underline">dataskydd@bibelstudion.se</a><br>
+            Postadress: Dataskydd, Bibelstudion AB, Box 1234, 111 22 Stockholm, Sverige
+          </address>
+        </div>
+
+        <div class="highlight-box p-6 rounded-lg">
+          <h3 class="font-bold text-xl mb-3">Vårt åtagande till transparens</h3>
+          <p class="text-gray-700">
+            På Bibelstudion värnar vi om din integritet och strävar efter full transparens i vår användning av cookies. Vi använder endast cookies när det är nödvändigt för webbplatsens funktion eller för att förbättra din användarupplevelse, och vi respekterar alltid dina val och preferenser.
           </p>
-          <a href="#" class="text-yellow-600 hover:underline font-medium">Läs mer →</a>
+          <p class="text-gray-700 mt-3">
+            Tack för att du litar på oss med dina bibelstudier. Om du har några frågor om vår cookiepolicy är vi alltid tillgängliga via kontaktuppgifterna ovan.
+          </p>
         </div>
-      </article>
-        
-       
-          <article class="bg-white rounded-lg shadow-md overflow-hidden article-card transition duration-300">
-            <img src="/images/Essential bibelstudieverktyg för nybörjare studiebibel, konkordans, anteckningsbok och penna.jpeg" 
-                 alt="Essential bibelstudieverktyg för nybörjare: studiebibel, konkordans, anteckningsbok och penna" 
-                 class="w-full h-48 object-cover">
-            <div class="p-6">
-              <span class="text-sm text-gray-500">5 mars 2023 • Resurser</span>
-              <h3 class="text-xl font-bold my-3">5 Must-Have Verktyg för Bibelstudienybörjare</h3>
-              <p class="text-gray-700 mb-4">
-                Enkla men kraftfulla verktyg som gör dina studier mer givande utan att bli överväldigande.
-              </p>
-              <a href="bibelstudieverktyg-nyborjare-guide.html" class="text-yellow-600 hover:underline font-medium">Läs mer →</a>
-            </div>
-          </article>
       </div>
-    </section>
+    </div>
   </main>
 
-  
- 
+
+  <script>
+    // JavaScript för cookiehantering
+    document.addEventListener('DOMContentLoaded', function() {
+      // Funktion för att spara cookiepreferenser
+      function saveCookiePreferences(preferences) {
+        localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+        // Skapa en cookie som sparar inställningarna i 1 år
+        const date = new Date();
+        date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = `cookie_consent=${encodeURIComponent(JSON.stringify(preferences))};${expires};path=/;SameSite=Lax`;
+        
+        // Ladda in cookies baserat på preferenser
+        loadCookiesBasedOnPreferences(preferences);
+      }
+
+      // Funktion för att ladda cookies baserat på användarens preferenser
+      function loadCookiesBasedOnPreferences(preferences) {
+        if (preferences.analytics) {
+          // Ladda in analysverktyg (t.ex. Google Analytics)
+          console.log('Loading analytics cookies...');
+        }
+        if (preferences.marketing) {
+          // Ladda in marknadsföringsverktyg (t.ex. Facebook Pixel)
+          console.log('Loading marketing cookies...');
+        }
+      }
+
+      // Kolla om användaren redan har satt cookiepreferenser
+      const savedPreferences = localStorage.getItem('cookiePreferences');
+      if (!savedPreferences) {
+        // Visa cookie-banner om inga preferenser är sparade
+        const banner = document.createElement('div');
+        banner.id = 'cookie-banner';
+        banner.innerHTML = `
+          <div class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 z-50 shadow-lg">
+            <div class="container mx-auto">
+              <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
+                <div class="mb-4 md:mb-0 md:mr-4">
+                  <h3 class="font-bold text-lg mb-1">Vi använder cookies</h3>
+                  <p class="text-sm">Vi använder cookies för att förbättra din upplevelse på Bibelstudion. Nödvändiga cookies är alltid aktiverade, men du kan välja bort andra.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full sm:w-auto">
+                  <button id="accept-all-cookies" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded text-sm whitespace-nowrap">
+                    Acceptera alla
+                  </button>
+                  <button id="accept-selected-cookies" class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded text-sm whitespace-nowrap">
+                    Anpassa inställningar
+                  </button>
+                  <button id="reject-non-essential" class="bg-transparent border border-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded text-sm whitespace-nowrap">
+                    Endast nödvändiga
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+        document.body.appendChild(banner);
+
+        // Hantera knapptryckningar
+        document.getElementById('accept-all-cookies').addEventListener('click', function() {
+          const preferences = {
+            necessary: true,
+            preferences: true,
+            analytics: true,
+            marketing: true
+          };
+          saveCookiePreferences(preferences);
+          document.getElementById('cookie-banner').remove();
+        });
+
+        document.getElementById('accept-selected-cookies').addEventListener('click', function() {
+          // Här skulle du visa en modal med detaljerade inställningar
+          alert('I en full implementation skulle du här kunna välja specifika cookie-kategorier');
+        });
+
+        document.getElementById('reject-non-essential').addEventListener('click', function() {
+          const preferences = {
+            necessary: true,
+            preferences: false,
+            analytics: false,
+            marketing: false
+          };
+          saveCookiePreferences(preferences);
+          document.getElementById('cookie-banner').remove();
+        });
+      } else {
+        // Ladda cookies baserat på sparade preferenser
+        loadCookiesBasedOnPreferences(JSON.parse(savedPreferences));
+      }
+    });
+  </script>
+
 
 <!-- Responsive Newsletter Signup (Same layout on all devices) -->
 <section class="bg-yellow-50 py-8 sm:py-12 mt-8 sm:mt-12">
-  <div class="container mx-auto px-4 sm:px-6 max-w-2xl md:max-w-4xl">
-    <div class="text-center">
-      <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">
-        Få fler bibelstudietips direkt till din inkorg
-      </h2>
-      
-      <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
-        Prenumerera på vårt nyhetsbrev och få regelbundna insikter och resurser för dina bibelstudier.
-      </p>
-      
-      <!-- Form (stays in row layout on all devices) -->
-      <form class="max-w-xs xs:max-w-sm sm:max-w-md mx-auto flex">
-        <input 
-          type="email" 
-          placeholder="Din e-postadress" 
-          class="flex-grow min-w-0 px-3 sm:px-4 py-2 text-sm sm:text-base rounded-l-md border border-r-0 border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500"
-        >
-        <button 
-          type="submit" 
-          class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 sm:px-6 py-2 text-sm sm:text-base rounded-r-md transition duration-300 whitespace-nowrap"
-        >
-          Prenumerera
-        </button>
-      </form>
-      
-      <p class="text-xs text-gray-500 mt-2 sm:mt-3">
-        Vi respekterar din integritet. Avsluta prenumerationen när som helst.
-      </p>
+    <div class="container mx-auto px-4 sm:px-6 max-w-2xl md:max-w-4xl">
+      <div class="text-center">
+        <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">
+          Få fler bibelstudietips direkt till din inkorg
+        </h2>
+        
+        <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
+          Prenumerera på vårt nyhetsbrev och få regelbundna insikter och resurser för dina bibelstudier.
+        </p>
+        
+        <!-- Form (stays in row layout on all devices) -->
+        <form class="max-w-xs xs:max-w-sm sm:max-w-md mx-auto flex">
+          <input 
+            type="email" 
+            placeholder="Din e-postadress" 
+            class="flex-grow min-w-0 px-3 sm:px-4 py-2 text-sm sm:text-base rounded-l-md border border-r-0 border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+          >
+          <button 
+            type="submit" 
+            class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 sm:px-6 py-2 text-sm sm:text-base rounded-r-md transition duration-300 whitespace-nowrap"
+          >
+            Prenumerera
+          </button>
+        </form>
+        
+        <p class="text-xs text-gray-500 mt-2 sm:mt-3">
+          Vi respekterar din integritet. Avsluta prenumerationen när som helst.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
   
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white pt-12 pb-6">
+   <!-- Footer -->
+   <footer class="bg-gray-800 text-white pt-12 pb-6">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <!-- Footer Column 1 -->
@@ -465,7 +650,7 @@
           <div>
             <h4 class="font-bold text-lg mb-4">Butik</h4>
             <ul class="space-y-2">
-              <li><a href="populart-just-nu.html" class="text-gray-400 hover:text-yellow-400 transition">Populärt just nu</a></li>
+              <li><a href="Populart-just-nu.html" class="text-gray-400 hover:text-yellow-400 transition">Populärt just nu</a></li>
               <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Nya produkter</a></li>
               <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">REA</a></li>
               <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Premium</a></li>
@@ -904,13 +1089,99 @@
   
     </script>
   
+    <script>
+      // Donation Type Selection
+      document.querySelectorAll('.donation-type-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const type = this.dataset.type;
+          document.getElementById('donation-form-container').classList.remove('hidden');
+          document.getElementById('project-selection').classList.add('hidden');
+          
+          // Update form title based on type
+          let title = '';
+          if (type === 'one-time') {
+            title = 'Engångsdonation';
+          } else if (type === 'monthly') {
+            title = 'Månadsgivande';
+            document.getElementById('submit-btn-text').textContent = 'Starta Månadsgivande';
+          } else if (type === 'project') {
+            title = 'Projektstöd';
+            document.getElementById('project-selection').classList.remove('hidden');
+          }
+          document.getElementById('donation-form-title').textContent = title;
+          
+          // Scroll to form
+          document.getElementById('donation-form-container').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+  
+      // Amount Selection
+      document.querySelectorAll('.amount-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Remove active class from all buttons
+          document.querySelectorAll('.amount-btn').forEach(b => {
+            b.classList.remove('bg-yellow-500', 'text-gray-800', 'border-yellow-500');
+            b.classList.add('bg-gray-100', 'border-gray-300');
+          });
+          
+          // Add active class to clicked button
+          this.classList.remove('bg-gray-100', 'border-gray-300');
+          this.classList.add('bg-yellow-500', 'text-gray-800', 'border-yellow-500');
+          
+          // Handle custom amount
+          if (this.dataset.amount === 'custom') {
+            document.getElementById('custom-amount-container').classList.remove('hidden');
+            document.getElementById('custom-amount').focus();
+          } else {
+            document.getElementById('custom-amount-container').classList.add('hidden');
+          }
+        });
+      });
+  
+      // Payment Method Toggle
+      document.querySelectorAll('input[name="payment-method"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+          if (this.value === 'credit-card') {
+            document.getElementById('credit-card-form').classList.remove('hidden');
+          } else {
+            document.getElementById('credit-card-form').classList.add('hidden');
+          }
+        });
+      });
+  
+      // FAQ Toggle
+      document.querySelectorAll('.faq-toggle').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const content = this.nextElementSibling;
+          const icon = this.querySelector('i');
+          
+          content.classList.toggle('hidden');
+          icon.classList.toggle('rotate-180');
+        });
+      });
+  
+      // Form Submission
+      document.getElementById('donation-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Here you would normally process the payment
+        // For demo purposes, we'll just show the confirmation
+        
+        // Generate random reference
+        const ref = 'BS2023-' + Math.floor(10000 + Math.random() * 90000);
+        document.getElementById('donation-reference').textContent = 'Referensnummer: ' + ref;
+        
+        // Hide form and show confirmation
+        document.getElementById('donation-form-container').classList.add('hidden');
+        document.getElementById('confirmation').classList.remove('hidden');
+        
+        // Scroll to confirmation
+        document.getElementById('confirmation').scrollIntoView({ behavior: 'smooth' });
+      });
+    </script>
   </body>
   
   </html>
-  
-  
-  
-  
   
   
   
@@ -930,6 +1201,5 @@
   })();
   </script>
   <!--End of Tawk.to Script-->
-  
   
   
