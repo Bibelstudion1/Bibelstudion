@@ -77,28 +77,108 @@
             <span id="cart-count"
               class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
           </a>
-          <button class="md:hidden text-gray-800 text-2xl" id="mobileMenuButton">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
-      </div>
   
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg absolute w-full px-4 py-2">
-        <div class="flex flex-col space-y-3">
-          <a href="index.html" class="text-gray-800 font-medium hover:text-yellow-500 py-2">Hem</a>
-          <a href="#shop" class="text-gray-800 font-medium hover:text-yellow-500 py-2">Butik</a>
-          <a href="#categories" class="text-gray-800 font-medium hover:text-yellow-500 py-2">Kategorier</a>
-          <a href="#about" class="text-gray-800 font-medium hover:text-yellow-500 py-2">Om oss</a>
-          <a href="#contact" class="text-gray-800 font-medium hover:text-yellow-500 py-2">Kontakt</a>
-          <div class="relative pt-2">
-            <input type="text" placeholder="Sök produkter..."
-              class="search-input pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 w-full">
-            <i class="fas fa-search absolute left-3 top-5 text-gray-400"></i>
-          </div>
+          <button class="md:hidden p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded-full transition-all duration-200" 
+          id="mobileMenuButton" 
+          aria-expanded="false" 
+          aria-controls="mobileMenu"
+          aria-label="Öppna meny">
+    <i class="fas fa-bars text-2xl transition-transform duration-300"></i>
+  </button>
+  </div>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed top-0 left-0 w-full bg-white shadow-xl z-50 transform -translate-y-full transition-transform duration-300 ease-out">
+    <!-- Menu Header with Close Button -->
+    <div class="flex justify-between items-center px-4 py-3 border-b border-gray-100">
+      <h2 class="text-lg font-semibold text-gray-800">Meny</h2>
+      <button id="mobileMenuClose" class="p-2 text-gray-500 hover:text-gray-700 focus:outline-none" aria-label="Stäng meny">
+        <i class="fas fa-times text-xl"></i>
+      </button>
+    </div>
+    
+    <div class="overflow-y-auto max-h-screen pb-6">
+      <div class="flex flex-col space-y-1 px-4 py-3">
+        <a href="index.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+          <i class="fas fa-home mr-3 text-gray-400 w-5 text-center"></i>
+          <span>Hem</span>
+        </a>
+        <a href="#shop" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+          <i class="fas fa-store mr-3 text-gray-400 w-5 text-center"></i>
+          <span>Butik</span>
+        </a>
+        <a href="#categories" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+          <i class="fas fa-tags mr-3 text-gray-400 w-5 text-center"></i>
+          <span>Kategorier</span>
+        </a>
+        <a href="#about" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+          <i class="fas fa-info-circle mr-3 text-gray-400 w-5 text-center"></i>
+          <span>Om oss</span>
+        </a>
+        <a href="#contact" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+          <i class="fas fa-envelope mr-3 text-gray-400 w-5 text-center"></i>
+          <span>Kontakt</span>
+        </a>
+      </div>
+      
+      <!-- Search Box -->
+      <div class="px-4 py-3 border-t border-gray-100">
+        <div class="relative">
+          <input type="text" placeholder="Sök produkter..." 
+                 class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all duration-200"
+                 aria-label="Sök produkter">
+          <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
         </div>
       </div>
-    </header>
+    </div>
+  </div>
+  
+  <!-- Overlay -->
+  <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  
+  <script>
+    const menuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const menuCloseButton = document.getElementById('mobileMenuClose');
+    const menuIcon = menuButton.querySelector('i');
+  
+    function toggleMenu() {
+      const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+      
+      // Toggle menu and overlay
+      mobileMenu.classList.toggle('-translate-y-full');
+      mobileMenu.classList.toggle('translate-y-0');
+      menuOverlay.classList.toggle('opacity-0');
+      menuOverlay.classList.toggle('pointer-events-none');
+      
+      // Toggle hamburger icon
+      menuIcon.classList.toggle('fa-bars');
+      menuIcon.classList.toggle('fa-times');
+      
+      // Update accessibility and body scroll
+      menuButton.setAttribute('aria-expanded', !isExpanded);
+      document.body.style.overflow = isExpanded ? '' : 'hidden';
+    }
+  
+    // Event listeners
+    menuButton.addEventListener('click', toggleMenu);
+    menuOverlay.addEventListener('click', toggleMenu);
+    menuCloseButton.addEventListener('click', toggleMenu);
+  
+    // Close menu when clicking on links
+    document.querySelectorAll('#mobileMenu a').forEach(item => {
+      item.addEventListener('click', toggleMenu);
+    });
+  
+    // Close menu with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+        toggleMenu();
+      }
+    });
+  </script>
   
      <!-- Secondary Navigation -->
      <div class="bg-gray-800 text-white">
