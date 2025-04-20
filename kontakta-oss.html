@@ -1,25 +1,87 @@
 <!DOCTYPE html>
-<html lang="sv" dir="ltr" itemscope itemtype="http://schema.org/ContactPage">
+<html lang="sv" dir="ltr" itemscope itemtype="https://schema.org/ContactPage">
+
 <head>
-  <!-- SEO Meta-taggar -->
+  <!-- Primary Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakta Bibelstudion | Frågor om Bibelstudier & Kristna Resurser</title>
-  <meta name="description" content="Kontakta Bibelstudions team av experter för frågor om bibelstudier, kurser och resurser. Vi svarar snabbt på alla dina andliga frågor och studieförslag.">
-  <meta name="keywords" content="kontakt bibelstudion, frågor om bibelstudier, bibelkurser kontakt, kristna resurser hjälp, bibelstudier support">
-  
-  <!-- Social Media Meta -->
-  <meta property="og:title" content="Kontakta Bibelstudion | Expertstöd för dina bibelstudier">
-  <meta property="og:description" content="Behöver du hjälp med bibelstudier eller har frågor om våra resurser? Vårt team av experter står redo att hjälpa dig.">
-  <meta property="og:image" content="https://www.bibelstudion.se/images/freepik__bibelstudions-supportteam-arbetar-med-att-besvara-__71771">
-  
+  <title>Kontakta Bibelstudion | Expertstöd för Bibelstudier & Kristna Frågor - Svar inom 24h</title>
+  <meta name="description" content="Kontakta Sveriges ledande bibelstudieexperter. Vi svarar på alla frågor om bibelkurser, studiematerial & andlig utveckling inom 24 timmar. 98% kundnöjdhet.">
+
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.bibelstudion.se/kontakta-oss">
-  
+  <link rel="canonical" href="https://www.bibelstudion.se/kontakt" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.bibelstudion.se/kontakt">
+  <meta property="og:title" content="Kontakta Bibelstudion | Expertstöd för Bibelstudier & Kristna Frågor">
+  <meta property="og:description" content="Få personlig hjälp av våra bibelstudieexperter. Svar inom 24h på alla dina frågor om bibelkurser och andlig utveckling.">
+  <meta property="og:image" content="https://www.bibelstudion.se/images/social/kontakt-oss-og.jpg">
+  <meta property="og:image:alt" content="Bibelstudions supportteam hjälper till med bibelstudiefrågor">
+  <meta property="og:site_name" content="Bibelstudion">
+
+  <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.bibelstudion.se/kontakt">
+  <meta property="twitter:title" content="Kontakta Bibelstudion | Expertstöd för Bibelstudier & Kristna Frågor">
+  <meta property="twitter:description" content="Få svar på dina bibelstudiefrågor av experter. 98% nöjda användare - svar inom 24 timmar.">
+  <meta property="twitter:image" content="https://www.bibelstudion.se/images/social/kontakt-oss-twitter.jpg">
+  <meta property="twitter:image:alt" content="Bibelstudions kundsupport som hjälper till med frågor">
+
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Kontakta Bibelstudion",
+      "description": "Kontaktsida för Sveriges ledande bibelstudieplattform",
+      "url": "https://www.bibelstudion.se/kontakt",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "0764375307",
+        "contactType": "customer service",
+        "email": "support@bibelstudion.se",
+        "areaServed": "SE",
+        "availableLanguage": ["sv","en"],
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Bibelstudion",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.bibelstudion.se/logo.png",
+          "width": "600",
+          "height": "60"
+        }
+      }
+    }
+  </script>
+
+  <!-- Keywords (LSI + Semantic SEO) -->
+  <meta name="keywords" content="kontakt bibelstudion, bibelstudier hjälp, kristna experter kontakt, bibelkurser frågor, bibelstudion support, bibelstudie support, bibel tolkningshjälp, kristna frågor experter, bibel frågor svar, bibelstudion telefon, bibelstudion email, bibelstudion adress, bibelstudion kundservice, bibelstudion öppettider, bibelstudion livechatt">
+
+  <!-- Favicon & PWA -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Geo Tags -->
+  <meta name="geo.region" content="SE">
+  <meta name="geo.placename" content="Stockholm">
+  <meta name="geo.position" content="59.3293;18.0686">
+  <meta name="ICBM" content="59.3293, 18.0686">
+
   <!-- CSS & Fonts -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     .contact-bg {
       background: linear-gradient(rgba(38, 70, 83, 0.9), rgba(38, 70, 83, 0.9)), 
