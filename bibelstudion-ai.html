@@ -1,360 +1,276 @@
 <!DOCTYPE html>
-<html lang="sv" dir="ltr" itemscope itemtype="http://schema.org/ContactPage">
+<html lang="sv">
 <head>
-  <!-- SEO Meta-taggar -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakta Bibelstudion | Frågor om Bibelstudier & Kristna Resurser</title>
-  <meta name="description" content="Kontakta Bibelstudions team av experter för frågor om bibelstudier, kurser och resurser. Vi svarar snabbt på alla dina andliga frågor och studieförslag.">
-  <meta name="keywords" content="kontakt bibelstudion, frågor om bibelstudier, bibelkurser kontakt, kristna resurser hjälp, bibelstudier support">
-  
-  <!-- Social Media Meta -->
-  <meta property="og:title" content="Kontakta Bibelstudion | Expertstöd för dina bibelstudier">
-  <meta property="og:description" content="Behöver du hjälp med bibelstudier eller har frågor om våra resurser? Vårt team av experter står redo att hjälpa dig.">
-  <meta property="og:image" content="https://www.bibelstudion.se/images/freepik__bibelstudions-supportteam-arbetar-med-att-besvara-__71771">
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.bibelstudion.se/kontakta-oss">
-  
-  <!-- CSS & Fonts -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🤖 Bibelstudion AI - Din personliga bibelguide</title>
+  <script defer src="chat.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
   <style>
-    .contact-bg {
-      background: linear-gradient(rgba(38, 70, 83, 0.9), rgba(38, 70, 83, 0.9)), 
-                  url('/images/bible-contact.jpg') no-repeat center center;
-      background-size: cover;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    .contact-card {
-      transition: all 0.3s ease;
-      border-left: 4px solid transparent;
+    .message-animation {
+      animation: fadeIn 0.3s ease-out;
     }
-    .contact-card:hover {
-      transform: translateY(-5px);
-      border-left-color: #e9c46a;
+    .btn-pulse {
+      animation: pulse 2s infinite;
     }
-    .form-input:focus {
-      border-color: #e9c46a;
-      box-shadow: 0 0 0 3px rgba(233, 196, 106, 0.2);
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
     }
   </style>
 </head>
 
+
+
 <body class="bg-gray-50 font-sans">
-  <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <!-- Logo -->
-      <div class="flex items-center">
-        <a href="index.html" class="flex items-center">
-          <i class="fas fa-bible text-yellow-500 text-3xl mr-2"></i>
-          <span class="text-2xl font-bold text-gray-800">Bibel<span class="text-yellow-500">studion</span></span>
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="index.html" class="flex items-center">
+            <i class="fas fa-bible text-yellow-500 text-3xl mr-2"></i>
+            <span class="text-2xl font-bold text-gray-800">Bibel<span class="text-yellow-500">studion</span></span>
+          </a>
+        </div>
+  
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="index.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Hem</a>
+          <a href="butik.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Butik</a>
+          <a href="kategorier.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kategorier</a>
+          <a href="om-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Om oss</a>
+          <a href="kontakta-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kontakt</a>
+        </nav>
+  
+        <!-- Icons -->
+        <div class="flex items-center space-x-4">
+          <div class="relative hidden md:block">
+            <input type="text" placeholder="Sök produkter..." 
+              class="search-input pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 w-64">
+            <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+          </div>
+          <a href="login.html" class="text-gray-800 hover:text-yellow-500 text-xl">
+            <i class="far fa-user"></i>
+          </a>
+          <a href="kundvagn.html" class="text-gray-800 hover:text-yellow-500 text-xl relative">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count" 
+              class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+          </a>
+  
+          <button class="md:hidden p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded-full transition-all duration-200" 
+          id="mobileMenuButton" 
+          aria-expanded="false" 
+          aria-controls="mobileMenu"
+          aria-label="Öppna meny">
+            <i class="fas fa-bars text-2xl transition-transform duration-300"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+  </body>
+  
+  
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed top-0 left-0 w-full bg-white shadow-xl z-50 transform -translate-y-full transition-transform duration-300 ease-out">
+    <!-- Menu Header with Close Button -->
+    <div class="flex justify-between items-center px-4 py-3 border-b border-gray-100">
+      <h2 class="text-lg font-semibold text-gray-800">Meny</h2>
+      <button id="mobileMenuClose" class="p-2 text-gray-500 hover:text-gray-700 focus:outline-none" aria-label="Stäng meny">
+        <i class="fas fa-times text-xl"></i>
+      </button>
+    </div>
+    
+    <div class="overflow-y-auto max-h-screen pb-6">
+      <div class="flex flex-col space-y-1 px-4 py-3">
+        <a href="index.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+          <i class="fas fa-home mr-3 text-gray-400 w-5 text-center"></i>
+          <span>Hem</span>
+        </a>
+        <a href="butik.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+          <i class="fas fa-store mr-3 text-gray-400 w-5 text-center"></i>
+          <span>Butik</span>
+        </a>
+        <a href="#categories" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+          <i class="fas fa-tags mr-3 text-gray-400 w-5 text-center"></i>
+          <span>Kategorier</span>
+        </a>
+        <a href="om-oss.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+          <i class="fas fa-info-circle mr-3 text-gray-400 w-5 text-center"></i>
+          <span>Om oss</span>
+        </a>
+        <a href="kontakta-oss.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+          <i class="fas fa-envelope mr-3 text-gray-400 w-5 text-center"></i>
+          <span>Kontakt</span>
         </a>
       </div>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-8">
-        <a href="index.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Hem</a>
-        <a href="butik.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Butik</a>
-        <a href="kategorier.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kategorier</a>
-        <a href="om-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Om oss</a>
-        <a href="kontakta-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kontakt</a>
-      </nav>
-
-      <!-- Icons -->
-      <div class="flex items-center space-x-4">
-        <div class="relative hidden md:block">
+      
+      <!-- Search Box -->
+      <div class="px-4 py-3 border-t border-gray-100">
+        <div class="relative">
           <input type="text" placeholder="Sök produkter..." 
-            class="search-input pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 w-64">
-          <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                 class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all duration-200"
+                 aria-label="Sök produkter">
+          <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
         </div>
-        <a href="login.html" class="text-gray-800 hover:text-yellow-500 text-xl">
-          <i class="far fa-user"></i>
-        </a>
-        <a href="kundvagn.html" class="text-gray-800 hover:text-yellow-500 text-xl relative">
-          <i class="fas fa-shopping-cart"></i>
-          <span id="cart-count" 
-            class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
-        </a>
-
-        <button class="md:hidden p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded-full transition-all duration-200" 
-        id="mobileMenuButton" 
-        aria-expanded="false" 
-        aria-controls="mobileMenu"
-        aria-label="Öppna meny">
-          <i class="fas fa-bars text-2xl transition-transform duration-300"></i>
-        </button>
       </div>
     </div>
-  </header>
-</body>
-
-
-<!-- Mobile Menu -->
-<div id="mobileMenu" class="fixed top-0 left-0 w-full bg-white shadow-xl z-50 transform -translate-y-full transition-transform duration-300 ease-out">
-  <!-- Menu Header with Close Button -->
-  <div class="flex justify-between items-center px-4 py-3 border-b border-gray-100">
-    <h2 class="text-lg font-semibold text-gray-800">Meny</h2>
-    <button id="mobileMenuClose" class="p-2 text-gray-500 hover:text-gray-700 focus:outline-none" aria-label="Stäng meny">
-      <i class="fas fa-times text-xl"></i>
-    </button>
   </div>
   
-  <div class="overflow-y-auto max-h-screen pb-6">
-    <div class="flex flex-col space-y-1 px-4 py-3">
-      <a href="index.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
-        <i class="fas fa-home mr-3 text-gray-400 w-5 text-center"></i>
-        <span>Hem</span>
-      </a>
-      <a href="butik.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
-        <i class="fas fa-store mr-3 text-gray-400 w-5 text-center"></i>
-        <span>Butik</span>
-      </a>
-      <a href="#categories" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
-        <i class="fas fa-tags mr-3 text-gray-400 w-5 text-center"></i>
-        <span>Kategorier</span>
-      </a>
-      <a href="om-oss.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
-        <i class="fas fa-info-circle mr-3 text-gray-400 w-5 text-center"></i>
-        <span>Om oss</span>
-      </a>
-      <a href="kontakta-oss.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
-        <i class="fas fa-envelope mr-3 text-gray-400 w-5 text-center"></i>
-        <span>Kontakt</span>
-      </a>
-    </div>
-    
-    <!-- Search Box -->
-    <div class="px-4 py-3 border-t border-gray-100">
-      <div class="relative">
-        <input type="text" placeholder="Sök produkter..." 
-               class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all duration-200"
-               aria-label="Sök produkter">
-        <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Overlay -->
-<div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-
-<script>
-  const menuButton = document.getElementById('mobileMenuButton');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const menuOverlay = document.getElementById('menuOverlay');
-  const menuCloseButton = document.getElementById('mobileMenuClose');
-  const menuIcon = menuButton.querySelector('i');
-
-  function toggleMenu() {
-    const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-    
-    // Toggle menu and overlay
-    mobileMenu.classList.toggle('-translate-y-full');
-    mobileMenu.classList.toggle('translate-y-0');
-    menuOverlay.classList.toggle('opacity-0');
-    menuOverlay.classList.toggle('pointer-events-none');
-    
-    // Toggle hamburger icon
-    menuIcon.classList.toggle('fa-bars');
-    menuIcon.classList.toggle('fa-times');
-    
-    // Update accessibility and body scroll
-    menuButton.setAttribute('aria-expanded', !isExpanded);
-    document.body.style.overflow = isExpanded ? '' : 'hidden';
-  }
-
-  // Event listeners
-  menuButton.addEventListener('click', toggleMenu);
-  menuOverlay.addEventListener('click', toggleMenu);
-  menuCloseButton.addEventListener('click', toggleMenu);
-
-  // Close menu when clicking on links
-  document.querySelectorAll('#mobileMenu a').forEach(item => {
-    item.addEventListener('click', toggleMenu);
-  });
-
-  // Close menu with Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
-      toggleMenu();
+  <!-- Overlay -->
+  <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  
+  <script>
+    const menuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const menuCloseButton = document.getElementById('mobileMenuClose');
+    const menuIcon = menuButton.querySelector('i');
+  
+    function toggleMenu() {
+      const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+      
+      // Toggle menu and overlay
+      mobileMenu.classList.toggle('-translate-y-full');
+      mobileMenu.classList.toggle('translate-y-0');
+      menuOverlay.classList.toggle('opacity-0');
+      menuOverlay.classList.toggle('pointer-events-none');
+      
+      // Toggle hamburger icon
+      menuIcon.classList.toggle('fa-bars');
+      menuIcon.classList.toggle('fa-times');
+      
+      // Update accessibility and body scroll
+      menuButton.setAttribute('aria-expanded', !isExpanded);
+      document.body.style.overflow = isExpanded ? '' : 'hidden';
     }
-  });
-</script>
-
-<!-- Secondary Navigation -->
-<div class="bg-gray-800 text-white sticky top-16 z-40">
-  <div class="container mx-auto px-4">
-    <div class="flex overflow-x-auto space-x-8 py-3">
-      <a href="populart-just-nu.html" class="whitespace-nowrap hover:text-yellow-400">Populärt just nu</a>
-      <a href="#premium" class="whitespace-nowrap hover:text-yellow-400">Premium</a>
-      <a href="bibel.html" class="whitespace-nowrap hover:text-yellow-400">Bibel</a>
-        <a href="bibelstudion-ai.html" class="whitespace-nowrap hover:text-yellow-400">Bibelstudion AI</a>
-      <a href="donera.html" class="whitespace-nowrap hover:text-yellow-400">Gåvor</a>
-      <a href="#accessories" class="whitespace-nowrap hover:text-yellow-400">Accessoarer</a>
-      <a href="blogginlagg.html" class="whitespace-nowrap hover:text-yellow-400">Blogginlägg</a>
-      <a href="#sale" class="whitespace-nowrap text-yellow-400 font-bold">REA</a>
-    </div>
-  </div>
-</div>
-
-
   
-
-  <!-- Kontaktinformation -->
-  <section class="container mx-auto px-4 py-16">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold mb-12 text-center">Hur du når oss</h2>
-      
-      <div class="grid md:grid-cols-3 gap-8 mb-16">
-        <div class="contact-card bg-white p-8 rounded-lg shadow-md">
-          <div class="text-yellow-500 text-4xl mb-4">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-4">E-post</h3>
-          <p class="text-gray-700 mb-4">
-            För allmänna frågor om våra bibelstudier och resurser är e-post det snabbaste sättet att nå oss. Vårt supportteam svarar vanligtvis inom 24 timmar på vardagar.
-          </p>
-          <a href="mailto:info@bibelstudion.se" class="text-yellow-600 font-medium hover:underline">info@bibelstudion.se</a>
-        </div>
-        
-        <div class="contact-card bg-white p-8 rounded-lg shadow-md">
-          <div class="text-yellow-500 text-4xl mb-4">
-            <i class="fas fa-phone"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-4">Telefon</h3>
-          <p class="text-gray-700 mb-4">
-            För mer personlig kontakt eller komplexa frågor om bibeltexter är våra telefonlinjer öppna måndag-fredag 09:00-16:00. Våra bibelhandledare tar gärna tid för djupare samtal.
-          </p>
-          <a href="tel:+4618123456" class="text-yellow-600 font-medium hover:underline">018-12 34 56</a>
-        </div>
-        
-        <div class="contact-card bg-white p-8 rounded-lg shadow-md">
-          <div class="text-yellow-500 text-4xl mb-4">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-4">Besök oss</h3>
-          <p class="text-gray-700 mb-4">
-            Vårt studiecentrum i Uppsala är öppet för besök efter överenskommelse. Här kan du träffa vårt team, bläddra i vårt referensbibliotek eller delta i våra live-studiegrupper.
-          </p>
-          <address class="text-yellow-600 not-italic">Bibelvägen 12, 753 10 Uppsala</address>
-        </div>
-      </div>
-      
-      <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <div class="grid md:grid-cols-2">
-          <div class="p-8 md:p-12">
-            <h2 class="text-2xl font-bold mb-6">Skicka ett meddelande</h2>
-            <form class="space-y-6">
-              <div>
-                <label for="name" class="block text-gray-700 font-medium mb-2">Ditt namn</label>
-                <input type="text" id="name" class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none">
-              </div>
-              <div>
-                <label for="email" class="block text-gray-700 font-medium mb-2">E-postadress</label>
-                <input type="email" id="email" class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none">
-              </div>
-              <div>
-                <label for="subject" class="block text-gray-700 font-medium mb-2">Ämne</label>
-                <select id="subject" class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none">
-                  <option>Välj ämne</option>
-                  <option>Fråga om bibelstudier</option>
-                  <option>Teknisk support</option>
-                  <option>Föreslå ett ämne</option>
-                  <option>Samarbetsfrågor</option>
-                  <option>Övrigt</option>
-                </select>
-              </div>
-              <div>
-                <label for="message" class="block text-gray-700 font-medium mb-2">Meddelande</label>
-                <textarea id="message" rows="5" class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none"></textarea>
-              </div>
-              <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-lg transition duration-300">
-                Skicka meddelande
-              </button>
-            </form>
-          </div>
-          <div class="hidden md:block">
-            <img src="/images/freepik__bibelstudions-supportteam-arbetar-med-att-besvara-__71771.jpeg" alt="Bibelstudions supportteam arbetar med att besvara frågor om bibelstudier" class="w-full h-full object-cover">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Vanliga frågor -->
-  <section class="bg-gray-100 py-16">
+    // Event listeners
+    menuButton.addEventListener('click', toggleMenu);
+    menuOverlay.addEventListener('click', toggleMenu);
+    menuCloseButton.addEventListener('click', toggleMenu);
+  
+    // Close menu when clicking on links
+    document.querySelectorAll('#mobileMenu a').forEach(item => {
+      item.addEventListener('click', toggleMenu);
+    });
+  
+    // Close menu with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+        toggleMenu();
+      }
+    });
+  </script>
+  
+  <!-- Secondary Navigation -->
+  <div class="bg-gray-800 text-white sticky top-16 z-40">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-12 text-center">Vanliga frågor</h2>
-      
-      <div class="max-w-4xl mx-auto space-y-6">
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-bold mb-3 flex items-center">
-            <i class="fas fa-question-circle text-yellow-500 mr-3"></i> Hur börjar jag med bibelstudier?
-          </h3>
-          <p class="text-gray-700">
-            För dig som är nybörjare rekommenderar vi vår introduktionskurs "Bibelns grundläggande budskap" som ger en översikt över Bibelns centrala teman. Kursen är anpassad för självstudier och innehåller guidad läsning, reflektionsfrågor och förklaringar av svåra begrepp. Efter registrering får du tillgång till allt material direkt och kan arbeta i din egen takt. Många väljer också att ansluta sig till en av våra nybörjargrupper där en erfaren studieledare guidar gruppen genom materialet.
-          </p>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-bold mb-3 flex items-center">
-            <i class="fas fa-question-circle text-yellow-500 mr-3"></i> Kan jag få personlig handledning?
-          </h3>
-          <p class="text-gray-700">
-            Ja, vi erbjuder individuell bibelhandledning för dem som vill fördjupa sin förståelse på ett mer personligt sätt. Våra handledare är utbildade teologer med specialkunskap inom olika delar av Bibeln. Efter en första bedömning av dina intressen och förkunskaper matchar vi dig med en lämplig handledare. Tillsammans utvecklar ni sedan en studieplan som passar just dina behov. Denna tjänst är kostnadsfri för våra premiummedlemmar, eller kan köpas som ett separat paket.
-          </p>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-bold mb-3 flex items-center">
-            <i class="fas fa-question-circle text-yellow-500 mr-3"></i> Hur fungerar era onlinekurser?
-          </h3>
-          <p class="text-gray-700">
-            Våra onlinekurser kombinerar videoföreläsningar, textmaterial och interaktiva övningar. Varje kurs är uppdelad i logiska moduler som du kan genomföra i din egen takt. Du får tillgång till ett digitalt klassrum där du kan ställa frågor till kursledaren och diskutera med andra deltagare. Vid slutet av varje modul finns en kort kunskapskontroll som hjälper dig att säkerställa att du förstått centrala begrepp. Många av våra kurser ger även möjlighet till certifiering som kan vara värdefull för dig som vill leda studier i din församling eller grupp.
-          </p>
-        </div>
+      <div class="flex overflow-x-auto space-x-8 py-3">
+        <a href="populart-just-nu.html" class="whitespace-nowrap hover:text-yellow-400">Populärt just nu</a>
+        <a href="#premium" class="whitespace-nowrap hover:text-yellow-400">Premium</a>
+        <a href="bibel.html" class="whitespace-nowrap hover:text-yellow-400">Bibel</a>
+        <a href="bibelstudion-ai.html" class="whitespace-nowrap hover:text-yellow-400">Bibelstudion AI</a>
+        <a href="donera.html" class="whitespace-nowrap hover:text-yellow-400">Gåvor</a>
+        <a href="#accessories" class="whitespace-nowrap hover:text-yellow-400">Accessoarer</a>
+        <a href="blogginlagg.html" class="whitespace-nowrap hover:text-yellow-400">Blogginlägg</a>
+        <a href="#sale" class="whitespace-nowrap text-yellow-400 font-bold">REA</a>
       </div>
     </div>
-  </section>
-
-   
-
-<!-- Responsive Newsletter Signup (Same layout on all devices) -->
-<section class="bg-yellow-50 py-8 sm:py-12 mt-8 sm:mt-12">
-  <div class="container mx-auto px-4 sm:px-6 max-w-2xl md:max-w-4xl">
-    <div class="text-center">
-      <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">
-        Få fler bibelstudietips direkt till din inkorg
-      </h2>
+</div>
+<body class="bg-gradient-to-br from-blue-50 to-gray-50 min-h-screen p-4">
+    <div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden mt-10">
+      <!-- Chat header -->
+      <div class="bg-gradient-to-r from-blue-600 to-blue-500 text-white p-4 flex items-center">
+        <div class="bg-white/20 p-2 rounded-full mr-3">
+          <i class="fas fa-robot text-white"></i>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold">Bibelstudion AI</h1>
+          <p class="text-xs opacity-90">Online nu - redo att hjälpa dig</p>
+        </div>
+        <div class="ml-auto flex items-center">
+          <span class="h-2 w-2 bg-green-400 rounded-full mr-2"></span>
+          <span class="text-xs">Aktiv</span>
+        </div>
+      </div>
+  
+    <!-- Chat container -->
+    <div class="p-4">
+      <div id="welcome-message" class="bg-blue-50 rounded-lg p-4 mb-4 message-animation">
+        <div class="flex items-start">
+          <div class="bg-blue-100 p-2 rounded-full mr-3">
+            <i class="fas fa-robot text-blue-600"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-1">Hej! 👋</h3>
+            <p class="text-gray-700">Jag är Bibelstudion AI. Ställ din fråga om Bibeln, Gud eller kristen tro så hjälper jag dig gärna!</p>
+            <div class="mt-3">
+              <p class="text-sm font-medium text-gray-600 mb-2">Populära frågor:</p>
+              <div class="grid grid-cols-2 gap-2">
+                <button class="text-xs bg-white border border-gray-200 rounded-lg p-2 text-left hover:bg-blue-50 hover:border-blue-300 transition-colors">
+                  "Vad betyder Romarbrevet 8:28?"
+                </button>
+                <button class="text-xs bg-white border border-gray-200 rounded-lg p-2 text-left hover:bg-blue-50 hover:border-blue-300 transition-colors">
+                  "Hur ber jag effektivt?"
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       
-      <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
-        Prenumerera på vårt nyhetsbrev och få regelbundna insikter och resurser för dina bibelstudier.
-      </p>
-      
-      <!-- Form (stays in row layout on all devices) -->
-      <form class="max-w-xs xs:max-w-sm sm:max-w-md mx-auto flex">
-        <input 
-          type="email" 
-          placeholder="Din e-postadress" 
-          class="flex-grow min-w-0 px-3 sm:px-4 py-2 text-sm sm:text-base rounded-l-md border border-r-0 border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500"
-        >
-        <button 
-          type="submit" 
-          class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 sm:px-6 py-2 text-sm sm:text-base rounded-r-md transition duration-300 whitespace-nowrap"
-        >
-          Prenumerera
+      <div id="chat" class="space-y-3 mb-4 max-h-[300px] overflow-y-auto"></div>
+    </div>
+    
+    <!-- Input area -->
+    <div class="border-t border-gray-200 p-4 bg-gray-50">
+      <form id="chat-form" class="flex items-center">
+        <div class="relative flex-grow">
+          <input 
+            id="chat-input" 
+            type="text" 
+            class="w-full pl-4 pr-10 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+            placeholder="Skriv din fråga här..." 
+            required
+          />
+          <button type="button" class="absolute right-3 top-3 text-gray-400 hover:text-blue-600">
+            <i class="fas fa-microphone"></i>
+          </button>
+        </div>
+        <button type="submit" class="ml-3 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full btn-pulse">
+          <i class="fas fa-paper-plane"></i>
         </button>
       </form>
-      
-      <p class="text-xs text-gray-500 mt-2 sm:mt-3">
-        Vi respekterar din integritet. Avsluta prenumerationen när som helst.
+      <p class="text-xs text-gray-500 mt-2 text-center">
+        <i class="fas fa-lock mr-1"></i> Alla konversationer är privata
       </p>
     </div>
   </div>
-</section>
 
+  <!-- Feature highlights -->
+<div class="max-w-xl mx-auto mt-6 mb-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+    <div class="bg-white rounded-lg p-4 shadow-sm">
+      <i class="fas fa-bible text-blue-500 mb-2 text-lg"></i>
+      <p class="text-sm font-medium">Bibeltrogna svar</p>
+    </div>
+    <div class="bg-white rounded-lg p-4 shadow-sm">
+      <i class="fas fa-clock text-blue-500 mb-2 text-lg"></i>
+      <p class="text-sm font-medium">Snabba svar</p>
+    </div>
+    <div class="bg-white rounded-lg p-4 shadow-sm">
+      <i class="fas fa-user-shield text-blue-500 mb-2 text-lg"></i>
+      <p class="text-sm font-medium">Privat</p>
+    </div>
+  </div>
+  
 
   
   <!-- Footer -->
@@ -836,6 +752,10 @@
 
 
 
+
+
+
+
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -849,4 +769,5 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+
 

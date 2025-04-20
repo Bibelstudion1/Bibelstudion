@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr" itemscope itemtype="http://schema.org/WebSite">
+<head>
+  <!-- SEO Meta-taggar -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kristen Butik Online | Bibelstudion - Högkvalitativa Bibelprodukter & Andliga Resurser</title>
+  <meta name="description" content="Upptäck Sveriges bästa kristna butik online hos Bibelstudion. Högkvalitativa biblar, böcker om tro, kristna gåvor och andliga resurser för din växt i tron. Snabb leverans & prisvärda produkter.">
+  <meta name="keywords" content="kristen butik, bibel online, kristna böcker, böcker om tro, kristna gåvor, bibelstudier, andlig utveckling, kristna accessoarer, bibelprylar, kristna resurser">
+  
+  <!-- Social Media Meta -->
+  <meta property="og:title" content="Kristen Butik Online | Bibelstudion - Premiumprodukter för Din Tro">
+  <meta property="og:description" content="Handla kvalitetsbiblar, kristna böcker och unika gåvor i Sveriges ledande kristna butik. Perfekt för personlig andlig utveckling eller menigheter.">
+  <meta property="og:image" content="https://www.bibelstudion.se/images/butik-social-share.jpg">
+  <meta property="og:url" content="https://www.bibelstudion.se/butik.html">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.bibelstudion.se/butik.html">
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+  <!-- CSS & Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(38,70,83,0.95) 0%, rgba(42,157,143,0.9) 100%);
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .nav-pill {
+      transition: all 0.3s ease;
+    }
+    .nav-pill:hover {
+      background-color: #e9c46a;
+      color: #264653;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+    }
+    .product-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #e63946;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+
+
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="index.html" class="flex items-center">
+            <i class="fas fa-bible text-yellow-500 text-3xl mr-2"></i>
+            <span class="text-2xl font-bold text-gray-800">Bibel<span class="text-yellow-500">studion</span></span>
+          </a>
+        </div>
+  
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="index.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Hem</a>
+          <a href="butik.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Butik</a>
+          <a href="kategorier.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kategorier</a>
+          <a href="om-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Om oss</a>
+          <a href="kontakta-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kontakt</a>
+        </nav>
+  
+        <!-- Icons -->
+        <div class="flex items-center space-x-4">
+          <div class="relative hidden md:block">
+            <input type="text" placeholder="Sök produkter..." 
+              class="search-input pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 w-64">
+            <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+          </div>
+          <a href="login.html" class="text-gray-800 hover:text-yellow-500 text-xl">
+            <i class="far fa-user"></i>
+          </a>
+          <a href="kundvagn.html" class="text-gray-800 hover:text-yellow-500 text-xl relative">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count" 
+              class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+          </a>
+  
+          <button class="md:hidden p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded-full transition-all duration-200" 
+          id="mobileMenuButton" 
+          aria-expanded="false" 
+          aria-controls="mobileMenu"
+          aria-label="Öppna meny">
+            <i class="fas fa-bars text-2xl transition-transform duration-300"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+  </body>
+  
+  
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed top-0 left-0 w-full bg-white shadow-xl z-50 transform -translate-y-full transition-transform duration-300 ease-out">
+    <!-- Menu Header with Close Button -->
+    <div class="flex justify-between items-center px-4 py-3 border-b border-gray-100">
+      <h2 class="text-lg font-semibold text-gray-800">Meny</h2>
+      <button id="mobileMenuClose" class="p-2 text-gray-500 hover:text-gray-700 focus:outline-none" aria-label="Stäng meny">
+        <i class="fas fa-times text-xl"></i>
+      </button>
+    </div>
+    
+    <div class="overflow-y-auto max-h-screen pb-6">
+      <div class="flex flex-col space-y-1 px-4 py-3">
+        <a href="index.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+          <i class="fas fa-home mr-3 text-gray-400 w-5 text-center"></i>
+          <span>Hem</span>
+        </a>
+        <a href="butik.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+          <i class="fas fa-store mr-3 text-gray-400 w-5 text-center"></i>
+          <span>Butik</span>
+        </a>
+        <a href="#categories" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+          <i class="fas fa-tags mr-3 text-gray-400 w-5 text-center"></i>
+          <span>Kategorier</span>
+        </a>
+        <a href="om-oss.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+          <i class="fas fa-info-circle mr-3 text-gray-400 w-5 text-center"></i>
+          <span>Om oss</span>
+        </a>
+        <a href="kontakta-oss.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+          <i class="fas fa-envelope mr-3 text-gray-400 w-5 text-center"></i>
+          <span>Kontakt</span>
+        </a>
+      </div>
+      
+      <!-- Search Box -->
+      <div class="px-4 py-3 border-t border-gray-100">
+        <div class="relative">
+          <input type="text" placeholder="Sök produkter..." 
+                 class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all duration-200"
+                 aria-label="Sök produkter">
+          <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Overlay -->
+  <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  
+  <script>
+    const menuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const menuCloseButton = document.getElementById('mobileMenuClose');
+    const menuIcon = menuButton.querySelector('i');
+  
+    function toggleMenu() {
+      const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+      
+      // Toggle menu and overlay
+      mobileMenu.classList.toggle('-translate-y-full');
+      mobileMenu.classList.toggle('translate-y-0');
+      menuOverlay.classList.toggle('opacity-0');
+      menuOverlay.classList.toggle('pointer-events-none');
+      
+      // Toggle hamburger icon
+      menuIcon.classList.toggle('fa-bars');
+      menuIcon.classList.toggle('fa-times');
+      
+      // Update accessibility and body scroll
+      menuButton.setAttribute('aria-expanded', !isExpanded);
+      document.body.style.overflow = isExpanded ? '' : 'hidden';
+    }
+  
+    // Event listeners
+    menuButton.addEventListener('click', toggleMenu);
+    menuOverlay.addEventListener('click', toggleMenu);
+    menuCloseButton.addEventListener('click', toggleMenu);
+  
+    // Close menu when clicking on links
+    document.querySelectorAll('#mobileMenu a').forEach(item => {
+      item.addEventListener('click', toggleMenu);
+    });
+  
+    // Close menu with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+        toggleMenu();
+      }
+    });
+  </script>
+  
+  <!-- Secondary Navigation -->
+  <div class="bg-gray-800 text-white sticky top-16 z-40">
+    <div class="container mx-auto px-4">
+      <div class="flex overflow-x-auto space-x-8 py-3">
+        <a href="populart-just-nu.html" class="whitespace-nowrap hover:text-yellow-400">Populärt just nu</a>
+        <a href="#premium" class="whitespace-nowrap hover:text-yellow-400">Premium</a>
+        <a href="bibel.html" class="whitespace-nowrap hover:text-yellow-400">Bibel</a>
+          <a href="bibelstudion-ai.html" class="whitespace-nowrap hover:text-yellow-400">Bibelstudion AI</a>
+        <a href="donera.html" class="whitespace-nowrap hover:text-yellow-400">Gåvor</a>
+        <a href="#accessories" class="whitespace-nowrap hover:text-yellow-400">Accessoarer</a>
+        <a href="blogginlagg.html" class="whitespace-nowrap hover:text-yellow-400">Blogginlägg</a>
+        <a href="#sale" class="whitespace-nowrap text-yellow-400 font-bold">REA</a>
+      </div>
+    </div>
+  </div>  
+
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-4 py-4">
+      <div class="breadcrumb text-sm text-gray-600">
+        <a href="index.html" class="hover:text-yellow-500">Hem</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-800 font-medium">Butik</span>
+      </div>
+    </div>
+
+    <!-- Featured Categories -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Utforska Våra Kategorier</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <a href="#bibles" class="category-card bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition duration-300">
+            <div class="feature-icon bg-yellow-100 text-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-bible text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg">Biblar</h3>
+            <p class="text-gray-600 text-sm mt-2">Över 50 versioner</p>
+          </a>
+          <a href="#books" class="category-card bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition duration-300">
+            <div class="feature-icon bg-blue-100 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-book text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg">Böcker</h3>
+            <p class="text-gray-600 text-sm mt-2">Andlig växt & teologi</p>
+          </a>
+          <a href="#gifts" class="category-card bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition duration-300">
+            <div class="feature-icon bg-red-100 text-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-gift text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg">Gåvor</h3>
+            <p class="text-gray-600 text-sm mt-2">Unika kristna presenter</p>
+          </a>
+          <a href="#accessories" class="category-card bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition duration-300">
+            <div class="feature-icon bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-cross text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg">Accessoarer</h3>
+            <p class="text-gray-600 text-sm mt-2">Smycken & mer</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="featured" class="py-12 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-2xl md:text-3xl font-bold">Utvalda Produkter</h2>
+          <a href="#all-products" class="text-yellow-500 hover:text-yellow-600 font-medium">Visa alla →</a>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Product 1 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover relative">
+            <span class="product-badge">Bästsäljare</span>
+            <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                 alt="Premium bibel i brunt läder med guldskrift - Svenska Bibelsällskapets utgåva" 
+                 class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-1">Studiebibel i läder</h3>
+              <p class="text-gray-600 text-sm mb-2">Svenska Bibelsällskapet</p>
+              <div class="flex items-center mb-2">
+                <div class="text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-gray-600 text-sm ml-2">(127 recensioner)</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="font-bold text-lg">499 kr</span>
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                  Lägg till
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 2 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover relative">
+            <span class="product-badge">Nyhet</span>
+            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                 alt="Kristen dagbok i blått med guldtext - 'Min Andliga Resa' av pastor Anna Karlsson" 
+                 class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-1">Min Andliga Resa</h3>
+              <p class="text-gray-600 text-sm mb-2">Anna Karlsson</p>
+              <div class="flex items-center mb-2">
+                <div class="text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-gray-600 text-sm ml-2">(89 recensioner)</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="font-bold text-lg">279 kr</span>
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                  Lägg till
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 3 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover">
+            <img src="https://images.unsplash.com/photo-1510172951991-856a62a9e395?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                 alt="Kristen bokomslag 'Kärlekens Kraft' av författare David Berg - djupgående om Guds kärlek" 
+                 class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-1">Kärlekens Kraft</h3>
+              <p class="text-gray-600 text-sm mb-2">David Berg</p>
+              <div class="flex items-center mb-2">
+                <div class="text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="text-gray-600 text-sm ml-2">(214 recensioner)</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="font-bold text-lg">349 kr</span>
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                  Lägg till
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 4 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover relative">
+            <span class="product-badge">-20%</span>
+            <img src="https://images.unsplash.com/photo-1600189261867-30e5ffe7b8da?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                 alt="Kristet armband med silverkors och blå stenar - handgjort i Sverige" 
+                 class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-1">Troshopp Armband</h3>
+              <p class="text-gray-600 text-sm mb-2">Handgjort i silver</p>
+              <div class="flex items-center mb-2">
+                <div class="text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="text-gray-600 text-sm ml-2">(156 recensioner)</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="font-bold text-lg"><span class="text-gray-400 line-through mr-2">399 kr</span> 319 kr</span>
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                  Lägg till
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sale Section -->
+    <section id="sale" class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-2xl md:text-3xl font-bold">REA & Erbjudanden</h2>
+          <a href="#all-sale" class="text-yellow-500 hover:text-yellow-600 font-medium">Visa alla →</a>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Product 5 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover relative">
+            <span class="product-badge">-30%</span>
+            <img src="https://plus.unsplash.com/premium_photo-1725075088161-12a1051fac61?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Barnbibel med färgglada illustrationer - 'Guds underbara värld' för barn 3-8 år" 
+                 class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-1">Barnbibel</h3>
+              <p class="text-gray-600 text-sm mb-2">Guds underbara värld</p>
+              <div class="flex items-center mb-2">
+                <div class="text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-gray-600 text-sm ml-2">(67 recensioner)</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="font-bold text-lg"><span class="text-gray-400 line-through mr-2">199 kr</span> 139 kr</span>
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                  Lägg till
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 6 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover relative">
+            <span class="product-badge">Begränsat lager</span>
+            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                 alt="Kristen studiebok 'Djupet av Guds nåd' av teologen Markus Lundgren - teologisk analys" 
+                 class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-1">Djupet av Guds nåd</h3>
+              <p class="text-gray-600 text-sm mb-2">Markus Lundgren</p>
+              <div class="flex items-center mb-2">
+                <div class="text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-gray-600 text-sm ml-2">(42 recensioner)</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="font-bold text-lg">229 kr</span>
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                  Lägg till
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 7 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover relative">
+            <span class="product-badge">-15%</span>
+            <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                 alt="Kristen kaffemugg med tryck 'Guds frid övergår allt förstånd' - hållbar keramik" 
+                 class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-1">Fridens Mugg</h3>
+              <p class="text-gray-600 text-sm mb-2">Keramik med bibelvers</p>
+              <div class="flex items-center mb-2">
+                <div class="text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="text-gray-600 text-sm ml-2">(183 recensioner)</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="font-bold text-lg"><span class="text-gray-400 line-through mr-2">149 kr</span> 127 kr</span>
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                  Lägg till
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 8 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover">
+            <img src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                 alt="Kristet väggkors i trä med Jesu ord 'Jag är vägen, sanningen och livet' - handgjort" 
+                 class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-1">Träkors med bibelvers</h3>
+              <p class="text-gray-600 text-sm mb-2">Handgjort i ek</p>
+              <div class="flex items-center mb-2">
+                <div class="text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-gray-600 text-sm ml-2">(94 recensioner)</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="font-bold text-lg">459 kr</span>
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                  Lägg till
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-12 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Vad Våra Kunder Säger</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="font-bold">Maria K.</span>
+            </div>
+            <p class="text-gray-700 mb-4">"Den vackraste studiebibeln jag ägt! Leveransen var supersnabb och förpackningen mycket säker. Kommer definitivt handla här igen."</p>
+            <p class="text-gray-500 text-sm">Köpte: Studiebibel i läder</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="font-bold">Erik L.</span>
+            </div>
+            <p class="text-gray-700 mb-4">"Bibelstudion har ett fantastiskt utbud av kvalitetsprodukter. Deras kundservice är oöverträffad - hjälpte mig hitta precis den bok jag letade efter."</p>
+            <p class="text-gray-500 text-sm">Köpte: Kärlekens Kraft</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="font-bold">Sara M.</span>
+            </div>
+            <p class="text-gray-700 mb-4">"Perfekt present till min systers dop! Träkorset är ännu vackrare i verkligheten än på bild. Snabb leverans och fin personlig hälsning medföljde."</p>
+            <p class="text-gray-500 text-sm">Köpte: Träkors med bibelvers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white pt-12 pb-6">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <!-- Footer Column 1 -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-bible text-yellow-400 mr-2"></i>
+            <span>Bibel<span class="text-yellow-400">studion</span></span>
+          </h3>
+          <p class="text-gray-400 mb-4">Din plats för kristna produkter, böcker och resurser för din andliga resa.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+              <i class="fab fa-spotify"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Footer Column 2 -->
+        <div>
+          <h4 class="font-bold text-lg mb-4">Butik</h4>
+          <ul class="space-y-2">
+            <li><a href="Populart-just-nu.html" class="text-gray-400 hover:text-yellow-400 transition">Populärt just nu</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Nya produkter</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">REA</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Premium</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Alla produkter</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Column 3 -->
+        <div>
+          <h4 class="font-bold text-lg mb-4">Kundservice</h4>
+          <ul class="space-y-2">
+            <li><a href="kontakta-oss.html" class="text-gray-400 hover:text-yellow-400 transition">Kontakta oss</a></li>
+            <li><a href="vanliga-fragor.html" class="text-gray-400 hover:text-yellow-400 transition">Vanliga frågor</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Frakt & leverans</a></li>
+            <li><a href="returpolicy.html" class="text-gray-400 hover:text-yellow-400 transition">Returpolicy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Betalningsmetoder</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Column 4 -->
+        <div>
+          <h4 class="font-bold text-lg mb-4">Om Bibelstudion</h4>
+          <ul class="space-y-2">
+            <li><a href="om-oss.html" class="text-gray-400 hover:text-yellow-400 transition">Om oss</a></li>
+            <li><a href="om-oss.html" class="text-gray-400 hover:text-yellow-400 transition">Vår vision</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Jobba hos oss</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Press</a></li>
+            <li><a href="Donera.html" class="text-gray-400 hover:text-yellow-400 transition">Donera</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 pt-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Bibelstudion. Alla rättigheter reserverade.</p>
+          <div class="flex space-x-6">
+            <a href="integritetspolicy.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Integritetspolicy</a>
+            <a href="anvandarvillkor.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Användarvillkor</a>
+            <a href="cookies.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Produktdata (simulerad databas) -->
+  <script>
+    // Produktdatabas
+    const products = [
+      {
+        id: 1,
+        title: "Studiebibel med noter",
+        price: 399,
+        originalPrice: 499,
+        description: "En komplett studiebibel med detaljerade noter och förklaringar till varje kapitel.",
+        category: "bibles",
+        stock: 15,
+        rating: 4.7,
+        reviews: 23,
+        images: [
+          "https://via.placeholder.com/500x500?text=Studiebibel",
+          "https://via.placeholder.com/500x500?text=Bibel+1",
+          "https://via.placeholder.com/500x500?text=Bibel+2",
+          "https://via.placeholder.com/500x500?text=Bibel+3"
+        ],
+        details: [
+          { label: "Författare", value: "Bibelkommissionen" },
+          { label: "Utgivningsår", value: "2022" },
+          { label: "Språk", value: "Svenska" },
+          { label: "Antal sidor", value: "1200" },
+          { label: "Bandtyp", value: "Hårdpärm" }
+        ],
+        similarProducts: [2, 3, 5]
+      },
+      {
+        id: 2,
+        title: "Bibel för barn",
+        price: 249,
+        originalPrice: 299,
+        description: "En färgglad och lättläst bibel speciellt anpassad för barn med illustrationer.",
+        category: "bibles",
+        stock: 8,
+        rating: 4.5,
+        reviews: 12,
+        images: [
+          "https://via.placeholder.com/500x500?text=Barnbibel",
+          "https://via.placeholder.com/500x500?text=Bibel+4",
+          "https://via.placeholder.com/500x500?text=Bibel+5",
+          "https://via.placeholder.com/500x500?text=Bibel+6"
+        ],
+        details: [
+          { label: "Författare", value: "Maria Karlsson" },
+          { label: "Utgivningsår", value: "2021" },
+          { label: "Språk", value: "Svenska" },
+          { label: "Antal sidor", value: "200" },
+          { label: "Bandtyp", value: "Häftad" }
+        ],
+        similarProducts: [1, 4, 6]
+      },
+      {
+        id: 3,
+        title: "Bönedagbok",
+        price: 149,
+        originalPrice: 179,
+        description: "En vacker dagbok för att dokumentera dina böner och Guds svar.",
+        category: "books",
+        stock: 22,
+        rating: 4.8,
+        reviews: 31,
+        images: [
+          "https://via.placeholder.com/500x500?text=Bönedagbok",
+          "https://via.placeholder.com/500x500?text=Dagbok+1",
+          "https://via.placeholder.com/500x500?text=Dagbok+2",
+          "https://via.placeholder.com/500x500?text=Dagbok+3"
+        ],
+        details: [
+          { label: "Författare", value: "Anna Pettersson" },
+          { label: "Utgivningsår", value: "2023" },
+          { label: "Språk", value: "Svenska" },
+          { label: "Antal sidor", value: "365" },
+          { label: "Bandtyp", value: "Häftad" }
+        ],
+        similarProducts: [4, 7, 8]
+      },
+      {
+        id: 4,
+        title: "Kristusarmband",
+        price: 199,
+        originalPrice: 249,
+        description: "Ett stilfullt armband med en liten Kristusfigur som charm.",
+        category: "accessories",
+        stock: 5,
+        rating: 4.3,
+        reviews: 18,
+        images: [
+          "https://via.placeholder.com/500x500?text=Kristusarmband",
+          "https://via.placeholder.com/500x500?text=Armband+1",
+          "https://via.placeholder.com/500x500?text=Armband+2",
+          "https://via.placeholder.com/500x500?text=Armband+3"
+        ],
+        details: [
+          { label: "Material", value: "Smyckesstål" },
+          { label: "Färg", value: "Silver" },
+          { label: "Storlek", value: "Justerbar" },
+          { label: "Vikt", value: "15g" }
+        ],
+        similarProducts: [5, 9, 10]
+      },
+      {
+        id: 5,
+        title: "Bibelomslag i läder",
+        price: 129,
+        originalPrice: 159,
+        description: "Ett elegant läderomslag som skyddar din bibel och ger den en personlig touch.",
+        category: "accessories",
+        stock: 12,
+        rating: 4.6,
+        reviews: 14,
+        images: [
+          "https://via.placeholder.com/500x500?text=Bibelomslag",
+          "https://via.placeholder.com/500x500?text=Omslag+1",
+          "https://via.placeholder.com/500x500?text=Omslag+2",
+          "https://via.placeholder.com/500x500?text=Omslag+3"
+        ],
+        details: [
+          { label: "Material", value: "Ekologiskt läder" },
+          { label: "Färg", value: "Brun" },
+          { label: "Passar till", value: "Standardbibelstorlek" },
+          { label: "Funktion", value: "Skydd och personlig stil" }
+        ],
+        similarProducts: [1, 2, 6]
+      },
+      {
+        id: 6,
+        title: "Bibelstudieguide",
+        price: 179,
+        originalPrice: 0,
+        description: "En praktisk guide för att fördjupa dina bibelstudier med frågor och reflektioner.",
+        category: "books",
+        stock: 7,
+        rating: 4.9,
+        reviews: 27,
+        images: [
+          "https://via.placeholder.com/500x500?text=Studieguide",
+          "https://via.placeholder.com/500x500?text=Guide+1",
+          "https://via.placeholder.com/500x500?text=Guide+2",
+          "https://via.placeholder.com/500x500?text=Guide+3"
+        ],
+        details: [
+          { label: "Författare", value: "David Bergman" },
+          { label: "Utgivningsår", value: "2022" },
+          { label: "Språk", value: "Svenska" },
+          { label: "Antal sidor", value: "250" },
+          { label: "Bandtyp", value: "Häftad" }
+        ],
+        similarProducts: [1, 3, 7]
+      },
+      {
+        id: 7,
+        title: "Kors i trä",
+        price: 349,
+        originalPrice: 399,
+        description: "Ett vackert handgjort träkors för hemmet eller som gåva.",
+        category: "gifts",
+        stock: 3,
+        rating: 4.7,
+        reviews: 9,
+        images: [
+          "https://via.placeholder.com/500x500?text=Träkors",
+          "https://via.placeholder.com/500x500?text=Kors+1",
+          "https://via.placeholder.com/500x500?text=Kors+2",
+          "https://via.placeholder.com/500x500?text=Kors+3"
+        ],
+        details: [
+          { label: "Material", value: "Ek" },
+          { label: "Färg", value: "Naturlig" },
+          { label: "Storlek", value: "30x20 cm" },
+          { label: "Vikt", value: "500g" }
+        ],
+        similarProducts: [8, 9, 10]
+      },
+      {
+        id: 8,
+        title: "Bibelpärmar",
+        price: 89,
+        originalPrice: 99,
+        description: "Praktiska pärmar för att organisera dina bibelstudiematerial.",
+        category: "accessories",
+        stock: 25,
+        rating: 4.2,
+        reviews: 11,
+        images: [
+          "https://via.placeholder.com/500x500?text=Bibelpärmar",
+          "https://via.placeholder.com/500x500?text=Pärmar+1",
+          "https://via.placeholder.com/500x500?text=Pärmar+2",
+          "https://via.placeholder.com/500x500?text=Pärmar+3"
+        ],
+        details: [
+          { label: "Material", value: "Kartong" },
+          { label: "Färg", value: "Svart" },
+          { label: "Antal", value: "3 st" },
+          { label: "Storlek", value: "A4" }
+        ],
+        similarProducts: [5, 6, 9]
+      },
+      {
+        id: 9,
+        title: "Böneljus",
+        price: 59,
+        originalPrice: 79,
+        description: "Ett set med fyra vackra ljus för att skapa en andlig stämning under bön.",
+        category: "gifts",
+        stock: 18,
+        rating: 4.4,
+        reviews: 16,
+        images: [
+          "https://via.placeholder.com/500x500?text=Böneljus",
+          "https://via.placeholder.com/500x500?text=Ljus+1",
+          "https://via.placeholder.com/500x500?text=Ljus+2",
+          "https://via.placeholder.com/500x500?text=Ljus+3"
+        ],
+        details: [
+          { label: "Material", value: "Bivax" },
+          { label: "Färg", value: "Beige" },
+          { label: "Antal", value: "4 st" },
+          { label: "Bränntid", value: "8 timmar/st" }
+        ],
+        similarProducts: [4, 7, 10]
+      },
+      {
+        id: 10,
+        title: "Bibelmarkörer",
+        price: 49,
+        originalPrice: 0,
+        description: "Ett set med sex vackra bibelmarkörer med bibelverser.",
+        category: "accessories",
+        stock: 30,
+        rating: 4.1,
+        reviews: 7,
+        images: [
+          "https://via.placeholder.com/500x500?text=Bibelmarkörer",
+          "https://via.placeholder.com/500x500?text=Markörer+1",
+          "https://via.placeholder.com/500x500?text=Markörer+2",
+          "https://via.placeholder.com/500x500?text=Markörer+3"
+        ],
+        details: [
+          { label: "Material", value: "Papper" },
+          { label: "Färg", value: "Olika färger" },
+          { label: "Antal", value: "6 st" },
+          { label: "Storlek", value: "5x15 cm" }
+        ],
+        similarProducts: [5, 8, 9]
+      }
+    ];
+
+    // Recensioner
+    const reviews = [
+      {
+        id: 1,
+        productId: 1,
+        author: "Lisa Andersson",
+        date: "2023-04-15",
+        rating: 5,
+        title: "Fantastisk studiebibel",
+        text: "Denna bibel har fördjupat min förståelse av Guds Ord på ett helt nytt sätt. Noterna är extremt hjälpsamma och välskrivna."
+      },
+      {
+        id: 2,
+        productId: 1,
+        author: "Johan Karlsson",
+        date: "2023-03-28",
+        rating: 4,
+        title: "Mycket bra men tyngd",
+        text: "Bibeln är verkligen omfattande med fantastiska noter. Enda nackdelen är att den är ganska tung att bära med sig."
+      },
+      {
+        id: 3,
+        productId: 3,
+        author: "Emma Nilsson",
+        date: "2023-05-02",
+        rating: 5,
+        title: "Underbar bönedagbok",
+        text: "Jag älskar att dokumentera mina böner och se hur Gud svarar över tid. Dagboken är vackert designad och hög kvalitet."
+      }
+    ];
+
+    // Kundvagn
+    let cart = [];
+
+    // Hämta kundvagn från localStorage om den finns
+    if (localStorage.getItem('cart')) {
+      cart = JSON.parse(localStorage.getItem('cart'));
+      updateCartCount();
+    }
+
+    // Aktuell sida
+    let currentPage = 'shop';
+    let currentProductId = null;
+
+    // Visa rätt sida baserad på URL-hash
+    function showPage() {
+      const hash = window.location.hash.substring(1);
+
+      // Dölj alla sidor först
+      document.querySelectorAll('[id$="-page"]').forEach(page => {
+        page.classList.add('hidden');
+      });
+
+      // Visa rätt sida baserad på hash
+      if (hash.startsWith('product-')) {
+        const productId = parseInt(hash.split('-')[1]);
+        showProductPage(productId);
+      } else if (hash === 'cart') {
+        showCartPage();
+      } else if (hash === 'checkout') {
+        showCheckoutPage();
+      } else if (hash === 'account') {
+        showAccountPage();
+      } else {
+        showShopPage();
+      }
+    }
+
+    // Visa butikssida
+    function showShopPage() {
+      currentPage = 'shop';
+      document.getElementById('shop-page').classList.remove('hidden');
+      renderProducts();
+    }
+
+    // Visa produktsida
+    function showProductPage(productId) {
+      currentPage = 'product';
+      currentProductId = productId;
+      document.getElementById('product-page').classList.remove('hidden');
+
+      const product = products.find(p => p.id === productId);
+      if (product) {
+        // Uppdatera produktinformation
+        document.getElementById('product-title').textContent = product.title;
+        document.getElementById('product-price').textContent = product.price + ' kr';
+
+        if (product.originalPrice) {
+          document.getElementById('product-original-price').textContent = product.originalPrice + ' kr';
+          document.getElementById('product-original-price').classList.remove('hidden');
+        } else {
+          document.getElementById('product-original-price').classList.add('hidden');
+        }
+
+        document.getElementById('product-description').textContent = product.description;
+        document.getElementById('product-stock').textContent = product.stock + ' i lager';
+
+        // Uppdatera bilder
+        const mainImage = document.getElementById('product-main-image');
+        mainImage.src = product.images[0];
+        mainImage.alt = product.title;
+
+        const thumbnails = document.querySelectorAll('#product-page .grid img');
+        thumbnails.forEach((thumb, index) => {
+          if (product.images[index]) {
+            thumb.src = product.images[index];
+            thumb.alt = product.title + ' ' + (index + 1);
+            thumb.parentElement.classList.remove('hidden');
+
+            thumb.parentElement.addEventListener('click', () => {
+              mainImage.src = product.images[index];
+            });
+          } else {
+            thumb.parentElement.classList.add('hidden');
+          }
+        });
+
+        // Uppdatera produktdetaljer
+        const detailsContainer = document.getElementById('product-details');
+        detailsContainer.innerHTML = '';
+
+        product.details.forEach(detail => {
+          const div = document.createElement('div');
+          div.className = 'flex mb-2';
+          div.innerHTML = `
+                        <span class="font-medium text-gray-700 w-1/3">${detail.label}</span>
+                        <span class="text-gray-600">${detail.value}</span>
+                    `;
+          detailsContainer.appendChild(div);
+        });
+
+        // Uppdatera betyg
+        const ratingContainer = document.querySelector('#product-page .flex.text-yellow-400');
+        ratingContainer.innerHTML = '';
+
+        const fullStars = Math.floor(product.rating);
+        const hasHalfStar = product.rating % 1 >= 0.5;
+
+        for (let i = 1
+
+
+  </script>
+
+
+
+  <script>
+    // JavaScript för cookiehantering
+    document.addEventListener('DOMContentLoaded', function() {
+      // Funktion för att spara cookiepreferenser
+      function saveCookiePreferences(preferences) {
+        localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+        // Skapa en cookie som sparar inställningarna i 1 år
+        const date = new Date();
+        date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = `cookie_consent=${encodeURIComponent(JSON.stringify(preferences))};${expires};path=/;SameSite=Lax`;
+        
+        // Ladda in cookies baserat på preferenser
+        loadCookiesBasedOnPreferences(preferences);
+      }
+
+      // Funktion för att ladda cookies baserat på användarens preferenser
+      function loadCookiesBasedOnPreferences(preferences) {
+        if (preferences.analytics) {
+          // Ladda in analysverktyg (t.ex. Google Analytics)
+          console.log('Loading analytics cookies...');
+        }
+        if (preferences.marketing) {
+          // Ladda in marknadsföringsverktyg (t.ex. Facebook Pixel)
+          console.log('Loading marketing cookies...');
+        }
+      }
+
+      // Kolla om användaren redan har satt cookiepreferenser
+      const savedPreferences = localStorage.getItem('cookiePreferences');
+      if (!savedPreferences) {
+        // Visa cookie-banner om inga preferenser är sparade
+        const banner = document.createElement('div');
+        banner.id = 'cookie-banner';
+        banner.innerHTML = `
+          <div class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 z-50 shadow-lg">
+            <div class="container mx-auto">
+              <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
+                <div class="mb-4 md:mb-0 md:mr-4">
+                  <h3 class="font-bold text-lg mb-1">Vi använder cookies</h3>
+                  <p class="text-sm">Vi använder cookies för att förbättra din upplevelse på Bibelstudion. Nödvändiga cookies är alltid aktiverade, men du kan välja bort andra.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full sm:w-auto">
+                  <button id="accept-all-cookies" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded text-sm whitespace-nowrap">
+                    Acceptera alla
+                  </button>
+                  <button id="accept-selected-cookies" class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded text-sm whitespace-nowrap">
+                    Anpassa inställningar
+                  </button>
+                  <button id="reject-non-essential" class="bg-transparent border border-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded text-sm whitespace-nowrap">
+                    Endast nödvändiga
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+        document.body.appendChild(banner);
+
+        // Hantera knapptryckningar
+        document.getElementById('accept-all-cookies').addEventListener('click', function() {
+          const preferences = {
+            necessary: true,
+            preferences: true,
+            analytics: true,
+            marketing: true
+          };
+          saveCookiePreferences(preferences);
+          document.getElementById('cookie-banner').remove();
+        });
+
+        document.getElementById('accept-selected-cookies').addEventListener('click', function() {
+          // Här skulle du visa en modal med detaljerade inställningar
+          alert('I en full implementation skulle du här kunna välja specifika cookie-kategorier');
+        });
+
+        document.getElementById('reject-non-essential').addEventListener('click', function() {
+          const preferences = {
+            necessary: true,
+            preferences: false,
+            analytics: false,
+            marketing: false
+          };
+          saveCookiePreferences(preferences);
+          document.getElementById('cookie-banner').remove();
+        });
+      } else {
+        // Ladda cookies baserat på sparade preferenser
+        loadCookiesBasedOnPreferences(JSON.parse(savedPreferences));
+      }
+    });
+  </script>
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/67b0bca7fb6773190d790aa1/1ik561s69';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+
+
+
+    <!-- Mobile Menu Script -->
+    <script>
+      document.getElementById('mobileMenuButton').addEventListener('click', function() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('hidden');
+      });
+
+      // Simple cart counter functionality
+      const addToCartButtons = document.querySelectorAll('button:contains("Lägg till")');
+      const cartCount = document.getElementById('cart-count');
+      let count = 0;
+
+      addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          count++;
+          cartCount.textContent = count;
+          // Here you would normally add AJAX call to update cart
+          alert('Produkten har lagts till i din varukorg!');
+        });
+      });
+    </script>
+</body>
+</html>
