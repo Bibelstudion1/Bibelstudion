@@ -15,6 +15,7 @@
   <meta property="og:title" content="Donera till Bibelstudion | Ledande Kristet Stödalternativ">
   <meta property="og:description" content="Din generositet gör skillnad! Stöd vårt globala arbete med att sprida Guds Ord genom säkra donationsalternativ.">
   <meta property="og:image" content="https://bibelstudion.se/images/donation-social-share.jpg">
+  <meta property="og:image:alt" content="Glad familj som donerar till Bibelstudion med biblar och leende ansikten">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
@@ -37,9 +38,6 @@
       "description": "Bibelstudion arbetar globalt för att sprida Guds Ord genom bibelutbildning, missionsarbete och distribution av gratisbiblar.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Bibelvägen 1",
-        "addressLocality": "Stockholm",
-        "postalCode": "111 22",
         "addressCountry": "SE"
       },
       "foundingDate": "2010",
@@ -47,7 +45,23 @@
         "https://facebook.com/bibelstudion",
         "https://instagram.com/bibelstudion",
         "https://youtube.com/bibelstudion"
-      ]
+      ],
+      "potentialAction": {
+        "@type": "DonateAction",
+        "url": "https://bibelstudion.se/donera/",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://bibelstudion.se/donera/",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform"
+          ]
+        },
+        "recipient": {
+          "@type": "Organization",
+          "name": "Bibelstudion"
+        }
+      }
     }
   </script>
   
@@ -68,6 +82,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NL4P515HW4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NL4P515HW4');
+</script>
+  
   <style>
     .donation-card:hover {
       transform: translateY(-5px);
