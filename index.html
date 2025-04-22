@@ -1191,6 +1191,27 @@
 
 </body>
 
+
+
+<script>
+  const searchInput = document.querySelector('.search-input');
+  const searchableItems = document.querySelectorAll('.searchable-item');
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase();
+
+    searchableItems.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      if (text.includes(query)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+
 </html>
 
 <!-- Back to Top Button -->
