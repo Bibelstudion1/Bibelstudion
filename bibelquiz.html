@@ -166,180 +166,166 @@
 
 
 <body class="bg-gray-50 font-sans">
-    <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <!-- Logo -->
-        <div class="flex items-center">
-          <a href="index.html" class="flex items-center">
-            <i class="fas fa-bible text-yellow-500 text-3xl mr-2"></i>
-            <span class="text-2xl font-bold text-gray-800">Bibel<span class="text-yellow-500">studion</span></span>
-          </a>
-        </div>
-  
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex space-x-8">
-          <a href="index.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Hem</a>
-          <a href="butik.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Butik</a>
-          <a href="kategorier.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kategorier</a>
-          <a href="om-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Om oss</a>
-          <a href="kontakta-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kontakt</a>
-        </nav>
-  
-        <!-- Icons -->
-        <div class="flex items-center space-x-4">
-          <div class="relative hidden md:block">
-            <input type="text" placeholder="Sök produkter..." 
-              class="search-input pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 w-64">
-            <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
-          </div>
-          <a href="login.html" class="text-gray-800 hover:text-yellow-500 text-xl">
-            <i class="far fa-user"></i>
-          </a>
-          <a href="kundvagn.html" class="text-gray-800 hover:text-yellow-500 text-xl relative">
-            <i class="fas fa-shopping-cart"></i>
-            <span id="cart-count" 
-              class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
-          </a>
-  
-          <button class="md:hidden p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded-full transition-all duration-200" 
-          id="mobileMenuButton" 
-          aria-expanded="false" 
-          aria-controls="mobileMenu"
-          aria-label="Öppna meny">
-            <i class="fas fa-bars text-2xl transition-transform duration-300"></i>
-          </button>
-        </div>
-      </div>
-    </header>
-  </body>
-  
-  
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="fixed top-0 left-0 w-full bg-white shadow-xl z-50 transform -translate-y-full transition-transform duration-300 ease-out">
-    <!-- Menu Header with Close Button -->
-    <div class="flex justify-between items-center px-4 py-3 border-b border-gray-100">
-      <h2 class="text-lg font-semibold text-gray-800">Meny</h2>
-      <button id="mobileMenuClose" class="p-2 text-gray-500 hover:text-gray-700 focus:outline-none" aria-label="Stäng meny">
-        <i class="fas fa-times text-xl"></i>
-      </button>
-    </div>
-    
-    <div class="overflow-y-auto max-h-screen pb-6">
-      <div class="flex flex-col space-y-1 px-4 py-3">
-        <a href="index.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
-          <i class="fas fa-home mr-3 text-gray-400 w-5 text-center"></i>
-          <span>Hem</span>
-        </a>
-        <a href="butik.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
-          <i class="fas fa-store mr-3 text-gray-400 w-5 text-center"></i>
-          <span>Butik</span>
-        </a>
-        <a href="kategorier.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
-          <i class="fas fa-tags mr-3 text-gray-400 w-5 text-center"></i>
-          <span>Kategorier</span>
-        </a>
-        <a href="om-oss.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
-          <i class="fas fa-info-circle mr-3 text-gray-400 w-5 text-center"></i>
-          <span>Om oss</span>
-        </a>
-        <a href="kontakta-oss.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
-          <i class="fas fa-envelope mr-3 text-gray-400 w-5 text-center"></i>
-          <span>Kontakt</span>
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="index.html" class="flex items-center">
+          <i class="fas fa-bible text-yellow-500 text-3xl mr-2"></i>
+          <span class="text-2xl font-bold text-gray-800">Bibel<span class="text-yellow-500">studion</span></span>
         </a>
       </div>
-      
-      <!-- Search Box -->
-      <div class="px-4 py-3 border-t border-gray-100">
-        <div class="relative">
-          <input type="text" placeholder="Sök produkter..." 
-                 class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all duration-200"
-                 aria-label="Sök produkter">
-          <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Overlay -->
-  <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-  
-  <script>
-    const menuButton = document.getElementById('mobileMenuButton');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuOverlay = document.getElementById('menuOverlay');
-    const menuCloseButton = document.getElementById('mobileMenuClose');
-    const menuIcon = menuButton.querySelector('i');
-  
-    function toggleMenu() {
-      const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-      
-      // Toggle menu and overlay
-      mobileMenu.classList.toggle('-translate-y-full');
-      mobileMenu.classList.toggle('translate-y-0');
-      menuOverlay.classList.toggle('opacity-0');
-      menuOverlay.classList.toggle('pointer-events-none');
-      
-      // Toggle hamburger icon
-      menuIcon.classList.toggle('fa-bars');
-      menuIcon.classList.toggle('fa-times');
-      
-      // Update accessibility and body scroll
-      menuButton.setAttribute('aria-expanded', !isExpanded);
-      document.body.style.overflow = isExpanded ? '' : 'hidden';
-    }
-  
-    // Event listeners
-    menuButton.addEventListener('click', toggleMenu);
-    menuOverlay.addEventListener('click', toggleMenu);
-    menuCloseButton.addEventListener('click', toggleMenu);
-  
-    // Close menu when clicking on links
-    document.querySelectorAll('#mobileMenu a').forEach(item => {
-      item.addEventListener('click', toggleMenu);
-    });
-  
-    // Close menu with Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
-        toggleMenu();
-      }
-    });
-  </script>
-  
-  <!-- Secondary Navigation -->
-  <div class="bg-gray-800 text-white sticky top-16 z-40">
-    <div class="container mx-auto px-4">
-      <div class="flex overflow-x-auto space-x-8 py-3">
-        <a href="populart-just-nu.html" class="whitespace-nowrap hover:text-yellow-400">Populärt just nu</a>
-        <a href="#premium" class="whitespace-nowrap hover:text-yellow-400">Premium</a>
-        <a href="bibel.html" class="whitespace-nowrap hover:text-yellow-400">Bibel</a>
-        <a href="bibelstudion-ai.html" class="whitespace-nowrap hover:text-yellow-400">Bibelstudion AI</a>
-        <a href="donera.html" class="whitespace-nowrap hover:text-yellow-400">Gåvor</a>
-        <a href="bibelquiz.html" class="whitespace-nowrap hover:text-yellow-400">Bibelquiz</a>
-        <a href="#accessories" class="whitespace-nowrap hover:text-yellow-400">Accessoarer</a>
-        <a href="blogginlagg.html" class="whitespace-nowrap hover:text-yellow-400">Blogginlägg</a>
-        <a href="#sale" class="whitespace-nowrap text-yellow-400 font-bold">REA</a>
-      </div>
-    </div>
-  </div>
 
-    
-    <!-- Hero Section -->
-    <section class="hero-gradient text-white py-12">
-      <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Testa Din Bibelkunskap</h1>
-        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Upptäck 10 spännande quiz som utmanar din förståelse av Bibelns berättelser, personer och läror</p>
-        <div class="flex justify-center space-x-4">
-          <a href="#quiz-list" class="bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-bold py-3 px-6 rounded-full transition duration-300">
-            Välj Ett Quiz
-          </a>
-          <a href="#how-it-works" class="bg-white hover:bg-gray-100 text-gray-800 font-bold py-3 px-6 rounded-full transition duration-300">
-            Hur Det Fungerar
-          </a>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="index.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Hem</a>
+        <a href="butik.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Butik</a>
+        <a href="kategorier.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kategorier</a>
+        <a href="om-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Om oss</a>
+        <a href="kontakta-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kontakt</a>
+      </nav>
+
+      <!-- Icons -->
+      <div class="flex items-center space-x-4">
+        <div class="relative hidden md:block">
+          <input type="text" placeholder="Sök produkter..." 
+            class="search-input pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 w-64">
+          <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
         </div>
+        <a href="login.html" class="text-gray-800 hover:text-yellow-500 text-xl">
+          <i class="far fa-user"></i>
+        </a>
+        <a href="kundvagn.html" class="text-gray-800 hover:text-yellow-500 text-xl relative">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-count" 
+            class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+        </a>
+
+        <button class="md:hidden p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded-full transition-all duration-200" 
+        id="mobileMenuButton" 
+        aria-expanded="false" 
+        aria-controls="mobileMenu"
+        aria-label="Öppna meny">
+          <i class="fas fa-bars text-2xl transition-transform duration-300"></i>
+        </button>
       </div>
-    </section>
+    </div>
+  </header>
+</body>
+
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="fixed top-0 left-0 w-full bg-white shadow-xl z-50 transform -translate-y-full transition-transform duration-300 ease-out">
+  <!-- Menu Header with Close Button -->
+  <div class="flex justify-between items-center px-4 py-3 border-b border-gray-100">
+    <h2 class="text-lg font-semibold text-gray-800">Meny</h2>
+    <button id="mobileMenuClose" class="p-2 text-gray-500 hover:text-gray-700 focus:outline-none" aria-label="Stäng meny">
+      <i class="fas fa-times text-xl"></i>
+    </button>
+  </div>
+  
+  <div class="overflow-y-auto max-h-screen pb-6">
+    <div class="flex flex-col space-y-1 px-4 py-3">
+      <a href="index.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+        <i class="fas fa-home mr-3 text-gray-400 w-5 text-center"></i>
+        <span>Hem</span>
+      </a>
+      <a href="butik.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+        <i class="fas fa-store mr-3 text-gray-400 w-5 text-center"></i>
+        <span>Butik</span>
+      </a>
+      <a href="kategorier.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+        <i class="fas fa-tags mr-3 text-gray-400 w-5 text-center"></i>
+        <span>Kategorier</span>
+      </a>
+      <a href="om-oss.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+        <i class="fas fa-info-circle mr-3 text-gray-400 w-5 text-center"></i>
+        <span>Om oss</span>
+      </a>
+      <a href="kontakta-oss.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
+        <i class="fas fa-envelope mr-3 text-gray-400 w-5 text-center"></i>
+        <span>Kontakt</span>
+      </a>
+    </div>
+    
+    <!-- Search Box -->
+    <div class="px-4 py-3 border-t border-gray-100">
+      <div class="relative">
+        <input type="text" placeholder="Sök produkter..." 
+               class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all duration-200"
+               aria-label="Sök produkter">
+        <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Overlay -->
+<div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+<script>
+  const menuButton = document.getElementById('mobileMenuButton');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuOverlay = document.getElementById('menuOverlay');
+  const menuCloseButton = document.getElementById('mobileMenuClose');
+  const menuIcon = menuButton.querySelector('i');
+
+  function toggleMenu() {
+    const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+    
+    // Toggle menu and overlay
+    mobileMenu.classList.toggle('-translate-y-full');
+    mobileMenu.classList.toggle('translate-y-0');
+    menuOverlay.classList.toggle('opacity-0');
+    menuOverlay.classList.toggle('pointer-events-none');
+    
+    // Toggle hamburger icon
+    menuIcon.classList.toggle('fa-bars');
+    menuIcon.classList.toggle('fa-times');
+    
+    // Update accessibility and body scroll
+    menuButton.setAttribute('aria-expanded', !isExpanded);
+    document.body.style.overflow = isExpanded ? '' : 'hidden';
+  }
+
+  // Event listeners
+  menuButton.addEventListener('click', toggleMenu);
+  menuOverlay.addEventListener('click', toggleMenu);
+  menuCloseButton.addEventListener('click', toggleMenu);
+
+  // Close menu when clicking on links
+  document.querySelectorAll('#mobileMenu a').forEach(item => {
+    item.addEventListener('click', toggleMenu);
+  });
+
+  // Close menu with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+      toggleMenu();
+    }
+  });
+</script>
+
+<!-- Secondary Navigation -->
+<div class="bg-gray-800 text-white sticky top-16 z-40">
+  <div class="container mx-auto px-4">
+    <div class="flex overflow-x-auto space-x-8 py-3">
+      <a href="populart-just-nu.html" class="whitespace-nowrap hover:text-yellow-400">Populärt just nu</a>
+      <a href="#premium" class="whitespace-nowrap hover:text-yellow-400">Premium</a>
+      <a href="bibel.html" class="whitespace-nowrap hover:text-yellow-400">Bibel</a>
+        <a href="bibelstudion-ai.html" class="whitespace-nowrap hover:text-yellow-400">Bibelstudion AI</a>
+      <a href="donera.html" class="whitespace-nowrap hover:text-yellow-400">Gåvor</a>
+      <a href="bibelquiz.html" class="whitespace-nowrap hover:text-yellow-400">Bibelquiz</a>
+      <a href="trendiga-accessoarer.html" class="whitespace-nowrap hover:text-yellow-400">Accessoarer</a>
+      <a href="blogginlagg.html" class="whitespace-nowrap hover:text-yellow-400">Blogginlägg</a>
+      <a href="#sale" class="whitespace-nowrap text-yellow-400 font-bold">REA</a>
+    </div>
+  </div>
+</div>
+
+
+
 
     <!-- Breadcrumbs -->
     <div class="container mx-auto px-4 py-4">
@@ -515,9 +501,147 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+
+
+
+
+
+
+
+
+    <!-- Quiz 11 -->
+<div class="quiz-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="startQuiz(11)">
+  <img src="images/Profetior om Messias i Gamla Testamentet med bibliska profetier och Jesus.jpeg" alt="Profetior om Messias i Gamla Testamentet" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h3 class="font-bold text-xl mb-2">Profetior om Messias i Gamla Testamentet</h3>
+    <p class="text-gray-600 mb-4">Upptäck hur Gamla Testamentets profetior uppfylldes i Jesus Kristus</p>
+    <div class="flex justify-between items-center">
+      <span class="text-sm text-gray-500"><i class="fas fa-question-circle mr-1"></i> 5 frågor</span>
+      <span class="text-sm text-gray-500"><i class="fas fa-users mr-1"></i> 1,892 spelade</span>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 12 -->
+<div class="quiz-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="startQuiz(12)">
+  <img src="images/Jesus Mirakel - Tecken på Guds rike med bibliska underverk.jpeg" alt="Jesus Mirakel - Tecken på Guds rike" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h3 class="font-bold text-xl mb-2">Jesus Mirakel - Tecken på Guds rike</h3>
+    <p class="text-gray-600 mb-4">Utforska Jesu underverk och deras djupa betydelser i Nya Testamentet</p>
+    <div class="flex justify-between items-center">
+      <span class="text-sm text-gray-500"><i class="fas fa-question-circle mr-1"></i> 5 frågor</span>
+      <span class="text-sm text-gray-500"><i class="fas fa-users mr-1"></i> 2,134 spelade</span>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 13 -->
+<div class="quiz-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="startQuiz(13)">
+  <img src="images/Paulus Missionsresor - Kristendomens Spridning med antika kartor.jpeg" alt="Paulus Missionsresor - Kristendomens Spridning" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h3 class="font-bold text-xl mb-2">Paulus Missionsresor - Kristendomens Spridning</h3>
+    <p class="text-gray-600 mb-4">Följ Paulus resor och lägg märke till hur evangeliet spreds i romarriket</p>
+    <div class="flex justify-between items-center">
+      <span class="text-sm text-gray-500"><i class="fas fa-question-circle mr-1"></i> 5 frågor</span>
+      <span class="text-sm text-gray-500"><i class="fas fa-users mr-1"></i> 1,765 spelade</span>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 14 -->
+<div class="quiz-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="startQuiz(14)">
+  <img src="images/Gamla Testamentets Hjältar och deras Tro med bibliska figurer.jpeg" alt="Gamla Testamentets Hjältar och deras Tro" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h3 class="font-bold text-xl mb-2">Gamla Testamentets Hjältar och deras Tro</h3>
+    <p class="text-gray-600 mb-4">Lär dig om de stora troshjältarna i Gamla Testamentet och deras livsläxor</p>
+    <div class="flex justify-between items-center">
+      <span class="text-sm text-gray-500"><i class="fas fa-question-circle mr-1"></i> 5 frågor</span>
+      <span class="text-sm text-gray-500"><i class="fas fa-users mr-1"></i> 2,021 spelade</span>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 15 -->
+<div class="quiz-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="startQuiz(15)">
+  <img src="images/Jesus Liknelser - Himlens Hemligheter med bibliska illustrationer.jpeg" alt="Jesus Liknelser - Himlens Hemligheter" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h3 class="font-bold text-xl mb-2">Jesus Liknelser - Himlens Hemligheter</h3>
+    <p class="text-gray-600 mb-4">Fördjupa dig i Jesu läror genom hans kraftfulla berättelser och liknelser</p>
+    <div class="flex justify-between items-center">
+      <span class="text-sm text-gray-500"><i class="fas fa-question-circle mr-1"></i> 5 frågor</span>
+      <span class="text-sm text-gray-500"><i class="fas fa-users mr-1"></i> 1,932 spelade</span>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 16 -->
+<div class="quiz-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="startQuiz(16)">
+  <img src="images/Bibelns Starka Kvinnor och deras Roll med bibliska kvinnofigurer.jpeg" alt="Bibelns Starka Kvinnor och deras Roll" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h3 class="font-bold text-xl mb-2">Bibelns Starka Kvinnor och deras Roll</h3>
+    <p class="text-gray-600 mb-4">Upptäck de betydelsefulla kvinnorna i Bibeln och deras unika bidrag till Guds plan</p>
+    <div class="flex justify-between items-center">
+      <span class="text-sm text-gray-500"><i class="fas fa-question-circle mr-1"></i> 5 frågor</span>
+      <span class="text-sm text-gray-500"><i class="fas fa-users mr-1"></i> 1,876 spelade</span>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 17 -->
+<div class="quiz-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="startQuiz(17)">
+  <img src="images/Psaltaren och Vishetsskrifterna - Andlig Rikedom med böcker från Bibeln.jpeg" alt="Psaltaren och Vishetsskrifterna - Andlig Rikedom" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h3 class="font-bold text-xl mb-2">Psaltaren och Vishetsskrifterna - Andlig Rikedom</h3>
+    <p class="text-gray-600 mb-4">Utforska djupsinnigheten i Psaltaren, Ordspråksboken och andra vishetsskrifter</p>
+    <div class="flex justify-between items-center">
+      <span class="text-sm text-gray-500"><i class="fas fa-question-circle mr-1"></i> 5 frågor</span>
+      <span class="text-sm text-gray-500"><i class="fas fa-users mr-1"></i> 1,654 spelade</span>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 18 -->
+<div class="quiz-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="startQuiz(18)">
+  <img src="images/Uppenbarelseboken - Profetia och Hopp med apokalyptiska symboler.jpeg" alt="Uppenbarelseboken - Profetia och Hopp" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h3 class="font-bold text-xl mb-2">Uppenbarelseboken - Profetia och Hopp</h3>
+    <p class="text-gray-600 mb-4">Decryptera symbolerna och budskapen i den sista bibliska boken full av profetiska visioner</p>
+    <div class="flex justify-between items-center">
+      <span class="text-sm text-gray-500"><i class="fas fa-question-circle mr-1"></i> 5 frågor</span>
+      <span class="text-sm text-gray-500"><i class="fas fa-users mr-1"></i> 2,198 spelade</span>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 19 -->
+<div class="quiz-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="startQuiz(19)">
+  <img src="images/Bibelns Böner - Samtal med Gud med bönehands.jpeg" alt="Bibelns Böner - Samtal med Gud" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h3 class="font-bold text-xl mb-2">Bibelns Böner - Samtal med Gud</h3>
+    <p class="text-gray-600 mb-4">Utforska kraftfulla böner i Bibeln och lär dig djupare bön från bibliska förebilder</p>
+    <div class="flex justify-between items-center">
+      <span class="text-sm text-gray-500"><i class="fas fa-question-circle mr-1"></i> 5 frågor</span>
+      <span class="text-sm text-gray-500"><i class="fas fa-users mr-1"></i> 1,789 spelade</span>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 20 -->
+<div class="quiz-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="startQuiz(20)">
+  <img src="images/Kristendomen i Romarriket - Från Förföljelse till Statsreligion med romerska symboler.jpeg" alt="Kristendomen i Romarriket - Från Förföljelse till Statsreligion" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h3 class="font-bold text-xl mb-2">Kristendomen i Romarriket - Från Förföljelse till Statsreligion</h3>
+    <p class="text-gray-600 mb-4">Följ kristendomens spridning och utveckling under romersk tid med förföljelser och tillväxt</p>
+    <div class="flex justify-between items-center">
+      <span class="text-sm text-gray-500"><i class="fas fa-question-circle mr-1"></i> 5 frågor</span>
+      <span class="text-sm text-gray-500"><i class="fas fa-users mr-1"></i> 2,045 spelade</span>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
    
     <!-- Quiz Container (hidden by default) -->
     <div id="quiz-container" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
@@ -767,7 +891,7 @@
           <div class="flex space-x-6">
             <a href="integritetspolicy.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Integritetspolicy</a>
             <a href="anvandarvillkor.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Användarvillkor</a>
-            <a href="cookies.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Cookies</a>
+            <a href="cookiepolicy.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Cookies</a>
           </div>
         </div>
       </div>
@@ -2451,588 +2575,609 @@ s0.parentNode.insertBefore(s1,s0);
           ]
         },
         11: {
-  title: "Bibelns Kärleksberättelser",
-  description: "Testa din kunskap om romantik och relationer i Bibeln",
+  title: "Profetior om Messias i Gamla Testamentet",
+  description: "Upptäck hur Gamla Testamentets profetior uppfylldes i Jesus Kristus",
   questions: [
     {
-      question: "Vem var Jakobs favorithustru?",
+      question: "Vilken profetia om Messias uppfylldes när Jesus föddes i Betlehem?",
       options: [
-        "Lea",
-        "Rakel",
-        "Bilha",
-        "Silpa"
+        "Jesaja 7:14",
+        "Mika 5:2",
+        "Psalm 22:16",
+        "Daniel 9:26"
       ],
       correctAnswer: 1,
-      explanation: "Jakob älskade Rakel mer än Lea, trots att Lea var hans första hustru (1 Mos 29:30)."
+      explanation: "Mika 5:2 förutsade att Messias skulle födas i Betlehem: 'Men du, Betlehem Efrata... ur dig skall den komma som skall vara herre över Israel.'"
     },
     {
-      question: "Vilken kvinna bad sin svärmor att följa med henne till ett främmande land?",
+      question: "Vilken Jesajaprofetia talar om Messias som 'Guds tjänare' som skulle lida?",
       options: [
-        "Rut",
-        "Ester",
-        "Rebekka",
-        "Maria"
+        "Jesaja 9:6",
+        "Jesaja 53",
+        "Jesaja 61:1",
+        "Jesaja 7:14"
+      ],
+      correctAnswer: 1,
+      explanation: "Jesaja 53 är den mest detaljerade profetian om Messias som lidande tjänare, med beskrivningar som exakt matchar Jesu lidande och död."
+    },
+    {
+      question: "Vilken profetia uppfylldes när soldaterna kastade lott om Jesu kläder?",
+      options: [
+        "Psalm 22:18",
+        "Sakaria 9:9",
+        "Jesaja 50:6",
+        "Daniel 7:13"
       ],
       correctAnswer: 0,
-      explanation: "Rut sade till Noomi: 'Ditt folk är mitt folk och din Gud är min Gud' (Rut 1:16)."
+      explanation: "Psalm 22:18 säger: 'De delar mina kläder mellan sig och kastar lott om min mantel.' Detta uppfylldes exakt under korsfästelsen (Joh 19:23-24)."
     },
     {
-      question: "Vem skrev Höga Visan, Bibelns kärleksdikt?",
+      question: "Vilket tecken gav Jesaja för att identifiera den sanna Messias?",
       options: [
+        "Han skulle födas av en jungfru",
+        "Han skulle göra under",
+        "Han skulle predika i templet",
+        "Han skulle skriva i sanden"
+      ],
+      correctAnswer: 0,
+      explanation: "Jesaja 7:14 säger: 'Se, jungfrun skall bli havande och föda en son.' Detta unika tecken uppfylldes i Jesu jungfrufödelse (Matt 1:22-23)."
+    },
+    {
+      question: "Hur många specifika messianska profetior uppfylldes i Jesus enligt forskare?",
+      options: [
+        "Omkring 12",
+        "Mellan 25-50",
+        "Över 300",
+        "Exakt 153"
+      ],
+      correctAnswer: 2,
+      explanation: "Forskare har identifierat över 300 specifika profetior i GT som uppfylldes i Jesus, från hans härkomst till detaljer vid hans död."
+    }
+  ]
+},
+12: {
+  title: "Jesus Mirakel - Tecken på Guds rike",
+  description: "Utforska Jesu underverk och deras djupa betydelser i Nya Testamentet",
+  questions: [
+    {
+      question: "Vilket var Jesus första mirakel enligt Johannesevangeliet?",
+      options: [
+        "Botande av en spetälsk",
+        "Förvandling av vatten till vin",
+        "Uppväckande av Lazarus",
+        "Stillande av stormen"
+      ],
+      correctAnswer: 1,
+      explanation: "I Johannes 2:1-11 förvandlade Jesus vatten till vin i Kana, hans första tecken som visade hans härlighet."
+    },
+    {
+      question: "Hur många bröd och fiskar använde Jesus när han mättade de 5000?",
+      options: [
+        "3 bröd och 2 fiskar",
+        "5 bröd och 2 fiskar",
+        "7 bröd och 3 fiskar",
+        "12 bröd och 5 fiskar"
+      ],
+      correctAnswer: 1,
+      explanation: "Enligt alla fyra evangelierna använde Jesus fem bröd och två fiskar för att mätta 5000 män (plus kvinnor och barn)."
+    },
+    {
+      question: "Vilket mirakel visade Jesus makt över naturen?",
+      options: [
+        "Botande av blind född blind",
+        "Stillande av stormen",
+        "Uppväckande av dottern till Jairus",
+        "Utdrivande av demoner"
+      ],
+      correctAnswer: 1,
+      explanation: "I Mark 4:35-41 stillade Jesus stormen med en befallning, vilket fick lärjungarna att fråga: 'Vem är då denne, att till och med vindarna och havet lyder honom?'"
+    },
+    {
+      question: "Varför gjorde Jesus mirakel enligt NT?",
+      options: [
+        "För att bli populär",
+        "Som tecken på Guds rike",
+        "För att tjäna pengar",
+        "För att imponera på ledarna"
+      ],
+      correctAnswer: 1,
+      explanation: "Miraklen var 'tecken' (Joh 20:30-31) som bekräftade Jesu identitet och visade att Guds rike brutit in i världen."
+    },
+    {
+      question: "Vilket mirakel är unikt för Johannesevangeliet?",
+      options: [
+        "Botande av en blind",
+        "Uppväckande av Lazarus",
+        "Förvandling av vatten till vin",
+        "Både 2 och 3"
+      ],
+      correctAnswer: 3,
+      explanation: "Uppväckandet av Lazarus (Joh 11) och vattnet till vin (Joh 2) finns bara hos Johannes, som valde specifika tecken för sin teologiska presentation."
+    }
+  ]
+},
+13:{
+  title: "Paulus Missionsresor - Kristendomens Spridning",
+  description: "Följ Paulus resor och lägg märke till hur evangeliet spreds i romarriket",
+  questions: [
+    {
+      question: "Hur många större missionsresor gjorde Paulus enligt Apostlagärningarna?",
+      options: [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      correctAnswer: 2,
+      explanation: "Paulus gjorde tre väl dokumenterade missionsresor (Apg 13-14, 15:36-18:22, 18:23-21:16) innan hans resa till Rom som fånge."
+    },
+    {
+      question: "Vilken stad var centrum för Paulus missionsverksamhet?",
+      options: [
+        "Jerusalem",
+        "Antiokia",
+        "Korinth",
+        "Efesos"
+      ],
+      correctAnswer: 1,
+      explanation: "Antiokia i Syrien blev basen för Paulus missionsresor (Apg 13:1-3) och var där lärjungarna först kallades 'kristna'."
+    },
+    {
+      question: "Vilket var ett viktigt sätt Paulus spred evangeliet under resorna?",
+      options: [
+        "Predikade i synagogor",
+        "Höll stora möten på arenor",
+        "Skrev brev till kejsaren",
+        "Använde sociala medier"
+      ],
+      correctAnswer: 0,
+      explanation: "Paulus inledde ofta i synagogor (Apg 17:1-2), där han kunde nå både judar och gudfruktiga hedningar med evangeliet."
+    },
+    {
+      question: "Vilken viktig princip etablerades vid Apostlamötet i Jerusalem?",
+      options: [
+        "Hedningar behövde bli judar först",
+        "Frälsning genom tro utan lagens verk",
+        "Alla måste omskäras",
+        "Endast judar kunde bli kristna"
+      ],
+      correctAnswer: 1,
+      explanation: "Apostlamötet (Apg 15) bekräftade att hedningar inte behövde bli judar först, vilket banade väg för evangeliums spridning."
+    },
+    {
+      question: "Vilket var ett viktigt resultat av Paulus missionsresor?",
+      options: [
+        "Kristna församlingar i hela romarriket",
+        "Bibeln översatt till latin",
+        "Kejsaren blev kristen",
+        "Tempel förstördes"
+      ],
+      correctAnswer: 0,
+      explanation: "Paulus resor resulterade i församlingar i strategiska städer som sedan spred evangeliet vidare i sina regioner."
+    }
+  ]
+},14:{
+  title: "Gamla Testamentets Hjältar och deras Tro",
+  description: "Lär dig om de stora troshjältarna i Gamla Testamentet och deras livsläxor",
+  questions: [
+    {
+      question: "Vad är Noa mest känd för i Bibeln?",
+      options: [
+        "Hans långa liv",
+        "Byggandet av arken",
+        "Hans kamp med Jakob",
+        "Att ha skrivit Psaltaren"
+      ],
+      correctAnswer: 1,
+      explanation: "Noa visade extraordinär tro genom att bygga en enorm ark på torra land under Guds befallning (1 Mos 6)."
+    },
+    {
+      question: "Vilken biblisk hjälte kämpade mot en jätte med bara en slunga?",
+      options: [
+        "Simson",
+        "Gideon",
         "David",
-        "Salomo",
-        "Jesaja",
-        "Jesaja"
+        "Josua"
+      ],
+      correctAnswer: 2,
+      explanation: "Davids seger över Goliat (1 Sam 17) visar hur Gud kan använda de svaga för att besegra de starka genom tro."
+    },
+    {
+      question: "Vad gjorde Ester unik bland Gamla Testamentets hjältar?",
+      options: [
+        "Hon var profetissa",
+        "Hon räddade sitt folk genom att riskera sitt liv",
+        "Hon ledde en armé",
+        "Hon skrev en bibelsk bok"
       ],
       correctAnswer: 1,
-      explanation: "Höga Visan tillskrivs traditionellt Salomo (Höga Visan 1:1)."
+      explanation: "Ester visade mod genom att närma sig kungen utan inbjudan (vilket kunde kosta livet) för att rädda judarna."
     },
     {
-      question: "Vilken kvinna bad Jesus om vatten vid brunnen?",
+      question: "Vilken hjälte stod emot avgudadyrkan trots hot om döden?",
       options: [
-        "Maria från Magdala",
-        "Maria, Jesu moder",
-        "Den samaritanska kvinnan",
-        "Kvinnan med blödningar"
+        "Daniel",
+        "Josef",
+        "Mose",
+        "Elia"
       ],
-      correctAnswer: 2,
-      explanation: "Jesus talade med en samaritansk kvinna vid Jakobs brunn (Joh 4:7-26)."
+      correctAnswer: 0,
+      explanation: "Daniel fortsatte att be till Gud trots förbudet och kastades i lejongropen, men Gud räddade honom (Dan 6)."
     },
     {
-      question: "Vem var den första personen i Bibeln som sägs ha älskat någon?",
+      question: "Vad lär oss Gamla Testamentets hjältar om tro?",
       options: [
-        "Adam älskade Eva",
-        "Isak älskade Rebekka",
-        "Jakob älskade Rakel",
-        "Boas älskade Rut"
+        "Gud använder vanliga människor",
+        "Tro kräver handling",
+        "Gud är trofast mot sina löften",
+        "Allt ovanstående"
+      ],
+      correctAnswer: 3,
+      explanation: "Dessa berättelser visar hur Gud arbetar genom troende människor, kräver tro som visar sig i handling och uppfyller sina löften."
+    }
+  ]
+},15:{
+  title: "Jesus Liknelser - Himlens Hemligheter",
+  description: "Fördjupa dig i Jesu läror genom hans kraftfulla berättelser och liknelser",
+  questions: [
+    {
+      question: "Vad var huvudsyftet med Jesu liknelser enligt Matteus 13:10-13?",
+      options: [
+        "Dölja sanningen",
+        "Avslöja himlens hemligheter",
+        "Underhålla folket",
+        "Kritisera fariséerna"
       ],
       correctAnswer: 1,
-      explanation: "1 Mos 24:67 säger: 'Och Isak förde henne [Rebekka] in i sin moder Saras tält... och han fick henne kär.'"
+      explanation: "Jesus sa att han talade i liknelser för att avslöja himlens hemligheter för dem som hade öron att höra, samtidigt som de förblev dolda för de obotfärdiga."
     },
     {
-      question: "Vilket par i Bibeln var kusiner?",
+      question: "Vilken liknelse illustrerar Guds oföränderliga kärlek till förlorade människor?",
       options: [
-        "Adam och Eva",
-        "Isak och Rebekka",
-        "Jakob och Rakel",
-        "Boas och Rut"
+        "Den förlorade sonen",
+        "Den barmhärtige samariten",
+        "Såmannen",
+        "De tio jungfrurna"
       ],
-      correctAnswer: 2,
-      explanation: "Jakob och Rakel var kusiner - Rakels far Laban var Jakobs morbror (1 Mos 28:2)."
+      correctAnswer: 0,
+      explanation: "Liknelsen om den förlorade sonen (Luk 15) visar Faderns outtröttliga kärlek och beredskap att förlåta."
     },
     {
-      question: "Vem sa 'Min älskade är min och jag är hans'?",
+      question: "Vad symboliserar fröet i liknelsen om såmannen?",
       options: [
-        "Eva",
-        "Rut",
-        "Bruden i Höga Visan",
-        "Maria Magdalena"
+        "Guds ord",
+        "Tro",
+        "Församlingen",
+        "Jesus själv"
       ],
-      correctAnswer: 2,
-      explanation: "Detta är en rad från Höga Visan 2:16."
+      correctAnswer: 0,
+      explanation: "Jesus förklarade att fröet är 'ordet om riket' (Matt 13:19), det vill säga Guds ord som sås i människors hjärtan."
     },
     {
-      question: "Vilken kvinna blev bortrövad och orsakade ett krig?",
+      question: "Vilken liknelse varnar för faran av att skjuta upp andlig beredskap?",
       options: [
-        "Dina",
+        "De tio jungfrurna",
+        "Talenterna",
+        "Odelad konung",
+        "Den rike dåren"
+      ],
+      correctAnswer: 0,
+      explanation: "De tio jungfrurna (Matt 25) lär oss att hålla oss andligt beredda, eftersom vi inte vet dagen eller timmen för Jesu återkomst."
+    },
+    {
+      question: "Vad är gemensamt för de flesta av Jesu liknelser?",
+      options: [
+        "De handlar om jordbruk",
+        "De fokuserar på Guds rike",
+        "De kritiserar romarna",
+        "De är enkla att förstå"
+      ],
+      correctAnswer: 1,
+      explanation: "Majoriteten av Jesu liknelser handlar om Guds rikes natur, dess tillväxt, värde och krav på dem som vill ingå i det."
+    }
+  ]
+},16:{
+  title: "Bibelns Starka Kvinnor och deras Roll",
+  description: "Upptäck de betydelsefulla kvinnorna i Bibeln och deras unika bidrag till Guds plan",
+  questions: [
+    {
+      question: "Vilken kvinna i GT blev domare och ledare över Israel?",
+      options: [
+        "Ester",
         "Mirjam",
         "Debora",
-        "Hanna"
-      ],
-      correctAnswer: 0,
-      explanation: "Dinas bortrövande ledde till hämndaktioner (1 Mos 34)."
-    },
-    {
-      question: "Vem var den enda kvinnan som Jesus tilltalade som 'kvinna' i evangelierna?",
-      options: [
-        "Maria, hans moder",
-        "Maria från Magdala",
-        "Kvinnan med blödningar",
-        "Den kananeiska kvinnan"
-      ],
-      correctAnswer: 0,
-      explanation: "Jesus tilltalade sin mor som 'kvinna' vid bröllopet i Kana (Joh 2:4) och på korset (Joh 19:26)."
-    },
-    {
-      question: "Vilket par i Nya testamentet arbetade tillsammans som missionsmedarbetare?",
-      options: [
-        "Petrus och Lydia",
-        "Paulus och Febe",
-        "Priska och Aquila",
-        "Timoteus och Eunike"
+        "Hulda"
       ],
       correctAnswer: 2,
-      explanation: "Priska och Aquila var ett äkta par som arbetade med Paulus (Apg 18:2, Rom 16:3)."
+      explanation: "Debora var både profetissa och domare som ledde Israel till seger (Dom 4-5), en exceptionell roll under den tiden."
+    },
+    {
+      question: "Vilken kvinna visade extraordinär lojalitet genom att säga: 'Ditt folk är mitt folk'?",
+      options: [
+        "Rut",
+        "Noomi",
+        "Rebekka",
+        "Lea"
+      ],
+      correctAnswer: 0,
+      explanation: "Ruts lojalitet mot Noomi och hennes Gud (Rut 1:16) ledde till att hon blev en förfader till David och Jesus."
+    },
+    {
+      question: "Vilken kvinna riskerade sitt liv för att rädda sitt folk?",
+      options: [
+        "Maria (Jesu moder)",
+        "Ester",
+        "Priscilla",
+        "Anna (profetissan)"
+      ],
+      correctAnswer: 1,
+      explanation: "Ester visade mod genom att närma sig kungen utan inbjudan med orden: 'Om jag då måste dö, så må jag dö' (Est 4:16)."
+    },
+    {
+      question: "Vilken kvinna i NT var den första att predika om Jesu uppståndelse?",
+      options: [
+        "Maria Magdalena",
+        "Lydia",
+        "Priscilla",
+        "Febe"
+      ],
+      correctAnswer: 0,
+      explanation: "Maria Magdalena fick uppdraget att berätta om Jesu uppståndelse för lärjungarna (Joh 20:17-18), vilket gör henne till 'apostlarnas apostel'."
+    },
+    {
+      question: "Vad lär Bibelns kvinnor oss om kvinnors roll i Guds plan?",
+      options: [
+        "Kvinnor var bara passiva figurer",
+        "Gud använde kvinnor i nyckelroller",
+        "Endast män kunde vara ledare",
+        "Kvinnor var oviktiga"
+      ],
+      correctAnswer: 1,
+      explanation: "Bibelns kvinnor visar att Gud använder kvinnor i kritiska roller som profeter, ledare, lärare och nyckelpersoner i frälsningshistorien."
     }
-          ]
-        },
-        12: {
-  title: "Bibelns Händelser i Kronologisk Ordning",
-  description: "Testa din kunskap om när olika bibliska händelser inträffade",
+  ]
+},17:{
+  title: "Psaltaren och Vishetsskrifterna - Andlig Rikedom",
+  description: "Utforska djupsinnigheten i Psaltaren, Ordspråksboken och andra vishetsskrifter",
   questions: [
     {
-      question: "Vilken av dessa händelser inträffade först?",
+      question: "Vilken är den längsta kapitlet i Bibeln?",
       options: [
-        "Syndafloden",
-        "Babyloniska fångenskapen",
-        "Utfärden ur Egypten",
-        "Templets byggnad i Jerusalem"
-      ],
-      correctAnswer: 0,
-      explanation: "Syndafloden (Noas tid) inträffade långt före de andra händelserna."
-    },
-    {
-      question: "Vilket hände efter det andra men före det tredje?",
-      options: [
-        "David blir kung → Salomo bygger templet → Israels rike delas",
-        "Israels rike delas → David blir kung → Salomo bygger templet",
-        "Salomo bygger templet → Israels rike delas → David blir kung",
-        "David blir kung → Israels rike delas → Salomo bygger templet"
-      ],
-      correctAnswer: 0,
-      explanation: "Kronologisk ordning: David → Salomo → Rikets delning (1 Kung 1-12)."
-    },
-    {
-      question: "Vilken händelse inträffade senast av dessa?",
-      options: [
-        "Mose tar emot de tio budorden",
-        "Jesus korsfästelse",
-        "Paulus missionsresor",
-        "Uppenbarelseboken skrivs"
-      ],
-      correctAnswer: 3,
-      explanation: "Uppenbarelseboken skrevs ca 95 e.Kr., senast av dessa alternativ."
-    },
-    {
-      question: "Vilken händelse inträffade under domartiden?",
-      options: [
-        "Ruts möte med Boas",
-        "Deboras seger över Sisera",
-        "Davids strid mot Goliat",
-        "Elia på berget Karmel"
+        "Jesaja 53",
+        "Psalm 119",
+        "1 Korinthier 13",
+        "Uppenbarelse 21"
       ],
       correctAnswer: 1,
-      explanation: "Debora var en domare (Dom 4-5), medan de andra händelserna kom senare."
+      explanation: "Psalm 119 är Bibelns längsta kapitel med 176 verser, en hyllning till Guds lag och ord."
     },
     {
-      question: "Vilken händelse inträffade först i Jesu liv?",
+      question: "Vad är huvudtemat i Ordspråksboken?",
       options: [
-        "Dopet i Jordan",
-        "Födelsen i Betlehem",
-        "Frestelsen i öknen",
-        "Bröllopet i Kana"
+        "Profetior om Messias",
+        "Praktisk visdom för vardagslivet",
+        "Historien om Israel",
+        "Templets ritualer"
       ],
       correctAnswer: 1,
-      explanation: "Kronologisk ordning: Födelse → Dop → Frestelse → Bröllop."
+      explanation: "Ordspråksboken ger praktisk visdom om relationer, arbete, tal och livsföring med utgångspunkt i 'HERRENS fruktan' (Ords 1:7)."
     },
     {
-      question: "Vilken händelse inträffade under den babyloniska fångenskapen?",
+      question: "Vilken psalm används ofta vid begravningar och kallas 'Herdens psalm'?",
       options: [
-        "Daniel i lejongropen",
-        "Nehemja bygger murarna",
-        "Ester blir drottning",
-        "Esra återvänder till Jerusalem"
-      ],
-      correctAnswer: 0,
-      explanation: "Daniel levde under fångenskapen, medan de andra händelserna var efteråt."
-    },
-    {
-      question: "Vilken händelse inträffade senast i Gamla testamentet?",
-      options: [
-        "Malaki skriver sin bok",
-        "Nehemja återuppbyggnad",
-        "Ester blir drottning",
-        "Joels profetior"
-      ],
-      correctAnswer: 0,
-      explanation: "Malaki var sannolikt den sista profeten i GT, ca 400 f.Kr."
-    },
-    {
-      question: "Vilken händelse inträffade först efter Jesu uppståndelse?",
-      options: [
-        "Pingstdagen",
-        "Paulus omvändelse",
-        "Stefanus martyrium",
-        "Församlingen i Antiochia"
-      ],
-      correctAnswer: 0,
-      explanation: "Pingstdagen var den första stora händelsen efter uppståndelsen (Apg 2)."
-    },
-    {
-      question: "Vilken händelse inträffade under Jesu barndom?",
-      options: [
-        "Flykten till Egypten",
-        "Dopet i Jordan",
-        "Frestelsen i öknen",
-        "Bröllopet i Kana"
-      ],
-      correctAnswer: 0,
-      explanation: "Josef och Maria flydde till Egypten med Jesus som barn (Matt 2:13-15)."
-    },
-    {
-      question: "Vilken händelse inträffade senast i Bibeln?",
-      options: [
-        "Jesu himmelsfärd",
-        "Paulus fängslande i Rom",
-        "Uppenbarelsebokens syner",
-        "Petrus död"
-      ],
-      correctAnswer: 2,
-      explanation: "Uppenbarelseboken avslutar Bibeln med syner om de yttersta tingen."
-    }
-          ]
-        },
-        13: {
-  title: "Bibelns Måltider och Mat",
-  description: "Testa din kunskap om mat och måltider i Bibeln",
-  questions: [
-    {
-      question: "Vilken frukt åt Adam och Eva som de inte fick äta?",
-      options: [
-        "Äpple",
-        "Fikon",
-        "Kunskapens träd",
-        "Livets träd"
-      ],
-      correctAnswer: 2,
-      explanation: "Bibeltexten säger bara 'kunskapens träd', inte vilken frukt det var (1 Mos 2:17)."
-    },
-    {
-      question: "Vad åt Johannes Döparen i öknen?",
-      options: [
-        "Gräshoppor och vildhonung",
-        "Manna och kvällsdagg",
-        "Bröd och fisk",
-        "Dadel och mjölk"
-      ],
-      correctAnswer: 0,
-      explanation: "Matt 3:4 beskriver Johannes diet som gräshoppor och vildhonung."
-    },
-    {
-      question: "Vad var det förbjudna i Gamla testamentet att äta?",
-      options: [
-        "Fläsk",
-        "Hummer",
-        "Hare",
-        "Alla dessa alternativ"
-      ],
-      correctAnswer: 3,
-      explanation: "3 Mos 11 listar alla dessa som orena djur som inte fick ätas."
-    },
-    {
-      question: "Vilket bröd åt israeliterna i öknen?",
-      options: [
-        "Tunnbröd",
-        "Manna",
-        "Surdegsbröd",
-        "Osyrat bröd"
-      ],
-      correctAnswer: 1,
-      explanation: "Manna var det bröd som föll från himmelen (2 Mos 16:31)."
-    },
-    {
-      question: "Vad gjorde Jesus vid den sista måltiden med lärjungarna?",
-      options: [
-        "Välsignade brödet och vinet",
-        "Tvättade lärjungarnas fötter",
-        "Berättade liknelsen om den förlorade sonen",
-        "Både 1 och 2"
-      ],
-      correctAnswer: 3,
-      explanation: "Jesus både tvättade fötterna (Joh 13) och instiftade nattvarden (Matt 26:26-28)."
-    },
-    {
-      question: "Vilken måltid ägde rum efter Jesu uppståndelse?",
-      options: [
-        "Måltiden i Emmaus",
-        "Fiskmåltiden vid Tiberias",
-        "Bröllopet i Kana",
-        "Både 1 och 2"
-      ],
-      correctAnswer: 3,
-      explanation: "Både Emmaus (Luk 24:30) och Tiberias (Joh 21:12) var post-uppståndelsemåltider."
-    },
-    {
-      question: "Vad var det första miraklet Jesus gjorde enligt Johannes?",
-      options: [
-        "Mättade 5000",
-        "Förvandlade vatten till vin",
-        "Helade en blind",
-        "Stillade stormen"
-      ],
-      correctAnswer: 1,
-      explanation: "Jesus första mirakel var vid bröllopet i Kana (Joh 2:1-11)."
-    },
-    {
-      question: "Vilken mat jämförde Jesus sig själv med?",
-      options: [
-        "Livets bröd",
-        "Himmelns manna",
-        "Livets vatten",
-        "Den sanna vinstocken"
-      ],
-      correctAnswer: 0,
-      explanation: "Jesus sade: 'Jag är livets bröd' (Joh 6:35)."
-    },
-    {
-      question: "Vad åt Elia innan han gick till Horebs berg?",
-      options: [
-        "Bröd och vatten",
-        "Manna och dagg",
-        "Kakor och vatten",
-        "Gräshoppor och honung"
-      ],
-      correctAnswer: 2,
-      explanation: "En ängel gav Elia kakor och vatten (1 Kung 19:6)."
-    },
-    {
-      question: "Vad symboliserar osyrat bröd i Bibeln?",
-      options: [
-        "Livet",
-        "Upprättelse",
-        "Renhet och brådska",
-        "Förlåtelse"
-      ],
-      correctAnswer: 2,
-      explanation: "Osyrat bröd symboliserar renhet och brådska (2 Mos 12:39)."
-    }
-          ]
-        },
-        14: {
-  title: "Bibelns Profeter",
-  description: "Testa din kunskap om profeter i Gamla och Nya testamentet",
-  questions: [
-    {
-      question: "Vem var den första profeten som nämns i Bibeln?",
-      options: [
-        "Mose",
-        "Abraham",
-        "Enoch",
-        "Noa"
-      ],
-      correctAnswer: 1,
-      explanation: "Abraham kallas profet i 1 Mos 20:7, tidigare än andra nämnda profeter."
-    },
-    {
-      question: "Vilken profet konfronterade kung David efter hans synd med Batseba?",
-      options: [
-        "Elia",
-        "Natan",
-        "Jesaja",
-        "Jeremia"
-      ],
-      correctAnswer: 1,
-      explanation: "Natan konfronterade David med liknelsen om det lilla lammet (2 Sam 12)."
-    },
-    {
-      question: "Vilken profet såg en syn om torra ben som fick liv?",
-      options: [
-        "Daniel",
-        "Hesekiel",
-        "Sakarias",
-        "Amos"
-      ],
-      correctAnswer: 1,
-      explanation: "Hesekiel såg torra ben som blev levande (Hes 37)."
-    },
-    {
-      question: "Vilken profet predikade för Nineve efter att ha varit i en fisk?",
-      options: [
-        "Joel",
-        "Jonas",
-        "Nahum",
-        "Habackuk"
-      ],
-      correctAnswer: 1,
-      explanation: "Jonas tillbringade tre dagar i fisken innan han predikade för Nineve."
-    },
-    {
-      question: "Vilken profet kallades 'Messiasprofeten'?",
-      options: [
-        "Jesaja",
-        "Jeremia",
-        "Hesekiel",
-        "Daniel"
-      ],
-      correctAnswer: 0,
-      explanation: "Jesaja kallas så för sina många profetior om Messias."
-    },
-    {
-      question: "Vilken profet var kastad i lejongropen men räddades?",
-      options: [
-        "Elisa",
-        "Daniel",
-        "Jeremia",
-        "Amos"
-      ],
-      correctAnswer: 1,
-      explanation: "Daniel räddades mirakulöst från lejongropen (Dan 6)."
-    },
-    {
-      question: "Vilken profet gifte sig med en otrogen kvinna som symbol?",
-      options: [
-        "Hosea",
-        "Joel",
-        "Mika",
-        "Obadja"
-      ],
-      correctAnswer: 0,
-      explanation: "Hosea fick gifta sig med Gomer som symbol för Israels otrohet (Hos 1)."
-    },
-    {
-      question: "Vilken profet var kung Davids rådgivare?",
-      options: [
-        "Natan",
-        "Gad",
-        "Samuel",
-        "Både 1 och 2"
-      ],
-      correctAnswer: 3,
-      explanation: "Både Natan och Gad var profeter och rådgivare åt David (1 Krön 29:29)."
-    },
-    {
-      question: "Vilken profet sa 'Här är jag, sänd mig'?",
-      options: [
-        "Jeremia",
-        "Jesaja",
-        "Hesekiel",
-        "Mose"
-      ],
-      correctAnswer: 1,
-      explanation: "Jesaja svarade så när Gud sökte en budbärare (Jes 6:8)."
-    },
-    {
-      question: "Vilken profet i Nya testamentet förutsade Jesus födelse?",
-      options: [
-        "Simeon",
-        "Anna",
-        "Johannes Döparen",
-        "Alla dessa"
-      ],
-      correctAnswer: 3,
-      explanation: "Alla dessa profeter talade om Jesus före eller vid hans födelse."
-    }
-          ]
-        },
-        15: {
-  title: "Bibelns Böner",
-  description: "Testa din kunskap om berömda böner och böneliv i Bibeln",
-  questions: [
-    {
-      question: "Vem bad: 'Herre, lär oss bedja'?",
-      options: [
-        "Petrus",
-        "Johannes",
-        "Jesu lärjungar",
-        "Maria"
-      ],
-      correctAnswer: 2,
-      explanation: "Lärjungarna bad Jesus lära dem bedja (Luk 11:1)."
-    },
-    {
-      question: "Vilken bön innehåller frasen 'såsom i himmelen så ock på jorden'?",
-      options: [
-        "Herrens bön",
-        "Maria bön",
-        "Paulus bön för efesierna",
-        "Jesu bön i Getsemane"
-      ],
-      correctAnswer: 0,
-      explanation: "Detta är en del av Fader vår (Matt 6:10)."
-    },
-    {
-      question: "Vem bad en bön som fick solen att stå stilla?",
-      options: [
-        "Mose",
-        "Elia",
-        "Josua",
-        "David"
-      ],
-      correctAnswer: 2,
-      explanation: "Josuas bön fick solen att stå stilla (Jos 10:12-14)."
-    },
-    {
-      question: "Vad bad Jesus i Getsemane?",
-      options: [
-        "Låt denna kalk gå mig förbi",
-        "Din vilja ske",
-        "Vaka och bed",
-        "Alla dessa"
-      ],
-      correctAnswer: 3,
-      explanation: "Jesus bad alla dessa böner i Getsemane (Matt 26:39-44)."
-    },
-    {
-      question: "Vilken bön i Psaltaren börjar 'Herren är min herde'?",
-      options: [
-        "Psalm 1",
         "Psalm 22",
+        "Psalm 51",
         "Psalm 23",
         "Psalm 100"
       ],
       correctAnswer: 2,
-      explanation: "Psalm 23 är den kända herdepsalmen."
+      explanation: "Psalm 23 ('HERREN är min herde') ger tröst med bilder av Guds omsorg, ledning och eviga närvaro även i 'dödsskuggans dal'."
     },
     {
-      question: "Vem bad: 'Herre, kom ihåg mig när du kommer i ditt rike'?",
+      question: "Vilket bok i GT behandlar livets meningslöshet utan Gud?",
       options: [
-        "Rövaren på korset",
-        "Blinde Bartimeus",
-        "Maria Magdalena",
-        "Tomas"
+        "Job",
+        "Predikaren",
+        "Höga Visan",
+        "Klagovisorna"
+      ],
+      correctAnswer: 1,
+      explanation: "Predikaren utforskar livets 'fåfänglighet' men slutar med att all mening finns i att frukta Gud och hålla hans bud (Pred 12:13)."
+    },
+    {
+      question: "Vad är unikt med Psaltaren jämfört med andra bibliska böcker?",
+      options: [
+        "Den är skriven helt av David",
+        "Den var Israels sångbok",
+        "Den innehåller inga profetior",
+        "Den nämner inte Gud"
+      ],
+      correctAnswer: 1,
+      explanation: "Psaltaren var Israels tillbedjans- och bönbok, använd i tempeltjänsten, och innehåller ett brett spektrum av mänskliga upplevelser inför Gud."
+    }
+  ]
+},18:{
+  title: "Uppenbarelseboken - Profetia och Hopp",
+  description: "Decryptera symbolerna och budskapen i den sista bibliska boken full av profetiska visioner",
+  questions: [
+    {
+      question: "Vilket litterärt genre tillhör Uppenbarelseboken?",
+      options: [
+        "Historisk krönika",
+        "Kärleksdikt",
+        "Apokalyptisk litteratur",
+        "Juridisk dokument"
+      ],
+      correctAnswer: 2,
+      explanation: "Uppenbarelseboken är apokalyptisk litteratur - en genre som använder starka symboler för att avslöja gudomliga sanningar."
+    },
+    {
+      question: "Vad representerar de sju kyrkorna i Uppenbarelseboken?",
+      options: [
+        "Endast historiska församlingar",
+        "Alla kristna församlingar genom tiderna",
+        "Symboler för olika tidsåldrar",
+        "Både 1 och 2"
+      ],
+      correctAnswer: 3,
+      explanation: "De sju breven till kyrkorna i Mindre Asien (Upp 2-3) var både till historiska församlingar och har tillämpning för alla tiders kyrka."
+    },
+    {
+      question: "Vem är 'den som sitter på tronen' i Upp 4?",
+      options: [
+        "Kejsar Domitianus",
+        "Gud Fader",
+        "Ärkeängeln Mikael",
+        "En symbol för romarriket"
+      ],
+      correctAnswer: 1,
+      explanation: "'Den som sitter på tronen' är Gud Fader, omgiven av tillbedjan, vilket visar Guds suveränitet över historien."
+    },
+    {
+      question: "Vad symboliserar 'djuret' i Uppenbarelseboken?",
+      options: [
+        "Kejsar Nero",
+        "Alla onda makter",
+        "En framtida diktator",
+        "Beroende på tolkning, olika föreställningar om ondskan"
+      ],
+      correctAnswer: 3,
+      explanation: "'Djuret' har tolkats som både historiska (t.ex. Nero) och framtida företeelser, men representerar i grunden all motstånd mot Gud och hans folk."
+    },
+    {
+      question: "Vilket är det centrala budskapet i Uppenbarelseboken?",
+      options: [
+        "Gud segrar till slut",
+        "Kristus återkommer",
+        "Troende ska stå fast under prövningar",
+        "Allt ovanstående"
+      ],
+      correctAnswer: 3,
+      explanation: "Uppenbarelsebokens huvudbudskap är att troende ska stå fast i tro, veta att Kristus återkommer och att Gud till slut segrar över ondska och död."
+    }
+  ]
+},19:{
+  title: "Bibelns Böner - Samtal med Gud",
+  description: "Utforska kraftfulla böner i Bibeln och lär dig djupare bön från bibliska förebilder",
+  questions: [
+    {
+      question: "Vilken bön lärde Jesus sina lärjungar att be?",
+      options: [
+        "Herrans bön (Fader vår)",
+        "Jesu högprästliga bön",
+        "Davids bön i Psalm 51",
+        "Salomos tempelbön"
       ],
       correctAnswer: 0,
-      explanation: "Rövaren på korset bad denna bön (Luk 23:42)."
+      explanation: "Fader vår (Matt 6:9-13) är den mönsterbön Jesus gav, med fokus på Guds härlighet, våra behov och förlåtelse."
     },
     {
-      question: "Vem bad en bön som fick eld att falla från himmelen?",
+      question: "Vilken bön i GT visade stor ödmjukhet och förtröstan på Gud?",
       options: [
-        "Mose",
-        "Elia",
-        "Elisa",
-        "Jesaja"
+        "Hanas bön (1 Sam 1)",
+        "Davids syndabekännelse (Ps 51)",
+        "Elias bön på Karmel (1 Kung 18)",
+        "Hiskias bön vid sjukdom (2 Kung 20)"
+      ],
+      correctAnswer: 0,
+      explanation: "Hanas hjärtskärande bön om en son (1 Sam 1) visar hennes ödmjukhet och tro, och Gud svarade genom att ge henne Samuel."
+    },
+    {
+      question: "Vad kännetecknar många av Paulus böner i hans brev?",
+      options: [
+        "Fokus på andlig tillväxt",
+        "Bön om materiell välfärd",
+        "Önskan om hämnd på fiender",
+        "Klagan över svårigheter"
+      ],
+      correctAnswer: 0,
+      explanation: "Paulus böner (t.ex. Ef 1:17-19, Fil 1:9-11) fokuserar ofta på församlingens andliga tillväxt, kunskap om Gud och kärlek."
+    },
+    {
+      question: "Vilken bön i GT fick ett dramatiskt svar genom eld från himlen?",
+      options: [
+        "Salomos tempelinvigning",
+        "Elias bön på Karmelberget",
+        "Moses bön vid Röda havet",
+        "Nehemjas bön om Jerusalem"
       ],
       correctAnswer: 1,
-      explanation: "Eld föll när Elia bad på berget Karmel (1 Kung 18:36-38)."
+      explanation: "Elias bön på Karmel (1 Kung 18:36-38) fick svar genom eld som förtärde offret och visade att Herren är den sanne Guden."
     },
     {
-      question: "Vilken bön i Bibeln är den längsta?",
+      question: "Vad lär Bibeln om effektiv bön?",
       options: [
-        "Jesu högtidliga bön (Joh 17)",
-        "Salomos invigningsbön (1 Kung 8)",
-        "Nehemjas bön (Neh 9)",
-        "Daniels bön (Dan 9)"
+        "Den måste vara lång",
+        "Den ska komma från hjärtat i tro",
+        "Den måste upprepas många gånger",
+        "Den kräver speciella ord"
       ],
       correctAnswer: 1,
-      explanation: "Salomos invigningsbön för templet är den längsta i Bibeln."
-    },
-    {
-      question: "Vem bad: 'Herre, jag tror, hjälp min otro'?",
-      options: [
-        "Petrus",
-        "Tomas",
-        "En man med besatt son",
-        "Paulus"
-      ],
-      correctAnswer: 2,
-      explanation: "En far bad detta om sin son (Mark 9:24)."
-    },
-    {
-      question: "Vilken bön avslutas med 'Ty riket är ditt och makten och härligheten i evighet'?",
-      options: [
-        "Herrens bön",
-        "Maria bön",
-        "Doxologin",
-        "Jesu avslutande ord på korset"
-      ],
-      correctAnswer: 2,
-      explanation: "Doxologin läggs ofta till Fader vår i vissa traditioner (Matt 6:13)."
+      explanation: "Bibeln lär att effektiv bön (Jak 5:16) kräver tro (Mark 11:24), rätt motiv (Jak 4:3) och kommer från ett uppriktigt hjärta, inte yttre former."
     }
-          ]
-        }
-      };
-
-
+  ]
+},20:{
+  title: "Kristendomen i Romarriket - Från Förföljelse till Statsreligion",
+  description: "Följ kristendomens spridning och utveckling under romersk tid med förföljelser och tillväxt",
+  questions: [
+    {
+      question: "Vilken romersk kejsare brände ner Rom och skyllade på kristna?",
+      options: [
+        "Augustus",
+        "Nero",
+        "Konstantin",
+        "Diocletianus"
+      ],
+      correctAnswer: 1,
+      explanation: "Nero inledde en brutal förföljelse av kristna år 64 e.Kr. efter Roms brand, vilket beskrivs i Tacitus krönikor."
+    },
+    {
+      question: "Vilket edikt gjorde kristendomen till en tillåten religion?",
+      options: [
+        "Ediktet i Milano (313)",
+        "Ediktet i Thessalonica (380)",
+        "Ediktet i Nantes (1598)",
+        "Ediktet i Worms (1521)"
+      ],
+      correctAnswer: 0,
+      explanation: "Ediktet i Milano (313) under Konstantin och Licinius gjorde kristendomen till en tillåten religion (religio licita) i riket."
+    },
+    {
+      question: "Varför var kristna förföljda under romersk tid?",
+      options: [
+        "De vägrade dyrka kejsaren",
+        "Deras läror ansågs subversiva",
+        "Misstänkta för kannibalism (nattvard)",
+        "Allt ovanstående"
+      ],
+      correctAnswer: 3,
+      explanation: "Kristna vägrade kejsarkulten, ansågs hota social ordning, och missförstod nattvarden, vilket ledde till misstankar och förföljelse."
+    },
+    {
+      question: "Vilken kejsare gjorde kristendomen till statsreligion?",
+      options: [
+        "Konstantin",
+        "Theodosius I",
+        "Julianus Apostata",
+        "Trajanus"
+      ],
+      correctAnswer: 1,
+      explanation: "Theodosius I gjorde kristendomen till romarrikets statsreligion genom Ediktet i Thessalonica år 380."
+    },
+    {
+      question: "Vad bidrog till kristendomens snabba tillväxt i romarriket?",
+      options: [
+        "Kristnas kärleksfulla liv",
+        "Budskapet om frälsning för alla",
+        "Gudstjänster öppna för alla",
+        "Allt ovanstående"
+      ],
+      correctAnswer: 3,
+      explanation: "Kristendomen växte genom dess inkluderande budskap, medlemmars liv, välgörenhet och öppna gudstjänster - i kontrast till hemliga hedniska ritualer."
+    }
+    ]
+  }
+};
       // Quiz State
       let currentQuiz = null;
       let currentQuestionIndex = 0;
