@@ -1,1237 +1,530 @@
 <!DOCTYPE html>
-<html lang="sv" dir="ltr" itemscope itemtype="https://schema.org/WebSite">
-
+<html lang="sv">
 <head>
-  <!-- Primary Meta Tags -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bibelstudion | #1 Kristna Plattformen för Bibelstudier & Andlig Tillväxt 2024</title>
-  <meta name="description" content="Sveriges mest använda bibelstudieplattform med 500K+ månatliga användare. 10,000+ bibelstudier, 200+ kurser & certifierade experter. Bli del av gemenskapen idag!">
-  <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('gizokraijaw.net',9248178,document.createElement('script'))</script>
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.bibelstudion.se/" />
-
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-TDDLK9R2');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.bibelstudion.se/">
-  <meta property="og:title" content="Bibelstudion | #1 Kristna Plattformen för Bibelstudier 2024">
-  <meta property="og:description" content="Upptäck Sveriges största bibelstudieresurs med expertguider, livekurser och dagliga devotioner. 98% användarnöjdhet - prova gratis idag!">
-  <meta property="og:image" content="https://www.bibelstudion.se/images/social/home-og-2024.jpg">
-  <meta property="og:image:alt" content="Bibelstudions plattform för online bibelstudier visar en grupp människor som studerar bibel tillsammans på olika enheter">
-  <meta property="og:site_name" content="Bibelstudion">
-
-  <!-- Twitter Card -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://www.bibelstudion.se/">
-  <meta property="twitter:title" content="Bibelstudion | #1 Kristna Plattformen för Bibelstudier">
-  <meta property="twitter:description" content="10,000+ bibelstudier & 200+ kurser. Bli del av Sveriges största bibelstudiegemenskap med 500K+ medlemmar.">
-  <meta property="twitter:image" content="https://www.bibelstudion.se/images/social/home-twitter-2024.jpg">
-  <meta property="twitter:image:alt" content="Skärmdump av Bibelstudions populäraste kurser med högkvalitativa bibelstudiematerial">
-
-  <!-- Schema.org Markup -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Bibelstudion",
-      "url": "https://www.bibelstudion.se/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.bibelstudion.se/sok?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Bibelstudion",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.bibelstudion.se/logo.png",
-          "width": "600",
-          "height": "60"
-        },
-        "sameAs": [
-          "https://facebook.com/bibelstudion",
-          "https://instagram.com/bibelstudion",
-          "https://youtube.com/bibelstudion"
-        ]
-      }
-    }
-  </script>
-
-  <!-- Additional Organization Schema -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Bibelstudion",
-      "url": "https://www.bibelstudion.se/",
-      "logo": "https://www.bibelstudion.se/logo.png",
-      "description": "Sveriges ledande plattform för bibelstudier och kristen utveckling",
-      "foundingDate": "2005",
-      "founders": [
-        {
-          "@type": "Person",
-          "name": "David Bergström"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>Bibelstudion - Den ultimata plattformen för kristen innehåll | Bibelstudier, Nyheter & Samhällsdebatt</title>
+    <meta name="description" content="Bibelstudion erbjuder premium kristet innehåll inklusive bibelstudier, inspirerande dokumentärer, aktuella nyheter och samhällsdebatt. Upptäck din tro på nytt med vårt omfattande bibliotek.">
+    <meta name="keywords" content="bibelstudier, kristen media, kristna filmer, bibelundervisning, kristna nyheter, samhällsdebatt, tro och livet, kristen dokumentär">
+    <meta name="author" content="Bibelstudion">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Bibelstudion - Premium kristet innehåll">
+    <meta property="og:description" content="Upptäck världens ledande plattform för kristen media och bibelstudier.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.bibelstudion.se">
+    <meta property="og:image" content="https://www.bibelstudion.se/images/bibelstudion-social.jpg">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Netflix-inspired styles */
+        .hero-section {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.8) 100%), url('https://images.unsplash.com/photo-1531293151682-5e5ce792486f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            height: 90vh;
         }
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Bibelvägen 12",
-        "addressLocality": "Stockholm",
-        "postalCode": "118 48",
-        "addressCountry": "SE"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "email": "support@bibelstudion.se",
-        "telephone": "0764375307"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "1247",
-        "bestRating": "5"
-      }
-    }
-  </script>
-
-  <!-- Keywords (LSI + Semantic SEO) -->
-  <meta name="keywords" content="bibelstudier, bibelkurser online, kristna resurser, bibelanalys, bibelkunskap, andlig utveckling, bibelstudion, bibelguide, bibel tolkningshjälp, bibel online, kristna donationer, böneguide, bibelverser, kristen gemenskap, bibelstudier för nybörjare, bibelstudier svenska, bibelstudiematerial, bibelböcker, kristna böcker, bibelkommentarer">
-
-
-<!-- Favicon -->
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="128x128" href="/images/favicon-128x128.png">
-<link rel="icon" type="image/png" sizes="256x256" href="/images/favicon-256x256.png">
-<link rel="icon" type="image/png" sizes="513x513" href="/images/favicon-513x513.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#1E3A8A">
-
-  <!-- Geo Tags -->
-  <meta name="geo.region" content="SE">
-  <meta name="geo.placename" content="Stockholm">
-  <meta name="geo.position" content="59.3293;18.0686">
-  <meta name="ICBM" content="59.3293, 18.0686">
-
-  <!-- CSS & Fonts -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Monetization Tag -->
-  <meta name="monetag" content="acc1e301dd22adb1d9917f8501a5ec7f">
-
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NL4P515HW4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NL4P515HW4');
-</script>
+        .hero-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+        
+        .nav-gradient {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0) 90%);
+        }
+        
+        .content-card:hover {
+            transform: scale(1.1);
+            z-index: 10;
+        }
+        
+        .content-card {
+            transition: transform 0.3s ease;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #222;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #e50914;
+            border-radius: 4px;
+        }
+        
+        /* Mobile menu animation */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        
+        /* Preloader for fast loading */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+        .loader-logo {
+            width: 150px;
+            height: 150px;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 70vh;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
- <style>
-    .hero-gradient {
-      background: linear-gradient(135deg, rgba(38,70,83,0.95) 0%, rgba(42,157,143,0.9) 100%);
-    }
-    .card-hover {
-      transition: all 0.3s ease;
-    }
-    .card-hover:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-    .nav-pill {
-      transition: all 0.3s ease;
-    }
-    .nav-pill:hover {
-      background-color: #e9c46a;
-      color: #264653;
-    }
-    .breadcrumb a:hover {
-      text-decoration: underline;
-    }
-    .feature-icon {
-      width: 60px;
-      height: 60px;
-    }
-  </style>
-</head>
+<body class="bg-black text-white">
+    <!-- Preloader for fast perceived loading -->
+    <div id="preloader">
+        <img src="https://via.placeholder.com/150x150/FFFFFF/000000?text=Bibelstudion" alt="Bibelstudion laddar..." class="loader-logo">
+    </div>
 
-
-
-<body class="bg-gray-50 font-sans">
-
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDDLK9R2"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <!-- Logo -->
-      <div class="flex items-center">
-        <a href="index.html" class="flex items-center">
-          <i class="fas fa-bible text-yellow-500 text-3xl mr-2"></i>
-          <span class="text-2xl font-bold text-gray-800">Bibel<span class="text-yellow-500">studion</span></span>
-        </a>
-      </div>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-8">
-        <a href="index.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Hem</a>
-        <a href="butik.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Butik</a>
-        <a href="kategorier.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kategorier</a>
-        <a href="om-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Om oss</a>
-        <a href="kontakta-oss.html" class="nav-link text-gray-800 font-medium hover:text-yellow-500">Kontakt</a>
-      </nav>
-
-      <!-- Icons -->
-      <div class="flex items-center space-x-4">
-        <div class="relative hidden md:block">
-          <input type="text" placeholder="Sök produkter..." 
-            class="search-input pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 w-64">
-          <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black shadow-md">
+        <div class="flex items-center justify-between px-4 py-3 md:px-12">
+            <div class="flex items-center">
+              <a href="#" class="text-white font-bold text-2xl md:text-3xl flex items-center">
+                <i class="fas fa-book-bible mr-2 text-red-600"></i>
+                <a href="#" class="text-red-600 font-bold text-2xl md:text-4xl">Bibelstudion</a>
+                <div class="hidden md:flex ml-8 space-x-4">
+                    <a href="#" class="text-white hover:text-gray-300">Hem</a>
+                    <a href="#" class="text-white hover:text-gray-300">Bibelstudier</a>
+                    <a href="#" class="text-white hover:text-gray-300">Dokumentärer</a>
+                    <a href="#" class="text-white hover:text-gray-300">Nyheter</a>
+                    <a href="#" class="text-white hover:text-gray-300">Blogg</a>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <div class="hidden md:block relative">
+                    <input type="text" placeholder="Sök innehåll..." class="bg-black bg-opacity-50 text-white px-4 py-1 rounded border border-gray-600 focus:outline-none focus:border-white w-64">
+                    <i class="fas fa-search absolute right-3 top-2 text-gray-400"></i>
+                </div>
+                <div class="hidden md:flex items-center space-x-2">
+                    <i class="fas fa-bell text-white"></i>
+                    <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold">U</span>
+                    </div>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
         </div>
-        <a href="login.html" class="text-gray-800 hover:text-yellow-500 text-xl">
-          <i class="far fa-user"></i>
-        </a>
-        <a href="kundvagn.html" class="text-gray-800 hover:text-yellow-500 text-xl relative">
-          <i class="fas fa-shopping-cart"></i>
-          <span id="cart-count" 
-            class="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
-        </a>
+    </nav>
 
-        <button class="md:hidden p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded-full transition-all duration-200" 
-        id="mobileMenuButton" 
-        aria-expanded="false" 
-        aria-controls="mobileMenu"
-        aria-label="Öppna meny">
-          <i class="fas fa-bars text-2xl transition-transform duration-300"></i>
-        </button>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-64 h-full bg-black bg-opacity-90 z-50 p-4 overflow-y-auto">
+        <div class="flex justify-between items-center mb-8">
+            <a href="#" class="text-red-600 font-bold text-2xl">Bibelstudion</a>
+            <button id="close-mobile-menu" class="text-white focus:outline-none">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <div class="mb-4">
+            <input type="text" placeholder="Sök innehåll..." class="bg-gray-800 text-white px-4 py-2 rounded w-full focus:outline-none">
+        </div>
+        <div class="space-y-4">
+            <a href="#" class="block text-white hover:text-red-500">Hem</a>
+            <a href="#" class="block text-white hover:text-red-500">Bibelstudier</a>
+            <a href="#" class="block text-white hover:text-red-500">Dokumentärer</a>
+            <a href="#" class="block text-white hover:text-red-500">Nyheter</a>
+            <a href="#" class="block text-white hover:text-red-500">Blogg</a>
+            <a href="#" class="block text-white hover:text-red-500">Min profil</a>
+            <a href="#" class="block text-white hover:text-red-500">Inställningar</a>
+            <a href="#" class="block text-white hover:text-red-500">Logga ut</a>
+        </div>
+    </div>
+
+<!-- Hero Section -->
+<section class="relative pt-16 min-h-[70vh] flex items-end" 
+         style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.pixabay.com/photo/2024/12/31/15/03/ai-generated-9302517_1280.jpg') no-repeat center center/cover;">
+  <div class="relative z-10 bottom-20 left-0 right-0 px-4 md:px-12">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">Upptäck Bibelns skatter</h1>
+      <p class="text-lg md:text-xl mb-6 max-w-2xl text-white">Streama exklusiva bibelstudier, inspirerande dokumentärer och aktuella samhällsanalyser. Premium kristet innehåll för hela familjen.</p>
+      <div class="flex space-x-4">
+          <button class="bg-white text-black px-6 py-2 rounded flex items-center hover:bg-opacity-80 transition">
+              <i class="fas fa-play mr-2"></i> Spela upp
+          </button>
+          <button class="bg-gray-600 bg-opacity-70 text-white px-6 py-2 rounded flex items-center hover:bg-opacity-50 transition">
+              <i class="fas fa-info-circle mr-2"></i> Mer info
+          </button>
       </div>
-    </div>
-  </header>
-</body>
-
-
-<!-- Mobile Menu -->
-<div id="mobileMenu" class="fixed top-0 left-0 w-full bg-white shadow-xl z-50 transform -translate-y-full transition-transform duration-300 ease-out">
-  <!-- Menu Header with Close Button -->
-  <div class="flex justify-between items-center px-4 py-3 border-b border-gray-100">
-    <h2 class="text-lg font-semibold text-gray-800">Meny</h2>
-    <button id="mobileMenuClose" class="p-2 text-gray-500 hover:text-gray-700 focus:outline-none" aria-label="Stäng meny">
-      <i class="fas fa-times text-xl"></i>
-    </button>
-  </div>
-  
-  <div class="overflow-y-auto max-h-screen pb-6">
-    <div class="flex flex-col space-y-1 px-4 py-3">
-      <a href="index.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
-        <i class="fas fa-home mr-3 text-gray-400 w-5 text-center"></i>
-        <span>Hem</span>
-      </a>
-      <a href="butik.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
-        <i class="fas fa-store mr-3 text-gray-400 w-5 text-center"></i>
-        <span>Butik</span>
-      </a>
-      <a href="kategorier.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
-        <i class="fas fa-tags mr-3 text-gray-400 w-5 text-center"></i>
-        <span>Kategorier</span>
-      </a>
-      <a href="om-oss.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
-        <i class="fas fa-info-circle mr-3 text-gray-400 w-5 text-center"></i>
-        <span>Om oss</span>
-      </a>
-      <a href="kontakta-oss.html" class="text-gray-800 font-medium hover:bg-yellow-50 hover:text-yellow-600 py-3 px-4 rounded-lg transition-colors duration-200 flex items-center">
-        <i class="fas fa-envelope mr-3 text-gray-400 w-5 text-center"></i>
-        <span>Kontakt</span>
-      </a>
-    </div>
-    
-    <!-- Search Box -->
-    <div class="px-4 py-3 border-t border-gray-100">
-      <div class="relative">
-        <input type="text" placeholder="Sök produkter..." 
-               class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 transition-all duration-200"
-               aria-label="Sök produkter">
-        <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Overlay -->
-<div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-
-<script>
-  const menuButton = document.getElementById('mobileMenuButton');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const menuOverlay = document.getElementById('menuOverlay');
-  const menuCloseButton = document.getElementById('mobileMenuClose');
-  const menuIcon = menuButton.querySelector('i');
-
-  function toggleMenu() {
-    const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-    
-    // Toggle menu and overlay
-    mobileMenu.classList.toggle('-translate-y-full');
-    mobileMenu.classList.toggle('translate-y-0');
-    menuOverlay.classList.toggle('opacity-0');
-    menuOverlay.classList.toggle('pointer-events-none');
-    
-    // Toggle hamburger icon
-    menuIcon.classList.toggle('fa-bars');
-    menuIcon.classList.toggle('fa-times');
-    
-    // Update accessibility and body scroll
-    menuButton.setAttribute('aria-expanded', !isExpanded);
-    document.body.style.overflow = isExpanded ? '' : 'hidden';
-  }
-
-  // Event listeners
-  menuButton.addEventListener('click', toggleMenu);
-  menuOverlay.addEventListener('click', toggleMenu);
-  menuCloseButton.addEventListener('click', toggleMenu);
-
-  // Close menu when clicking on links
-  document.querySelectorAll('#mobileMenu a').forEach(item => {
-    item.addEventListener('click', toggleMenu);
-  });
-
-  // Close menu with Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
-      toggleMenu();
-    }
-  });
-</script>
-
-<!-- Secondary Navigation -->
-<div class="bg-gray-800 text-white sticky top-16 z-40">
-  <div class="container mx-auto px-4">
-    <div class="flex overflow-x-auto space-x-8 py-3">
-      <a href="populart-just-nu.html" class="whitespace-nowrap hover:text-yellow-400">Populärt just nu</a>
-      <a href="#premium" class="whitespace-nowrap hover:text-yellow-400">Premium</a>
-      <a href="bibel.html" class="whitespace-nowrap hover:text-yellow-400">Bibel</a>
-      <a href="bibelstudion-ai.html" class="whitespace-nowrap hover:text-yellow-400">Bibelstudion AI</a>
-      <a href="donera.html" class="whitespace-nowrap hover:text-yellow-400">Gåvor</a>
-      <a href="bibelquiz.html" class="whitespace-nowrap hover:text-yellow-400">Bibelquiz</a>
-      <a href="trendiga-accessoarer.html" class="whitespace-nowrap hover:text-yellow-400">Accessoarer</a>
-      <a href="blogginlagg.html" class="whitespace-nowrap hover:text-yellow-400">Blogginlägg</a>
-      <a href="#sale" class="whitespace-nowrap text-yellow-400 font-bold">REA</a>
-    </div>
-  </div>
-</div>
-
-
-
-  <!-- Hero-sektion -->
-<section class="hero-gradient text-white py-10 md:py-16">
-  <div class="container mx-auto px-4">
-    <div class="max-w-3xl">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6">Fördjupa din förståelse av Bibeln</h1>
-      <p class="text-xl md:text-2xl mb-8">Över 5 000 gratisresurser, kurser och guider för alla kunskapsnivåer</p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a href="#featured-courses" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-lg text-center transition duration-300">
-          Börja studera
-        </a>
-        <a href="#how-it-works" class="bg-white hover:bg-gray-100 text-gray-800 font-bold py-3 px-6 rounded-lg text-center transition duration-300">
-          Så fungerar det
-        </a>
-      </div>
-    </div>
   </div>
 </section>
 
-
-  <!-- Brödsmulor -->
-  <div class="container mx-auto px-4 py-4 bg-gray-100">
-    <nav class="breadcrumb" aria-label="Brödsmulor">
-      <ol class="list-none p-0 inline-flex">
-        <li class="flex items-center">
-          <a href="index.html" class="text-gray-600 hover:text-yellow-500">Hem</a>
-        </li>
-      </ol>
-    </nav>
-  </div>
-
-  <!-- Snabblänkar -->
-  <section class="container mx-auto px-4 py-8">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <a href="bibelstudier/nya-testamentet" class="nav-pill bg-gray-800 text-white text-center py-3 px-4 rounded-lg font-medium">
-        <i class="fas fa-cross mr-2"></i> Nya testamentet
-      </a>
-      <a href="bibelstudier/gamla-testamentet" class="nav-pill bg-gray-800 text-white text-center py-3 px-4 rounded-lg font-medium">
-        <i class="fas fa-star-of-david mr-2"></i> Gamla testamentet
-      </a>
-      <a href="bibelstudier/daglig-devotion" class="nav-pill bg-gray-800 text-white text-center py-3 px-4 rounded-lg font-medium">
-        <i class="fas fa-pray mr-2"></i> Daglig devotion
-      </a>
-      <a href="butik/bocker" class="nav-pill bg-gray-800 text-white text-center py-3 px-4 rounded-lg font-medium">
-        <i class="fas fa-book mr-2"></i> Böcker & resurser
-      </a>
-    </div>
-  </section>
-
-  <!-- Populärt just nu -->
-  <section class="container mx-auto px-4 py-12">
-    <h2 class="text-3xl font-bold mb-8">Populärt just nu</h2>
-    
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md">
-        <img src="/images/freepik__studieguide-om-jesu-liknelser-med-ppen-bok-och-ant__71772.png" alt="Studieguide om Jesu liknelser med öppen bok och anteckningsblock" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <span class="text-sm text-gray-500">Bibelstudier • 12 lektioner</span>
-          <h3 class="text-xl font-bold my-2">Jesu liknelser</h3>
-          <p class="text-gray-700 mb-4">Upptäck djupet i Jesu undervisningsmetoder</p>
-          <div class="flex justify-between items-center">
-            <span class="text-orange-500 font-bold">Gratis</span>
-            <a href="jesu-liknelser-bibelstudie-gratis.html" class="text-orange-500 hover:text-orange-600 underline-offset-2 hover:underline font-medium transition duration-200">
-              Läs mer →
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md">
-        <img src="/images/freepik__the-style-is-candid-image-photography-with-natural__71773.jpeg" alt="Bibelstudiepaket med böcker och arbetsbok om Psaltaren" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <span class="text-sm text-gray-500">Butik • Studiepaket</span>
-          <h3 class="text-xl font-bold my-2">Psaltarens värld</h3>
-          <p class="text-gray-700 mb-4">Komplett studiepaket med kommentarer</p>
-          <div class="flex justify-between items-center">
-            <span class="text-orange-500 font-bold">349 kr</span>
-            <a href="psaltarens-varld-studiepaket.html" class="text-orange-500 hover:underline">Läs mer →</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md">
-        <img src="/images/top-view-people-holding-hands-praying.jpg" alt="Gruppstudie om Paulus brev med deltagare runt bord" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <span class="text-sm text-gray-500">Live-studie • Starts 15/6</span>
-          <h3 class="text-xl font-bold my-2">Paulus brev</h3>
-          <p class="text-gray-700 mb-4">8-veckors onlinekurs med expert</p>
-          <div class="flex justify-between items-center">
-            <span class="text-orange-500 font-bold">Gratis</span>
-            <a href="/kurser/paulus" class="text-orange-500 hover:underline">Läs mer →</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md">
-        <img src="/images/medium-shot-little-girl-reading-bible.jpg" alt="Barnbibel med färgglada illustrationer och pedagogiskt material" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <span class="text-sm text-gray-500">Butik • Barnresurser</span>
-          <h3 class="text-xl font-bold my-2">Barnbibel + arbetsbok</h3>
-          <p class="text-gray-700 mb-4">50 berättelser med aktiviteter</p>
-          <div class="flex justify-between items-center">
-            <span class="text-orange-500 font-bold">249 kr</span>
-            <a href="/butik/barnbibel" class="text-orange-500 hover:underline">Läs mer →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Senaste nytt & blogg -->
-  <section class="bg-gray-100 py-12">
-    <div class="container mx-auto px-4">
-      <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-8">
-        <h2 class="text-3xl font-bold">Senaste nytt & blogginlägg</h2>
-        <a href="blogginlagg.html" class="text-yellow-600 hover:underline font-medium">Visa alla inlägg →</a>
-      </div>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <article class="card-hover bg-white rounded-lg overflow-hidden shadow-md">
-          <img src="/images/freepik__forskare-presenterar-ny-upptckt-om-ddahavsrullarna__15206.jpeg" alt="Forskare presenterar ny upptäckt om Dödahavsrullarna vid konferens" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <span class="text-sm text-gray-500">15 juni 2023 • Nyheter</span>
-            <h3 class="text-xl font-bold my-3">Nya insikter om Dödahavsrullarna</h3>
-            <p class="text-gray-700 mb-4">
-              Vår korrespondent rapporterar från den senaste internationella konferensen om Qumran-fynden och vad de nya upptäckterna betyder för vår förståelse av Bibelns text.
-            </p>
-            <a href="nyheter-dodahavsrullarna.html" class="text-yellow-600 hover:underline font-medium">Läs mer →</a>
-          </div>
-        </article>
-        
-        <article class="card-hover bg-white rounded-lg overflow-hidden shadow-md">
-          <img src="/images/ChatGPT Image 18 apr. 2025 14_17_01.png" alt="Pastor som leder bibelstudiegrupp med deltagare som antecknar" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <span class="text-sm text-gray-500">12 juni 2023 • Studietips</span>
-            <h3 class="text-xl font-bold my-3">5 sätt att förbättra dina bibelstudier</h3>
-            <p class="text-gray-700 mb-4">
-              Vår erfarna studieledare David Bergman delar sina bästa tips för hur du kan få mer ut av din studietid och undvika vanliga fallgropar i bibeltolkning.
-            </p>
-            <a href="5-vetenskapliga-satt-forbattra-bibelstudier.html" class="text-yellow-600 hover:underline font-medium">Läs mer →</a>
-          </div>
-        </article>
-        
-        <article class="card-hover bg-white rounded-lg overflow-hidden shadow-md">
-          <img src="/images/Familj läser bibel.jpeg" alt="Familj som läser bibel tillsammans i vardagsrummet" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <span class="text-sm text-gray-500">8 juni 2023 • Familj</span>
-            <h3 class="text-xl font-bold my-3">Bibelstudier med barn</h3>
-            <p class="text-gray-700 mb-4">
-              Praktiska råd för hur du kan göra bibelstudier till en meningsfull familjeaktivitet, oavsett barnens ålder.
-            </p>
-            <a href="/blogg/bibelstudier-med-barn" class="text-yellow-600 hover:underline font-medium">Läs mer →</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Utvalda kurser -->
-  <section id="featured-courses" class="container mx-auto px-4 py-16">
-    <h2 class="text-3xl font-bold mb-8 text-center">Börja med dessa kurser</h2>
-    
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md">
-        <div class="relative">
-          <img src="/images/deepimg-1744979207221.png" alt="Introduktionskurs till Bibeln med översiktsmaterial och studieguide" class="w-full h-48 object-cover">
-          <span class="absolute top-4 right-4 bg-yellow-500 text-gray-900 text-xs px-2 py-1 rounded">Rekommenderad</span>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Bibelns grundläggande budskap</h3>
-          <p class="text-gray-600 mb-4">Perfekt för nybörjare - 10 lektioner om Bibelns centrala teman</p>
-          <div class="flex items-center mb-4">
-            <div class="text-yellow-400 mr-2">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
+    <!-- Content Rows -->
+    <div class="py-8 px-4 md:px-12 space-y-8">
+        <!-- Trending Now -->
+        <section>
+            <h2 class="text-xl md:text-2xl font-bold mb-4">Trendar nu på Bibelstudion</h2>
+            <div class="relative">
+                <div class="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+                    <!-- Content cards -->
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1544830332-9b6c2a6a1c90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Bibelstudie: Upptäck Jesu liknelser i Matteusevangeliet" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1503945438517-f65904bc2006?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Dokumentär: Kristna martyrer genom tiderna" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Samhällsdebatt: Kristendom i en modern värld" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1529107386315-e1c2d3d5f1d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Bibelkurs: Upptäck Gamla testamentets profetior" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Inspiration: Berättelser om tro och mirakel" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Familj: Kristna värderingar i vardagen" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <span class="text-gray-600 text-sm">(4.7) • 900+ deltagare</span>
-          </div>
-          <a href="/kurser/bibelns-grund" class="block w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded text-center transition duration-300">
-            Starta kurs
-          </a>
-        </div>
-      </div>
-      
-      <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md">
-        <img src="/images/_aaafb0ae-a6ce-4a02-b6f2-2faa292f8f14.jpeg" alt="Evangeliernas kurs med fyra biblar öppnade till olika evangelier" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Evangeliernas Jesus</h3>
-          <p class="text-gray-600 mb-4">Jämförande studie av Jesu porträtt i Matteus, Markus, Lukas och Johannes</p>
-          <div class="flex items-center mb-4">
-            <div class="text-yellow-400 mr-2">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+        </section>
+
+        <!-- Popular on Bibelstudion -->
+        <section>
+            <h2 class="text-xl md:text-2xl font-bold mb-4">Populärt på Bibelstudion</h2>
+            <div class="relative">
+                <div class="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+                    <!-- Content cards -->
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80" alt="Bibelstudie: Paulus brev till romarna" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd81b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Dokumentär: Jerusalem - Hjärtat av tre religioner" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Nyheter: Kristna i världen idag" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1490730141103-6c27ec0e5a16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Bibelkurs: Psalmernas kraft och skönhet" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Inspiration: Natur och skapelsen" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Familj: Andaktsstunder för barn" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <span class="text-gray-600 text-sm">(5.0) • 850+ deltagare</span>
-          </div>
-          <a href="/kurser/evangelierna" class="block w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded text-center transition duration-300">
-            Starta kurs
-          </a>
-        </div>
-      </div>
-      
-      <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md">
-        <img src="/images/ChatGPT Image 18 apr. 2025 14_43_47.png" alt="Profeternas kurs med gammal karta och högar med böcker om profetior" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Profeternas budskap</h3>
-          <p class="text-gray-600 mb-4">Upptäck profetlitteraturens struktur och relevans för idag</p>
-          <div class="flex items-center mb-4">
-            <div class="text-yellow-400 mr-2">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
+        </section>
+
+        <!-- Continue Watching -->
+        <section>
+            <h2 class="text-xl md:text-2xl font-bold mb-4">Fortsätt titta</h2>
+            <div class="relative">
+                <div class="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+                    <!-- Content cards with progress bars -->
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2094&q=80" alt="Bibelstudie: Upptäck Uppenbarelseboken" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gray-600">
+                            <div class="h-full bg-red-600" style="width: 65%"></div>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Dokumentär: Världens största kyrkor" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gray-600">
+                            <div class="h-full bg-red-600" style="width: 30%"></div>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Samhällsdebatt: Tro och vetenskap" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gray-600">
+                            <div class="h-full bg-red-600" style="width: 80%"></div>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <span class="text-gray-600 text-sm">(4.0) • 600+ deltagare</span>
-          </div>
-          <a href="/kurser/profeterna" class="block w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded text-center transition duration-300">
-            Starta kurs
-          </a>
-        </div>
-      </div>
+        </section>
+
+        <!-- New Releases -->
+        <section>
+            <h2 class="text-xl md:text-2xl font-bold mb-4">Nya tillskott</h2>
+            <div class="relative">
+                <div class="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+                    <!-- Content cards -->
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd81b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Bibelstudie: Apostlagärningarnas kraft" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">NY</div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80" alt="Dokumentär: Pilgrimsvandringar i Europa" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">NY</div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-card flex-shrink-0 w-48 md:w-56 relative group">
+                        <img src="https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Nyhetsprogram: Kristna i politiken" class="w-full h-28 md:h-32 object-cover rounded">
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">NY</div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button class="bg-white text-black px-4 py-1 rounded-full text-sm">
+                                <i class="fas fa-play mr-1"></i> Spela
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </section>
 
-  <!-- Statistik -->
-  <section class="bg-gray-800 text-white py-16">
-    <div class="container mx-auto px-4 text-center">
-      <div class="grid md:grid-cols-4 gap-8">
-        <div>
-          <div class="text-4xl font-bold mb-2">15+</div>
-          <div class="text-gray-300">År i branschen</div>
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-8 px-4 md:px-12">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex justify-center mb-8">
+                <a href="#" class="text-red-600 font-bold text-2xl md:text-4xl">Bibelstudion</a>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white mb-4">Om oss</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Om Bibelstudion</a></li>
+                        <li><a href="#" class="hover:text-white">Jobba hos oss</a></li>
+                        <li><a href="#" class="hover:text-white">Press</a></li>
+                        <li><a href="#" class="hover:text-white">Investerare</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white mb-4">Hjälp</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Kundservice</a></li>
+                        <li><a href="#" class="hover:text-white">Vanliga frågor</a></li>
+                        <li><a href="#" class="hover:text-white">Kontakta oss</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white mb-4">Juridisk information</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Användarvillkor</a></li>
+                        <li><a href="#" class="hover:text-white">Integritetspolicy</a></li>
+                        <li><a href="#" class="hover:text-white">Cookie-inställningar</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white mb-4">Följ oss</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-sm">
+                <p>&copy; 2023 Bibelstudion. Alla rättigheter reserverade.</p>
+            </div>
         </div>
-        <div>
-          <div class="text-4xl font-bold mb-2">5 000+</div>
-          <div class="text-gray-300">Bibelstudier</div>
-        </div>
-        <div>
-          <div class="text-4xl font-bold mb-2">250 000+</div>
-          <div class="text-gray-300">Månatliga besökare</div>
-        </div>
-        <div>
-          <div class="text-4xl font-bold mb-2">57</div>
-          <div class="text-gray-300">Kurser</div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- Varför välja oss -->
-  <section class="container mx-auto px-4 py-16">
-    <h2 class="text-3xl font-bold mb-12 text-center">Varför välja Bibelstudion?</h2>
-    
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="flex flex-col items-center text-center">
-        <div class="feature-icon bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mb-4">
-          <i class="fas fa-user-graduate text-2xl"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Expertkunskap</h3>
-        <p class="text-gray-700">
-          Allt innehåll skapas av vårt team av bibelexperter med akademisk bakgrund och praktisk erfarenhet. Vi kombinerar vetenskaplig rigorösitet med andlig insikt.
-        </p>
-      </div>
-      
-      <div class="flex flex-col items-center text-center">
-        <div class="feature-icon bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mb-4">
-          <i class="fas fa-layer-group text-2xl"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Flera tolkningsnivåer</h3>
-        <p class="text-gray-700">
-          Vår unika metodik utforskar Bibelns texter på fyra nivåer: historisk, litterär, teologisk och praktisk - för en heltäckande förståelse.
-        </p>
-      </div>
-      
-      <div class="flex flex-col items-center text-center">
-        <div class="feature-icon bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mb-4">
-          <i class="fas fa-users text-2xl"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Gemenskap</h3>
-        <p class="text-gray-700">
-          Delta i våra studiegrupper eller diskussioner online. Lär av andra och dela dina egna insikter i en stödjande miljö.
-        </p>
-      </div>
-    </div>
-  </section>
+    <!-- JavaScript -->
+    <script>
+        // Preloader - simulate fast loading
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('preloader').style.display = 'none';
+            }, 500); // Simulate fast loading (500ms)
+        });
 
-  <!-- CTA -->
-  <section class="bg-yellow-500 py-16">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6">Redo att börja din resa?</h2>
-      <p class="text-xl mb-8 max-w-2xl mx-auto">Skapa ett gratis konto idag och få tillgång till alla våra resurser.</p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="login.html" class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
-          Registrera dig gratis
-        </a>
-        <a href="blogginlagg.html" class="bg-white hover:bg-gray-100 text-gray-800 font-bold py-3 px-8 rounded-lg transition duration-300">
-          Utforska studier
-        </a>
-      </div>
-    </div>
-  </section>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.add('open');
+        });
 
+        document.getElementById('close-mobile-menu').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.remove('open');
+        });
 
-
-
-
-
-
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white pt-12 pb-6">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-        <!-- Footer Column 1 -->
-        <div>
-          <h3 class="text-xl font-bold mb-4 flex items-center">
-            <i class="fas fa-bible text-yellow-400 mr-2"></i>
-            <span>Bibel<span class="text-yellow-400">studion</span></span>
-          </h3>
-          <p class="text-gray-400 mb-4">Din plats för kristna produkter, böcker och resurser för din andliga resa.</p>
-          <div class="flex space-x-4">
-            <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
-              <i class="fab fa-youtube"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
-              <i class="fab fa-spotify"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Footer Column 2 -->
-        <div>
-          <h4 class="font-bold text-lg mb-4">Butik</h4>
-          <ul class="space-y-2">
-            <li><a href="Populart-just-nu.html" class="text-gray-400 hover:text-yellow-400 transition">Populärt just nu</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Nya produkter</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">REA</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Premium</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Alla produkter</a></li>
-          </ul>
-        </div>
-
-        <!-- Footer Column 3 -->
-        <div>
-          <h4 class="font-bold text-lg mb-4">Kundservice</h4>
-          <ul class="space-y-2">
-            <li><a href="kontakta-oss.html" class="text-gray-400 hover:text-yellow-400 transition">Kontakta oss</a></li>
-            <li><a href="vanliga-fragor.html" class="text-gray-400 hover:text-yellow-400 transition">Vanliga frågor</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Frakt & leverans</a></li>
-            <li><a href="returpolicy.html" class="text-gray-400 hover:text-yellow-400 transition">Returpolicy</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Betalningsmetoder</a></li>
-          </ul>
-        </div>
-
-        <!-- Footer Column 4 -->
-        <div>
-          <h4 class="font-bold text-lg mb-4">Om Bibelstudion</h4>
-          <ul class="space-y-2">
-            <li><a href="om-oss.html" class="text-gray-400 hover:text-yellow-400 transition">Om oss</a></li>
-            <li><a href="om-oss.html" class="text-gray-400 hover:text-yellow-400 transition">Vår vision</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Jobba hos oss</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Press</a></li>
-            <li><a href="Donera.html" class="text-gray-400 hover:text-yellow-400 transition">Donera</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="border-t border-gray-700 pt-6">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Bibelstudion. Alla rättigheter reserverade.</p>
-          <div class="flex space-x-6">
-            <a href="integritetspolicy.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Integritetspolicy</a>
-            <a href="anvandarvillkor.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Användarvillkor</a>
-            <a href="cookiepolicy.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Cookies</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Produktdata (simulerad databas) -->
-  <script>
-    // Produktdatabas
-    const products = [
-      {
-        id: 1,
-        title: "Studiebibel med noter",
-        price: 399,
-        originalPrice: 499,
-        description: "En komplett studiebibel med detaljerade noter och förklaringar till varje kapitel.",
-        category: "bibles",
-        stock: 15,
-        rating: 4.7,
-        reviews: 23,
-        images: [
-          "https://via.placeholder.com/500x500?text=Studiebibel",
-          "https://via.placeholder.com/500x500?text=Bibel+1",
-          "https://via.placeholder.com/500x500?text=Bibel+2",
-          "https://via.placeholder.com/500x500?text=Bibel+3"
-        ],
-        details: [
-          { label: "Författare", value: "Bibelkommissionen" },
-          { label: "Utgivningsår", value: "2022" },
-          { label: "Språk", value: "Svenska" },
-          { label: "Antal sidor", value: "1200" },
-          { label: "Bandtyp", value: "Hårdpärm" }
-        ],
-        similarProducts: [2, 3, 5]
-      },
-      {
-        id: 2,
-        title: "Bibel för barn",
-        price: 249,
-        originalPrice: 299,
-        description: "En färgglad och lättläst bibel speciellt anpassad för barn med illustrationer.",
-        category: "bibles",
-        stock: 8,
-        rating: 4.5,
-        reviews: 12,
-        images: [
-          "https://via.placeholder.com/500x500?text=Barnbibel",
-          "https://via.placeholder.com/500x500?text=Bibel+4",
-          "https://via.placeholder.com/500x500?text=Bibel+5",
-          "https://via.placeholder.com/500x500?text=Bibel+6"
-        ],
-        details: [
-          { label: "Författare", value: "Maria Karlsson" },
-          { label: "Utgivningsår", value: "2021" },
-          { label: "Språk", value: "Svenska" },
-          { label: "Antal sidor", value: "200" },
-          { label: "Bandtyp", value: "Häftad" }
-        ],
-        similarProducts: [1, 4, 6]
-      },
-      {
-        id: 3,
-        title: "Bönedagbok",
-        price: 149,
-        originalPrice: 179,
-        description: "En vacker dagbok för att dokumentera dina böner och Guds svar.",
-        category: "books",
-        stock: 22,
-        rating: 4.8,
-        reviews: 31,
-        images: [
-          "https://via.placeholder.com/500x500?text=Bönedagbok",
-          "https://via.placeholder.com/500x500?text=Dagbok+1",
-          "https://via.placeholder.com/500x500?text=Dagbok+2",
-          "https://via.placeholder.com/500x500?text=Dagbok+3"
-        ],
-        details: [
-          { label: "Författare", value: "Anna Pettersson" },
-          { label: "Utgivningsår", value: "2023" },
-          { label: "Språk", value: "Svenska" },
-          { label: "Antal sidor", value: "365" },
-          { label: "Bandtyp", value: "Häftad" }
-        ],
-        similarProducts: [4, 7, 8]
-      },
-      {
-        id: 4,
-        title: "Kristusarmband",
-        price: 199,
-        originalPrice: 249,
-        description: "Ett stilfullt armband med en liten Kristusfigur som charm.",
-        category: "accessories",
-        stock: 5,
-        rating: 4.3,
-        reviews: 18,
-        images: [
-          "https://via.placeholder.com/500x500?text=Kristusarmband",
-          "https://via.placeholder.com/500x500?text=Armband+1",
-          "https://via.placeholder.com/500x500?text=Armband+2",
-          "https://via.placeholder.com/500x500?text=Armband+3"
-        ],
-        details: [
-          { label: "Material", value: "Smyckesstål" },
-          { label: "Färg", value: "Silver" },
-          { label: "Storlek", value: "Justerbar" },
-          { label: "Vikt", value: "15g" }
-        ],
-        similarProducts: [5, 9, 10]
-      },
-      {
-        id: 5,
-        title: "Bibelomslag i läder",
-        price: 129,
-        originalPrice: 159,
-        description: "Ett elegant läderomslag som skyddar din bibel och ger den en personlig touch.",
-        category: "accessories",
-        stock: 12,
-        rating: 4.6,
-        reviews: 14,
-        images: [
-          "https://via.placeholder.com/500x500?text=Bibelomslag",
-          "https://via.placeholder.com/500x500?text=Omslag+1",
-          "https://via.placeholder.com/500x500?text=Omslag+2",
-          "https://via.placeholder.com/500x500?text=Omslag+3"
-        ],
-        details: [
-          { label: "Material", value: "Ekologiskt läder" },
-          { label: "Färg", value: "Brun" },
-          { label: "Passar till", value: "Standardbibelstorlek" },
-          { label: "Funktion", value: "Skydd och personlig stil" }
-        ],
-        similarProducts: [1, 2, 6]
-      },
-      {
-        id: 6,
-        title: "Bibelstudieguide",
-        price: 179,
-        originalPrice: 0,
-        description: "En praktisk guide för att fördjupa dina bibelstudier med frågor och reflektioner.",
-        category: "books",
-        stock: 7,
-        rating: 4.9,
-        reviews: 27,
-        images: [
-          "https://via.placeholder.com/500x500?text=Studieguide",
-          "https://via.placeholder.com/500x500?text=Guide+1",
-          "https://via.placeholder.com/500x500?text=Guide+2",
-          "https://via.placeholder.com/500x500?text=Guide+3"
-        ],
-        details: [
-          { label: "Författare", value: "David Bergman" },
-          { label: "Utgivningsår", value: "2022" },
-          { label: "Språk", value: "Svenska" },
-          { label: "Antal sidor", value: "250" },
-          { label: "Bandtyp", value: "Häftad" }
-        ],
-        similarProducts: [1, 3, 7]
-      },
-      {
-        id: 7,
-        title: "Kors i trä",
-        price: 349,
-        originalPrice: 399,
-        description: "Ett vackert handgjort träkors för hemmet eller som gåva.",
-        category: "gifts",
-        stock: 3,
-        rating: 4.7,
-        reviews: 9,
-        images: [
-          "https://via.placeholder.com/500x500?text=Träkors",
-          "https://via.placeholder.com/500x500?text=Kors+1",
-          "https://via.placeholder.com/500x500?text=Kors+2",
-          "https://via.placeholder.com/500x500?text=Kors+3"
-        ],
-        details: [
-          { label: "Material", value: "Ek" },
-          { label: "Färg", value: "Naturlig" },
-          { label: "Storlek", value: "30x20 cm" },
-          { label: "Vikt", value: "500g" }
-        ],
-        similarProducts: [8, 9, 10]
-      },
-      {
-        id: 8,
-        title: "Bibelpärmar",
-        price: 89,
-        originalPrice: 99,
-        description: "Praktiska pärmar för att organisera dina bibelstudiematerial.",
-        category: "accessories",
-        stock: 25,
-        rating: 4.2,
-        reviews: 11,
-        images: [
-          "https://via.placeholder.com/500x500?text=Bibelpärmar",
-          "https://via.placeholder.com/500x500?text=Pärmar+1",
-          "https://via.placeholder.com/500x500?text=Pärmar+2",
-          "https://via.placeholder.com/500x500?text=Pärmar+3"
-        ],
-        details: [
-          { label: "Material", value: "Kartong" },
-          { label: "Färg", value: "Svart" },
-          { label: "Antal", value: "3 st" },
-          { label: "Storlek", value: "A4" }
-        ],
-        similarProducts: [5, 6, 9]
-      },
-      {
-        id: 9,
-        title: "Böneljus",
-        price: 59,
-        originalPrice: 79,
-        description: "Ett set med fyra vackra ljus för att skapa en andlig stämning under bön.",
-        category: "gifts",
-        stock: 18,
-        rating: 4.4,
-        reviews: 16,
-        images: [
-          "https://via.placeholder.com/500x500?text=Böneljus",
-          "https://via.placeholder.com/500x500?text=Ljus+1",
-          "https://via.placeholder.com/500x500?text=Ljus+2",
-          "https://via.placeholder.com/500x500?text=Ljus+3"
-        ],
-        details: [
-          { label: "Material", value: "Bivax" },
-          { label: "Färg", value: "Beige" },
-          { label: "Antal", value: "4 st" },
-          { label: "Bränntid", value: "8 timmar/st" }
-        ],
-        similarProducts: [4, 7, 10]
-      },
-      {
-        id: 10,
-        title: "Bibelmarkörer",
-        price: 49,
-        originalPrice: 0,
-        description: "Ett set med sex vackra bibelmarkörer med bibelverser.",
-        category: "accessories",
-        stock: 30,
-        rating: 4.1,
-        reviews: 7,
-        images: [
-          "https://via.placeholder.com/500x500?text=Bibelmarkörer",
-          "https://via.placeholder.com/500x500?text=Markörer+1",
-          "https://via.placeholder.com/500x500?text=Markörer+2",
-          "https://via.placeholder.com/500x500?text=Markörer+3"
-        ],
-        details: [
-          { label: "Material", value: "Papper" },
-          { label: "Färg", value: "Olika färger" },
-          { label: "Antal", value: "6 st" },
-          { label: "Storlek", value: "5x15 cm" }
-        ],
-        similarProducts: [5, 8, 9]
-      }
-    ];
-
-    // Recensioner
-    const reviews = [
-      {
-        id: 1,
-        productId: 1,
-        author: "Lisa Andersson",
-        date: "2023-04-15",
-        rating: 5,
-        title: "Fantastisk studiebibel",
-        text: "Denna bibel har fördjupat min förståelse av Guds Ord på ett helt nytt sätt. Noterna är extremt hjälpsamma och välskrivna."
-      },
-      {
-        id: 2,
-        productId: 1,
-        author: "Johan Karlsson",
-        date: "2023-03-28",
-        rating: 4,
-        title: "Mycket bra men tyngd",
-        text: "Bibeln är verkligen omfattande med fantastiska noter. Enda nackdelen är att den är ganska tung att bära med sig."
-      },
-      {
-        id: 3,
-        productId: 3,
-        author: "Emma Nilsson",
-        date: "2023-05-02",
-        rating: 5,
-        title: "Underbar bönedagbok",
-        text: "Jag älskar att dokumentera mina böner och se hur Gud svarar över tid. Dagboken är vackert designad och hög kvalitet."
-      }
-    ];
-
-    // Kundvagn
-    let cart = [];
-
-    // Hämta kundvagn från localStorage om den finns
-    if (localStorage.getItem('cart')) {
-      cart = JSON.parse(localStorage.getItem('cart'));
-      updateCartCount();
-    }
-
-    // Aktuell sida
-    let currentPage = 'shop';
-    let currentProductId = null;
-
-    // Visa rätt sida baserad på URL-hash
-    function showPage() {
-      const hash = window.location.hash.substring(1);
-
-      // Dölj alla sidor först
-      document.querySelectorAll('[id$="-page"]').forEach(page => {
-        page.classList.add('hidden');
-      });
-
-      // Visa rätt sida baserad på hash
-      if (hash.startsWith('product-')) {
-        const productId = parseInt(hash.split('-')[1]);
-        showProductPage(productId);
-      } else if (hash === 'cart') {
-        showCartPage();
-      } else if (hash === 'checkout') {
-        showCheckoutPage();
-      } else if (hash === 'account') {
-        showAccountPage();
-      } else {
-        showShopPage();
-      }
-    }
-
-    // Visa butikssida
-    function showShopPage() {
-      currentPage = 'shop';
-      document.getElementById('shop-page').classList.remove('hidden');
-      renderProducts();
-    }
-
-    // Visa produktsida
-    function showProductPage(productId) {
-      currentPage = 'product';
-      currentProductId = productId;
-      document.getElementById('product-page').classList.remove('hidden');
-
-      const product = products.find(p => p.id === productId);
-      if (product) {
-        // Uppdatera produktinformation
-        document.getElementById('product-title').textContent = product.title;
-        document.getElementById('product-price').textContent = product.price + ' kr';
-
-        if (product.originalPrice) {
-          document.getElementById('product-original-price').textContent = product.originalPrice + ' kr';
-          document.getElementById('product-original-price').classList.remove('hidden');
-        } else {
-          document.getElementById('product-original-price').classList.add('hidden');
-        }
-
-        document.getElementById('product-description').textContent = product.description;
-        document.getElementById('product-stock').textContent = product.stock + ' i lager';
-
-        // Uppdatera bilder
-        const mainImage = document.getElementById('product-main-image');
-        mainImage.src = product.images[0];
-        mainImage.alt = product.title;
-
-        const thumbnails = document.querySelectorAll('#product-page .grid img');
-        thumbnails.forEach((thumb, index) => {
-          if (product.images[index]) {
-            thumb.src = product.images[index];
-            thumb.alt = product.title + ' ' + (index + 1);
-            thumb.parentElement.classList.remove('hidden');
-
-            thumb.parentElement.addEventListener('click', () => {
-              mainImage.src = product.images[index];
+        // Netflix-style hover effect for content cards
+        const contentCards = document.querySelectorAll('.content-card');
+        contentCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                // Calculate position to prevent overflow
+                const rect = card.getBoundingClientRect();
+                const isAtViewportEdge = rect.right + (rect.width * 0.1) > window.innerWidth;
+                
+                if (isAtViewportEdge) {
+                    card.style.transformOrigin = 'right center';
+                } else {
+                    card.style.transformOrigin = 'left center';
+                }
             });
-          } else {
-            thumb.parentElement.classList.add('hidden');
-          }
         });
 
-        // Uppdatera produktdetaljer
-        const detailsContainer = document.getElementById('product-details');
-        detailsContainer.innerHTML = '';
-
-        product.details.forEach(detail => {
-          const div = document.createElement('div');
-          div.className = 'flex mb-2';
-          div.innerHTML = `
-                        <span class="font-medium text-gray-700 w-1/3">${detail.label}</span>
-                        <span class="text-gray-600">${detail.value}</span>
-                    `;
-          detailsContainer.appendChild(div);
+        // Search functionality
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                alert('Sökning: ' + this.value);
+                // In a real implementation, you would redirect to search results
+            }
         });
 
-        // Uppdatera betyg
-        const ratingContainer = document.querySelector('#product-page .flex.text-yellow-400');
-        ratingContainer.innerHTML = '';
+        // Netflix-style scroll behavior for content rows
+        const contentRows = document.querySelectorAll('[class*="overflow-x-auto"]');
+        contentRows.forEach(row => {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
 
-        const fullStars = Math.floor(product.rating);
-        const hasHalfStar = product.rating % 1 >= 0.5;
+            row.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - row.offsetLeft;
+                scrollLeft = row.scrollLeft;
+                row.style.cursor = 'grabbing';
+            });
 
-        for (let i = 1
+            row.addEventListener('mouseleave', () => {
+                isDown = false;
+                row.style.cursor = 'grab';
+            });
 
+            row.addEventListener('mouseup', () => {
+                isDown = false;
+                row.style.cursor = 'grab';
+            });
 
-  </script>
-
-
-
-  <script>
-    // JavaScript för cookiehantering
-    document.addEventListener('DOMContentLoaded', function() {
-      // Funktion för att spara cookiepreferenser
-      function saveCookiePreferences(preferences) {
-        localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
-        // Skapa en cookie som sparar inställningarna i 1 år
-        const date = new Date();
-        date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
-        const expires = "expires=" + date.toUTCString();
-        document.cookie = `cookie_consent=${encodeURIComponent(JSON.stringify(preferences))};${expires};path=/;SameSite=Lax`;
-        
-        // Ladda in cookies baserat på preferenser
-        loadCookiesBasedOnPreferences(preferences);
-      }
-
-      // Funktion för att ladda cookies baserat på användarens preferenser
-      function loadCookiesBasedOnPreferences(preferences) {
-        if (preferences.analytics) {
-          // Ladda in analysverktyg (t.ex. Google Analytics)
-          console.log('Loading analytics cookies...');
-        }
-        if (preferences.marketing) {
-          // Ladda in marknadsföringsverktyg (t.ex. Facebook Pixel)
-          console.log('Loading marketing cookies...');
-        }
-      }
-
-        `;
-        document.body.appendChild(banner);
-
-        // Hantera knapptryckningar
-        document.getElementById('accept-all-cookies').addEventListener('click', function() {
-          const preferences = {
-            necessary: true,
-            preferences: true,
-            analytics: true,
-            marketing: true
-          };
-          saveCookiePreferences(preferences);
-          document.getElementById('cookie-banner').remove();
+            row.addEventListener('mousemove', (e) => {
+                if(!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - row.offsetLeft;
+                const walk = (x - startX) * 2;
+                row.scrollLeft = scrollLeft - walk;
+            });
         });
 
-        document.getElementById('accept-selected-cookies').addEventListener('click', function() {
-          // Här skulle du visa en modal med detaljerade inställningar
-          alert('I en full implementation skulle du här kunna välja specifika cookie-kategorier');
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
-
-        document.getElementById('reject-non-essential').addEventListener('click', function() {
-          const preferences = {
-            necessary: true,
-            preferences: false,
-            analytics: false,
-            marketing: false
-          };
-          saveCookiePreferences(preferences);
-          document.getElementById('cookie-banner').remove();
-        });
-      } else {
-        // Ladda cookies baserat på sparade preferenser
-        loadCookiesBasedOnPreferences(JSON.parse(savedPreferences));
-      }
-    });
-  </script>
-
-
+    </script>
 </body>
-
-
-
-<script>
-  const searchInput = document.querySelector('.search-input');
-  const searchableItems = document.querySelectorAll('.searchable-item');
-
-  searchInput.addEventListener('input', () => {
-    const query = searchInput.value.toLowerCase();
-
-    searchableItems.forEach(item => {
-      const text = item.textContent.toLowerCase();
-      if (text.includes(query)) {
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
-      }
-    });
-  });
-</script>
-
-
 </html>
-
-<!-- Back to Top Button -->
-<button id="backToTop" class="fixed bottom-6 left-6 bg-yellow-500 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
-  <i class="fas fa-arrow-up"></i>
-</button>
-
-
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/67b0bca7fb6773190d790aa1/1ik561s69';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
