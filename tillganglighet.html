@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="sv" class="scroll-smooth">
+<head>
+    <!-- Primary Meta Tags -->
+    <title>Tillgänglighet | Bibelstudion - En webbplats för alla</title>
+    <meta name="description" content="Bibelstudion strävar efter att vara tillgänglig för alla. Läs om våra åtgärder för webbtillgänglighet och hur vi arbetar för att inkludera alla användare.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="webbtillgänglighet bibelstudion, tillgänglighet kristen webbplats, WCAG bibelstudier, anpassad webbplats för funktionsnedsättning, tillgänglighetsredogörelse">
+    <meta name="author" content="Bibelstudion AB">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.bibelstudion.se/tillganglighet.html">
+    <meta property="og:title" content="Tillgänglighet | Bibelstudion - En webbplats för alla">
+    <meta property="og:description" content="Upptäck hur Bibelstudion arbetar med webbtillgänglighet för att göra våra bibelstudier tillgängliga för alla, oavsett funktionsnedsättning.">
+    <meta property="og:image" content="https://www.bibelstudion.se/images/bibelstudion-tillganglighet.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.bibelstudion.se/tillganglighet.html">
+    <meta property="twitter:title" content="Tillgänglighet | Bibelstudion - En webbplats för alla">
+    <meta property="twitter:description" content="Lär dig hur Bibelstudion implementerar WCAG-riktlinjer för att skapa en inkluderande upplevelse för alla användare med olika behov.">
+    <meta property="twitter:image" content="https://www.bibelstudion.se/images/bibelstudion-tillganglighet-twitter.jpg">
+    
+         <!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/images/favicon-128x128.png">
+<link rel="icon" type="image/png" sizes="256x256" href="/images/favicon-256x256.png">
+<link rel="icon" type="image/png" sizes="513x513" href="/images/favicon-513x513.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1E3A8A">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.bibelstudion.se/tillganglighet.html" />
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a365d',
+            secondary: '#2c5282',
+            accent: '#ecc94b',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Merriweather', 'serif'],
+          },
+        }
+      }
+    }
+    </script>
+    
+    <!-- Custom CSS -->
+    <style>
+        /* Netflix-inspired styles */
+        .hero-section {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.8) 100%), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            height: 50vh;
+        }
+        
+        .nav-gradient {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0) 90%);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #222;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #e50914;
+            border-radius: 4px;
+        }
+        
+        /* Accessibility content styling */
+        .accessibility-section {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .accessibility-section h2 {
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .accessibility-section h2:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 60%;
+            width: 4px;
+            background: #e50914;
+            border-radius: 2px;
+        }
+        
+        .accessibility-item {
+            border-left: 3px solid #e50914;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Focus styles for accessibility */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 3px solid #e50914;
+            outline-offset: 2px;
+        }
+        
+        /* Skip to content link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #e50914;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        .nav-gradient {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0) 90%);
+        }
+        
+        .content-card:hover {
+            transform: scale(1.1);
+            z-index: 10;
+        }
+        
+        .content-card {
+            transition: transform 0.3s ease;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #222;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #e50914;
+            border-radius: 4px;
+        }
+        
+        /* Mobile menu animation */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        
+
+        /* Preloader for fast loading */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+        .loader-logo {
+            width: 150px;
+            height: 150px;
+            animation: pulse 5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+/* Hide main content at start */
+#main-content.hidden {
+    display: none;
+}
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 40vh;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white">
+    <!-- Preloader for fast perceived loading -->
+    <div id="preloader">
+      <img src="images/Bibelstudion.logo.jpeg" alt="Bibelstudion laddar..." class="loader-logo">
+  </div>
+  
+  
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black shadow-md">
+        <div class="flex items-center justify-between px-4 py-3 md:px-12">
+            <div class="flex items-center">
+              <a href="#" class="text-white font-bold text-2xl md:text-3xl flex items-center">
+                <i class="fas fa-book-bible mr-2 text-red-600"></i>
+                <a href="index.html" class="text-red-600 font-bold text-2xl md:text-4xl">Bibelstudion</a>
+                <div class="hidden md:flex ml-8 space-x-4">
+                    <a href="index.html" class="text-white hover:text-gray-300">Hem</a>
+                    <a href="#" class="text-white hover:text-gray-300">Bibelstudier</a>
+                    <a href="#" class="text-white hover:text-gray-300">Dokumentärer</a>
+                    <a href="#" class="text-white hover:text-gray-300">Nyheter</a>
+                    <a href="blogginlagg.html" class="text-white hover:text-gray-300">Blogg</a>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <div class="hidden md:block relative">
+                    <input type="text" placeholder="Sök innehåll..." class="bg-black bg-opacity-50 text-white px-4 py-1 rounded border border-gray-600 focus:outline-none focus:border-white w-64">
+                    <i class="fas fa-search absolute right-3 top-2 text-gray-400"></i>
+                </div>
+                <div class="hidden md:flex items-center space-x-2">
+                    <i class="fas fa-bell text-white"></i>
+                    <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold">U</span>
+                    </div>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-64 h-full bg-black bg-opacity-90 z-50 p-4 overflow-y-auto">
+        <div class="flex justify-between items-center mb-8">
+            <a href="#" class="text-red-600 font-bold text-2xl">Bibelstudion</a>
+            <button id="close-mobile-menu" class="text-white focus:outline-none">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <div class="mb-4">
+            <input type="text" placeholder="Sök innehåll..." class="bg-gray-800 text-white px-4 py-2 rounded w-full focus:outline-none">
+        </div>
+        <div class="space-y-4">
+            <a href="#" class="block text-white hover:text-red-500">Hem</a>
+            <a href="#" class="block text-white hover:text-red-500">Bibelstudier</a>
+            <a href="#" class="block text-white hover:text-red-500">Dokumentärer</a>
+            <a href="#" class="block text-white hover:text-red-500">Nyheter</a>
+            <a href="#" class="block text-white hover:text-red-500">Blogg</a>
+            <a href="#" class="block text-white hover:text-red-500">Min profil</a>
+            <a href="#" class="block text-white hover:text-red-500">Inställningar</a>
+            <a href="#" class="block text-white hover:text-red-500">Logga ut</a>
+        </div>
+    </div>  
+
+    <!-- Hero Section -->
+    <section class="hero-section pt-16 flex items-center justify-center">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">Tillgänglighet</h1>
+            <p class="text-xl md:text-2xl text-white max-w-3xl mx-auto">En webbplats för alla - oavsett förmåga eller funktionsnedsättning</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container mx-auto px-4 md:px-12 py-16 max-w-5xl">
+        <div class="accessibility-section p-8 md:p-12">
+            <!-- Breadcrumbs -->
+            <div class="flex items-center text-sm text-gray-400 mb-8">
+                <a href="index.html" class="hover:text-white">Hem</a>
+                <span class="mx-2">/</span>
+                <span class="text-white">Tillgänglighet</span>
+            </div>
+            
+            <!-- Last Updated -->
+            <div class="bg-gray-900 p-4 rounded-lg mb-8 flex items-start">
+                <i class="fas fa-info-circle text-red-600 mt-1 mr-3"></i>
+                <p class="text-sm">Senast uppdaterad: 15 maj 2024. Denna tillgänglighetsredogörelse kan komma att uppdateras. Vid betydande ändringar meddelar vi våra användare.</p>
+            </div>
+            
+            <!-- Introduction -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-4 text-white">1. Vår strävan efter tillgänglighet</h2>
+                <div class="space-y-4 text-gray-300">
+                    <p>På Bibelstudion tror vi att Guds ord är till för alla. Därför arbetar vi aktivt för att vår webbplats ska vara tillgänglig för alla användare, oavsett funktionsnedsättning, tekniska förutsättningar eller individuella behov. Vi vill skapa en plats där varje individ kan känna sig välkommen, värdefull och fullt delaktig i gemenskapen.</p>
+    
+                    <p>Vi följer internationella riktlinjer för webbtillgänglighet (WCAG 2.1 på nivå AA) och strävar efter att kontinuerligt förbättra användarupplevelsen för alla besökare. Vårt mål är att säkerställa att ingen ska uppleva hinder när de söker kunskap, tröst eller inspiration genom vår plattform.</p>
+                    
+                    <p>Vårt arbete med tillgänglighet inkluderar bland annat att erbjuda tydliga navigationsstrukturer, anpassningsbara textstorlekar, alternativtext för bilder och kompatibilitet med hjälpmedel som skärmläsare. Vi tror att en tillgänglig webbplats inte bara är en teknisk fråga utan också en del av vårt uppdrag att sprida Guds kärlek till hela världen.</p>
+                
+                    <p>Bibelstudion utvecklas med omtanke om alla våra användare. Om du stöter på några hinder eller har förslag på hur vi kan göra webbplatsen ännu mer tillgänglig, tveka inte att kontakta oss. Tillsammans kan vi skapa en ännu öppnare och mer inkluderande plats för tro och gemenskap.</p>
+                    
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2022&q=80" alt="Bibelstudion arbetar aktivt med webbtillgänglighet för att inkludera alla användare" class="w-full rounded-lg my-6">
+                  </div>
+                </section>
+            
+            <!-- Accessibility Features -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-4 text-white">2. Tillgänglighetsfunktioner</h2>
+                <div class="space-y-6 text-gray-300">
+                    <p>För oss på Bibelstudion är det viktigt att alla våra besökare, oavsett förmåga eller tekniska begränsningar, kan ta del av vårt innehåll på ett smidigt och självständigt sätt. Därför har vi implementerat en rad tillgänglighetsfunktioner som syftar till att skapa en inkluderande upplevelse för alla. Vi arbetar ständigt med att utvärdera och förbättra dessa funktioner för att möta aktuella standarder och våra användares behov. Här är några av de insatser vi gjort för att göra webbplatsen mer tillgänglig:</p>
+
+                    <div class="accessibility-item">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Navigering och struktur:</h3>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li>Logisk rubrikhierarki för skärmläsare</li>
+                            <li>Konsekvent navigering på alla sidor</li>
+                            <li>"Hoppa till huvudinnehåll"-länk för tangentbordsanvändare</li>
+                            <li>Tydliga fokusmarkeringar för tangentbordsnavigation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="accessibility-item">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Innehåll och läsbarhet:</h3>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li>Anpassningsbar textstorlek (via webbläsarens zoom-funktion)</li>
+                            <li>Tillräcklig kontrast mellan text och bakgrund</li>
+                            <li>Beskrivande alt-text för alla meningsfulla bilder</li>
+                            <li>Tydliga länkar med beskrivande text</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="accessibility-item">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Mediealternativ:</h3>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li>Textade videor för döva och hörselskadade</li>
+                            <li>Ljudbeskrivningar för viktiga visuella element</li>
+                            <li>Möjlighet att pausa eller stänga av rörligt innehåll</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <!-- Known Issues -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-4 text-white">3. Kända tillgänglighetshinder</h2>
+                <div class="space-y-4 text-gray-300">
+                    <p>Vi på Bibelstudion arbetar ständigt för att säkerställa att vår webbplats är tillgänglig för så många som möjligt. Trots våra ansträngningar är vi medvetna om att vissa delar av webbplatsen fortfarande kan ha begränsningar när det gäller tillgänglighet. Vi strävar efter full transparens och vill därför informera om att det fortfarande finns områden som ännu inte helt uppfyller de krav och riktlinjer som vi siktar mot:</p>
+                    
+                    <div class="bg-gray-900 p-6 rounded-lg">
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full">
+                                <thead>
+                                    <tr class="bg-gray-800">
+                                        <th class="px-4 py-3 text-left text-white font-semibold">Område</th>
+                                        <th class="px-4 py-3 text-left text-white font-semibold">Problem</th>
+                                        <th class="px-4 py-3 text-left text-white font-semibold">Planerad lösning</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-700">
+                                    <tr>
+                                        <td class="px-4 py-3">Vissa PDF-dokument</td>
+                                        <td class="px-4 py-3">Saknar korrekt taggstruktur</td>
+                                        <td class="px-4 py-3">Konvertera till tillgängliga HTML-sidor under 2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3">Vissa äldre videor</td>
+                                        <td class="px-4 py-3">Saknar textning eller ljudbeskrivning</td>
+                                        <td class="px-4 py-3">Lägga till textning i etapper under 2024-2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3">Komplexa formulär</td>
+                                        <td class="px-4 py-3">Begränsad tangentbordsnavigation</td>
+                                        <td class="px-4 py-3">Omdesign planerad till Q3 2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3">Vissa interaktiva kartor</td>
+                                        <td class="px-4 py-3">Saknar textalternativ</td>
+                                        <td class="px-4 py-3">Arbetar med alternativa presentationer</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <p class="mt-6">Vi arbetar kontinuerligt med att åtgärda dessa brister och förbättra webbplatsens tillgänglighet. Om du stöter på andra hinder, vänligen kontakta oss.</p>
+                    
+                    <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1936&q=80" alt="Bibelstudion arbetar aktivt med att åtgärda kända tillgänglighetshinder på webbplatsen" class="w-full rounded-lg my-6">
+                </div>
+            </section>
+            
+            <!-- How to Use Accessibility Features -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-4 text-white">4. Så här använder du våra tillgänglighetsfunktioner</h2>
+                <div class="space-y-6 text-gray-300">
+                    <p>Här är några tips för att få ut mesta möjliga av vår webbplats:</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                            <h3 class="text-lg font-semibold mb-2 text-white flex items-center">
+                                <i class="fas fa-keyboard mr-2 text-red-600"></i>
+                                Tangentbordsnavigation
+                            </h3>
+                            <ul class="list-disc pl-6 space-y-1 text-sm">
+                                <li>Använd TAB för att navigera mellan länkar och formulärfält</li>
+                                <li>Använd SKIFT+TAB för att gå bakåt</li>
+                                <li>Tryck ENTER för att aktivera valt element</li>
+                                <li>Använd piltangenterna för att navigera i menyer</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                            <h3 class="text-lg font-semibold mb-2 text-white flex items-center">
+                                <i class="fas fa-text-height mr-2 text-red-600"></i>
+                                Textanpassning
+                            </h3>
+                            <ul class="list-disc pl-6 space-y-1 text-sm">
+                                <li>Använd webbläsarens zoom-funktion (CTRL/CMD + +/-)</li>
+                                <li>Välj "Läs upp" i webbläsaren för att höra innehållet</li>
+                                <li>Använd högkontrastläge i operativsystemet vid behov</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                            <h3 class="text-lg font-semibold mb-2 text-white flex items-center">
+                                <i class="fas fa-video mr-2 text-red-600"></i>
+                                Videofunktioner
+                            </h3>
+                            <ul class="list-disc pl-6 space-y-1 text-sm">
+                                <li>Aktivera textning via CC-knappen i videospelaren</li>
+                                <li>Justera textningsstorlek i spelarinställningar</li>
+                                <li>Pausa videor för att läsa text i egen takt</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                            <h3 class="text-lg font-semibold mb-2 text-white flex items-center">
+                                <i class="fas fa-mobile-alt mr-2 text-red-600"></i>
+                                Mobilanvändning
+                            </h3>
+                            <ul class="list-disc pl-6 space-y-1 text-sm">
+                                <li>Vänd enheten horisontellt för större text vid behov</li>
+                                <li>Använd pekfunktioner för att förstora specifika områden</li>
+                                <li>Aktivera skärmläsare i mobilens inställningar</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Användarinstruktioner för tillgänglighetsfunktioner på Bibelstudion" class="w-full rounded-lg my-6">
+                </div>
+            </section>
+            
+            <!-- Technical Information -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-4 text-white">5. Teknisk information</h2>
+                <div class="space-y-4 text-gray-300">
+                    <p>Denna webbplats strävar efter att följa WCAG 2.1 riktlinjerna på nivå AA. Webbplatsen är delvis kompatibel med dessa riktlinjer på grund av de brister som beskrivs ovan.</p>
+                    
+                    <div class="bg-gray-900 p-6 rounded-lg">
+                        <h3 class="text-lg font-semibold mb-4 text-white">Testmetodik:</h3>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li>Automatiserade tillgänglighetstester med verktyg som axe och WAVE</li>
+                            <li>Manuell granskning av nyckelsidor</li>
+                            <li>Testning med skärmläsare (JAWS, NVDA, VoiceOver)</li>
+                            <li>Tangentbordsnavigeringstester</li>
+                            <li>Användartester med personer med olika funktionsnedsättningar</li>
+                        </ul>
+                    </div>
+                    
+                    <p class="mt-6">Vi genomför regelbundna tillgänglighetsgranskningar och arbetar kontinuerligt med att förbättra webbplatsen.</p>
+                </div>
+            </section>
+            
+            <!-- Feedback -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-4 text-white">6. Ge oss feedback</h2>
+                <div class="space-y-4 text-gray-300">
+                    <p>Vi vill gärna höra din feedback om webbplatsens tillgänglighet. Kontakta oss om du:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Stöter på tillgänglighetshinder som inte beskrivits här</li>
+                        <li>Har förslag på förbättringar</li>
+                        <li>Behöver hjälp med att komma åt viss information</li>
+                        <li>Vill dela din upplevelse av webbplatsens tillgänglighet</li>
+                    </ul>
+                    
+                    <div class="bg-gray-900 p-6 rounded-lg mt-6">
+                        <h3 class="text-lg font-semibold mb-4 text-white">Kontakta vår tillgänglighetsansvarige:</h3>
+                        <form id="accessibility-feedback" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-1">Namn</label>
+                                <input type="text" id="name" name="name" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-red-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-1">E-post</label>
+                                <input type="email" id="email" name="email" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-red-500">
+                            </div>
+                            <div>
+                                <label for="feedback" class="block text-sm font-medium mb-1">Din feedback</label>
+                                <textarea id="feedback" name="feedback" rows="4" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-red-500"></textarea>
+                            </div>
+                            <div>
+                                <label for="contact-preference" class="block text-sm font-medium mb-1">Föredragen kontaktmetod</label>
+                                <select id="contact-preference" name="contact-preference" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-red-500">
+                                    <option value="email">E-post</option>
+                                    <option value="phone">Telefon</option>
+                                    <option value="none">Ingen kontakt, bara feedback</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition-colors">
+                                Skicka feedback
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <p class="mt-6">Vi strävar efter att besvara alla feedback inom 5 arbetsdagar.</p>
+                    
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Kontaktformulär för feedback om tillgänglighet på Bibelstudion" class="w-full rounded-lg my-6">
+                </div>
+            </section>
+            
+            <!-- Legal Requirements -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-4 text-white">7. Lagkrav och tillsyn</h2>
+                <div class="space-y-4 text-gray-300">
+                    <p>Denna webbplats omfattas av lagen om tillgänglighet till digital offentlig service. Webbplatsen uppfyller delvis kraven enligt lag (2018:1937) om tillgänglighet till digital offentlig service.</p>
+                    
+                    <div class="bg-gray-900 p-6 rounded-lg mt-6">
+                        <h3 class="text-lg font-semibold mb-4 text-white">Om du upplever tillgänglighetsproblem:</h3>
+                        <p>Vi gör allt vi kan för att åtgärda problemen. Om du inte är nöjd med hur vi hanterar din feedback eller om du inte får svar inom 5 arbetsdagar kan du kontakta:</p>
+                        
+                        <div class="mt-4">
+                            <h4 class="font-semibold text-white">Myndigheten för digital förvaltning (DIGG)</h4>
+                            <address class="not-italic mt-2">
+                                <p>Box 223 07</p>
+                                <p>250 23 Helsingborg</p>
+                                <p><a href="https://www.digg.se" class="text-red-400 hover:underline">www.digg.se</a></p>
+                                <p><a href="mailto:registrator@digg.se" class="text-red-400 hover:underline">registrator@digg.se</a></p>
+                            </address>
+                        </div>
+                    </div>
+                    
+                    <p class="mt-6">DIGG ansvarar för tillsyn över lagen om tillgänglighet till digital offentlig service.</p>
+                </div>
+            </section>
+            
+            <!-- Future Improvements -->
+            <section>
+                <h2 class="text-2xl font-bold mb-4 text-white">8. Framtida förbättringar</h2>
+                <div class="space-y-4 text-gray-300">
+                    <p>Vi arbetar kontinuerligt med att förbättra webbplatsens tillgänglighet. Här är några av våra planerade förbättringar:</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mt-6">
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                            <h3 class="text-lg font-semibold mb-2 text-white flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-red-600"></i>
+                                Kort sikt (2024)
+                            </h3>
+                            <ul class="list-disc pl-6 space-y-1 text-sm">
+                                <li>Full tillgänglighet för alla formulär</li>
+                                <li>Textning av återstående äldre videor</li>
+                                <li>Förbättrad kontrast på vissa element</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                            <h3 class="text-lg font-semibold mb-2 text-white flex items-center">
+                                <i class="fas fa-calendar-plus mr-2 text-red-600"></i>
+                                Lång sikt (2025)
+                            </h3>
+                            <ul class="list-disc pl-6 space-y-1 text-sm">
+                                <li>Anpassningsbara färgteman</li>
+                                <li>Stöd för fler skärmläsare</li>
+                                <li>Förbättrad läsbarhet för neurodivergenta</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p class="mt-6">Vi uppdaterar denna sida regelbundet med våra framsteg och nya mål.</p>
+                    
+                </div>
+            </section>
+        </div>
+    </main>
+
+   
+<!-- Kristet anpassad Netflix-style Footer -->
+<footer class="bg-black text-gray-400 py-12 px-4 md:px-16 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto">
+        <!-- Logo och slogan -->
+        <div class="flex flex-col items-center mb-8">
+            <div class="flex items-center mb-4">
+                <i class="fas fa-book-bible text-red-600 text-3xl mr-3"></i>
+                <span class="text-white font-bold text-2xl">Bibelstudion</span>
+            </div>
+            <p class="text-gray-400 text-sm text-center max-w-lg">
+                Din plattform för djupgående bibelstudier, andakt och kristen gemenskap
+            </p>
+        </div>
+  
+        <!-- Footer Links - Organiserad för kristet innehåll -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+            <!-- Resurser -->
+            <div>
+                <h4 class="text-white text-sm font-semibold mb-4 uppercase tracking-wider">Resurser</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-book mr-2 text-red-600 text-xs"></i> Bibelstudier
+                    </a></li>
+                    <li><a href="#" class="hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-headphones mr-2 text-red-600 text-xs"></i> Ljudböcker
+                    </a></li>
+                    <li><a href="#" class="hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-podcast mr-2 text-red-600 text-xs"></i> Podcasts
+                    </a></li>
+                </ul>
+            </div>
+            
+            <!-- Gemenskap -->
+            <div>
+                <h4 class="text-white text-sm font-semibold mb-4 uppercase tracking-wider">Gemenskap</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-calendar-alt mr-2 text-red-600 text-xs"></i> Evenemang
+                    </a></li>
+                    <li><a href="#" class="hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-hands-praying mr-2 text-red-600 text-xs"></i> Bönförbön
+                    </a></li>
+                    <li><a href="#" class="hover:text-white transition-colors flex items-center">
+                        <i class="fas fa-user-group mr-2 text-red-600 text-xs"></i> Studiegrupper
+                    </a></li>
+                </ul>
+            </div>
+            
+            <!-- Om oss -->
+            <div>
+                <h4 class="text-white text-sm font-semibold mb-4 uppercase tracking-wider">Om oss</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-white transition-colors">Vår tro</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Teamet</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Samarbetspartners</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Bli volontär</a></li>
+                </ul>
+            </div>
+            
+            <!-- Support -->
+            <div>
+                <h4 class="text-white text-sm font-semibold mb-4 uppercase tracking-wider">Support</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-white transition-colors">Kontakta oss</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Vanliga frågor</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Donera</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Bli medlem</a></li>
+                </ul>
+            </div>
+        </div>
+  
+        <!-- Social Media och Legal -->
+        <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800">
+            <!-- Social Media -->
+            <div class="flex space-x-6 mb-4 md:mb-0">
+                <a href="#" class="text-gray-400 hover:text-white text-xl">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white text-xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white text-xl">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white text-xl">
+                    <i class="fab fa-spotify"></i>
+                </a>
+            </div>
+            
+            <!-- Legal Links -->
+            <div class="flex flex-wrap justify-center gap-4 text-xs">
+                <a href="anvandarvillkor.html" class="hover:text-white hover:underline">Användarvillkor</a>
+                <a href="integritetspolicy.html" class="hover:text-white hover:underline">Integritetspolicy</a>
+                <a href="cookiepolicy.html" class="hover:text-white hover:underline">Cookies</a>
+                <a href="tillganglighet.html" class="hover:text-white hover:underline">Tillgänglighet</a>
+            </div>
+        </div>
+  
+        <!-- Copyright och språk -->
+        <div class="flex flex-col md:flex-row justify-between items-center mt-8">
+            <div class="text-xs text-gray-500 mb-4 md:mb-0">
+                © 2025 Bibelstudion. Alla rättigheter reserverade.
+            </div>
+            <div class="relative inline-block">
+                <select class="bg-black border border-gray-700 text-white py-1.5 px-3 pr-7 rounded focus:outline-none focus:border-gray-500 text-xs">
+                    <option>Svenska</option>
+                    <option>English</option>
+                    <option>Español</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
+                    <i class="fas fa-chevron-down text-xs"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+      <!-- JavaScript -->
+  
+       <script>
+          // Preloader - simulate fast loading
+          window.addEventListener('load', function() {
+              setTimeout(function() {
+                  document.getElementById('preloader').style.display = 'none';
+              }, 800); // Simulate fast loading (800ms)
+          });      
+        </script>
+        <script>
+          // Förbättrad preloader
+          document.addEventListener('DOMContentLoaded', function() {
+              const preloader = document.getElementById('preloader');
+              
+              // Visa preloader direkt när sidan börjar ladda
+              preloader.style.display = 'flex';
+              
+              // Dölj preloader när allt är laddat
+              window.addEventListener('load', function() {
+                  // Lägg till fade-out effekt
+                  preloader.style.opacity = '0';
+                  preloader.style.transition = 'opacity 8s ease';
+                  
+                  setTimeout(function() {
+                      preloader.style.display = 'none';
+                  }, 700); // Matchar övergångstiden
+              });
+  
+          // Mobile menu toggle
+          document.getElementById('mobile-menu-button').addEventListener('click', function() {
+              document.getElementById('mobile-menu').classList.add('open');
+          });
+  
+          document.getElementById('close-mobile-menu').addEventListener('click', function() {
+              document.getElementById('mobile-menu').classList.remove('open');
+          });
+  
+          // Netflix-style hover effect for content cards
+          const contentCards = document.querySelectorAll('.content-card');
+          contentCards.forEach(card => {
+              card.addEventListener('mouseenter', function() {
+                  // Calculate position to prevent overflow
+                  const rect = card.getBoundingClientRect();
+                  const isAtViewportEdge = rect.right + (rect.width * 0.1) > window.innerWidth;
+                  
+                  if (isAtViewportEdge) {
+                      card.style.transformOrigin = 'right center';
+                  } else {
+                      card.style.transformOrigin = 'left center';
+                  }
+              });
+          });
+  
+          // Search functionality
+          const searchInput = document.querySelector('input[type="text"]');
+          searchInput.addEventListener('keypress', function(e) {
+              if (e.key === 'Enter') {
+                  alert('Sökning: ' + this.value);
+                  // In a real implementation, you would redirect to search results
+              }
+          });
+  
+          // Netflix-style scroll behavior for content rows
+          const contentRows = document.querySelectorAll('[class*="overflow-x-auto"]');
+          contentRows.forEach(row => {
+              let isDown = false;
+              let startX;
+              let scrollLeft;
+  
+              row.addEventListener('mousedown', (e) => {
+                  isDown = true;
+                  startX = e.pageX - row.offsetLeft;
+                  scrollLeft = row.scrollLeft;
+                  row.style.cursor = 'grabbing';
+              });
+  
+              row.addEventListener('mouseleave', () => {
+                  isDown = false;
+                  row.style.cursor = 'grab';
+              });
+  
+              row.addEventListener('mouseup', () => {
+                  isDown = false;
+                  row.style.cursor = 'grab';
+              });
+  
+              row.addEventListener('mousemove', (e) => {
+                  if(!isDown) return;
+                  e.preventDefault();
+                  const x = e.pageX - row.offsetLeft;
+                  const walk = (x - startX) * 2;
+                  row.scrollLeft = scrollLeft - walk;
+              });
+          });
+  
+          // Add smooth scrolling for anchor links
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+              anchor.addEventListener('click', function (e) {
+                  e.preventDefault();
+                  document.querySelector(this.getAttribute('href')).scrollIntoView({
+                      behavior: 'smooth'
+                  });
+              });
+          });
+      </script>
+      <!-- JavaScript -->
+      <script>
+          // Mobile menu toggle
+          document.getElementById('mobile-menu-button').addEventListener('click', function() {
+              document.getElementById('mobile-menu').classList.add('open');
+          });
+  
+          document.getElementById('close-mobile-menu').addEventListener('click', function() {
+              document.getElementById('mobile-menu').classList.remove('open');
+          });
+  
+          // Smooth scrolling for anchor links
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+              anchor.addEventListener('click', function (e) {
+                  e.preventDefault();
+                  document.querySelector(this.getAttribute('href')).scrollIntoView({
+                      behavior: 'smooth'
+                  });
+              });
+          });
+  
+          // Track policy page view for analytics
+          document.addEventListener('DOMContentLoaded', function() {
+              if (typeof gtag !== 'undefined') {
+                  gtag('event', 'privacy_policy_view', {
+                      'event_category': 'engagement',
+                      'event_label': 'privacy_policy_page'
+                  });
+              }
+          });
+      </script>
+   <!--End of Tawk.to Script-->
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.add('open');
+        });
+
+        document.getElementById('close-mobile-menu').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.remove('open');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Handle accessibility feedback form
+        document.getElementById('accessibility-feedback').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would normally send the form data to your server
+            // For this example, we'll just show an alert
+            alert('Tack för din feedback! Vi kommer att granska dina kommentarer och återkomma om det behövs.');
+            
+            // Reset the form
+            this.reset();
+            
+            // Track the feedback submission for analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'accessibility_feedback', {
+                    'event_category': 'engagement',
+                    'event_label': 'accessibility_page'
+                });
+            }
+        });
+
+        // Track accessibility page view for analytics
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'accessibility_page_view', {
+                    'event_category': 'engagement',
+                    'event_label': 'accessibility_page'
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+<!--Start of Tawk.to Script-->
+   <script type="text/javascript">
+   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+   (function(){
+   var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+   s1.async=true;
+   s1.src='https://embed.tawk.to/67b0bca7fb6773190d790aa1/1ik561s69';
+   s1.charset='UTF-8';
+   s1.setAttribute('crossorigin','*');
+   s0.parentNode.insertBefore(s1,s0);
+   })();
+   </script>
