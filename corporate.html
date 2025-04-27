@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Användarvillkor för Bibelstudion. Läs våra villkor för användning av våra tjänster och webbplats.">
-    <meta name="keywords" content="bibelstudion, användarvillkor, villkor, avtal, tjänstevillkor">
+    <meta name="description" content="Bibelstudion - Corporate Information. Läs om vår verksamhet, ledning, historia och företagsinformation.">
+    <meta name="keywords" content="bibelstudion, corporate, företagsinformation, ledning, historia, verksamhet, kontakt">
     <meta name="author" content="Bibelstudion">
-    <meta property="og:title" content="Användarvillkor - Bibelstudion">
-    <meta property="og:description" content="Läs användarvillkoren för Bibelstudions tjänster">
+    <meta property="og:title" content="Corporate Information - Bibelstudion">
+    <meta property="og:description" content="Läs om vår verksamhet, ledning, historia och företagsinformation">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bibelstudion.se/anvandarvillkor">
-    <meta property="og:image" content="https://bibelstudion.se/images/og-terms.jpg">
+    <meta property="og:url" content="https://bibelstudion.se/corporate.html">
+    <meta property="og:image" content="https://bibelstudion.se/images/og-corporate.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <title>Användarvillkor - Bibelstudion</title>
-    <link rel="canonical" href="https://bibelstudion.se/anvandarvillkor">
+    <title>Corporate Information - Bibelstudion</title>
+    <link rel="canonical" href="https://bibelstudion.se/corporate.html">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,23 +30,28 @@
         }
         
         .hero-section {
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.8) 100%), url('https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.8) 100%), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center;
             background-size: cover;
-            height: 40vh;
+            height: 50vh;
         }
         
         .nav-gradient {
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
         }
         
-        .terms-section {
+        .corporate-section {
             background-color: var(--netflix-dark);
         }
         
-        .terms-card {
+        .corporate-card {
             background-color: rgba(20, 20, 20, 0.8);
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .corporate-card:hover {
+            transform: translateY(-5px);
         }
         
         .red-button {
@@ -84,15 +89,9 @@
             overflow-y: auto;
         }
         
-        .terms-highlight {
-            border-left: 4px solid var(--netflix-red);
-            padding-left: 1rem;
-            margin: 1.5rem 0;
-        }
-        
         @media (max-width: 1024px) {
             .hero-section {
-                height: 35vh;
+                height: 40vh;
             }
             
             .nav-links, .nav-search {
@@ -106,7 +105,7 @@
         
         @media (max-width: 768px) {
             .hero-section {
-                height: 30vh;
+                height: 35vh;
                 background-position: 50% 50%;
             }
             
@@ -121,7 +120,7 @@
         
         @media (max-width: 480px) {
             .hero-section {
-                height: 25vh;
+                height: 30vh;
             }
             
             .hero-content h1 {
@@ -177,7 +176,7 @@
                 <li class="text-xl font-semibold border-b border-gray-700 pb-2"><a href="/amnen">Ämnen</a></li>
                 <li class="text-xl font-semibold border-b border-gray-700 pb-2"><a href="/bocker">Böcker</a></li>
                 <li class="text-xl font-semibold border-b border-gray-700 pb-2"><a href="/corporate">Corporate</a></li>
-                <li class="text-xl font-semibold border-b border-gray-700 pb-2"><a href="/anvandarvillkor">Användarvillkor</a></li>
+                <li class="text-xl font-semibold border-b border-gray-700 pb-2"><a href="/kontakt">Kontakt</a></li>
             </ul>
             <div class="mt-8">
                 <button class="w-full red-button text-white px-6 py-3 rounded font-bold">
@@ -190,127 +189,132 @@
     <!-- Hero Section -->
     <section class="hero-section flex flex-col justify-center px-4 md:px-12 pt-16">
         <div class="hero-content max-w-4xl">
-            <h1 class="text-3xl md:text-5xl font-bold mb-4">Användarvillkor</h1>
-            <p class="text-lg md:text-xl mb-6">Villkor för användning av Bibelstudions tjänster</p>
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">Corporate Information</h1>
+            <p class="text-lg md:text-xl mb-6">Lär känna Bibelstudion - vår historia, ledning och verksamhet</p>
         </div>
     </section>
 
-    <!-- Terms Content -->
-    <section class="terms-section px-4 md:px-12 py-12">
+    <!-- Corporate Content -->
+    <section class="corporate-section px-4 md:px-12 py-12">
         <div class="max-w-6xl mx-auto">
-            <!-- Terms of Service Content -->
-            <div class="terms-card p-6 md:p-8 mb-12">
-                <div class="text-gray-300 space-y-6">
-                    <div class="terms-highlight">
-                        <p class="text-xl font-semibold">Senast uppdaterad: 1 januari 2023</p>
+            <!-- About Section -->
+            <div class="corporate-card p-6 md:p-8 mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-red-600">Om Bibelstudion</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Vår vision</h3>
+                        <p class="text-gray-300 mb-6">Bibelstudion grundades 2010 med visionen att göra djupgående bibelstudier tillgängliga för alla. Vår plattform erbjuder ett omfattande bibliotek av studier, kommentarer och andliga resurser som hjälper dig att fördjupa din förståelse av Guds Ord.</p>
+                        <h3 class="text-xl font-semibold mb-4">Vårt uppdrag</h3>
+                        <p class="text-gray-300">Vi strävar efter att skapa en engagerande och interaktiv upplevelse för bibelstudier online. Vårt team av teologer, författare och utvecklare arbetar ständigt med att förbättra och utöka vårt innehåll.</p>
                     </div>
-                    
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-red-600">1. Allmänna villkor</h2>
-                    <p>Genom att använda Bibelstudions webbplats och tjänster ("Tjänsterna") godkänner du dessa användarvillkor. Om du inte godkänner villkoren får du inte använda våra tjänster.</p>
-                    <p>Vi förbehåller oss rätten att ändra dessa villkor när som helst. Uppdaterade villkor gäller från och med publiceringsdatumet. Din fortsatta användning av Tjänsterna efter ändringar innebär acceptans av de nya villkoren.</p>
-                    
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-red-600">2. Tjänstebeskrivning</h2>
-                    <p>Bibelstudion tillhandahåller:</p>
-                    <ul class="list-disc pl-6 space-y-2 mt-2">
-                        <li>Tillgång till bibelstudier och religiöst innehåll</li>
-                        <li>Digitala böcker och resurser</li>
-                        <li>Kommentarsfunktioner och diskussionsforum</li>
-                        <li>Personliga rekommendationer</li>
-                        <li>Premiumabonnemang med extra funktioner</li>
-                    </ul>
-                    <p>Vi förbehåller oss rätten att ändra, begränsa eller avsluta Tjänsterna när som helst utan föregående meddelande.</p>
-                    
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-red-600">3. Användarkonton</h2>
-                    <p>För att komma åt vissa funktioner måste du skapa ett användarkonto. Du ansvarar för:</p>
-                    <ul class="list-disc pl-6 space-y-2 mt-2">
-                        <li>Att ange korrekt och komplett information vid registrering</li>
-                        <li>Att skydda ditt lösenord och konto</li>
-                        <li>All aktivitet som sker under ditt konto</li>
-                    </ul>
-                    <p>Du får inte använda någon annan persons konto utan tillstånd. Bibelstudion har rätt att avsluta konton som bryter mot dessa villkor.</p>
-                    
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-red-600">4. Användaruppförande</h2>
-                    <p>När du använder våra tjänster förbinder du dig att:</p>
-                    <ul class="list-disc pl-6 space-y-2 mt-2">
-                        <li>Följa alla tillämpliga lagar och regler</li>
-                        <li>Respektera andra användare</li>
-                        <li>Inte sprida olagligt, stötande, hotfullt, förtalande, diskriminerande eller pornografiskt material</li>
-                        <li>Inte upphovsrättsskyddat material utan tillstånd</li>
-                        <li>Inte sprida virus eller skadlig kod</li>
-                        <li>Inte försöka kringgå säkerhetsåtgärder</li>
-                    </ul>
-                    <p>Överträdelser kan leda till avslutande av ditt konto och juridiska åtgärder.</p>
-                    
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-red-600">5. Immateriella rättigheter</h2>
-                    <p>Allt innehåll på Bibelstudion (text, grafik, logotyper, bilder, videor etc.) är skyddat enligt upphovsrätt och andra immateriella rättigheter som tillhör Bibelstudion eller dess licensgivare.</p>
-                    <p>Du får:</p>
-                    <ul class="list-disc pl-6 space-y-2 mt-2">
-                        <li>Använda materialet för personligt, icke-kommersiellt bruk</li>
-                        <li>Dela länkar till vårt innehåll</li>
-                    </ul>
-                    <p>Du får inte:</p>
-                    <ul class="list-disc pl-6 space-y-2 mt-2">
-                        <li>Reproducera, distribuera eller modifiera innehållet utan tillstånd</li>
-                        <li>Använda innehållet för kommersiella ändamål</li>
-                        <li>Ta bort upphovsrättsnotiser</li>
-                    </ul>
-                    
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-red-600">6. Betalning och abonnemang</h2>
-                    <p>Vissa tjänster kräver betalning. Vid prenumeration godkänner du:</p>
-                    <ul class="list-disc pl-6 space-y-2 mt-2">
-                        <li>Att betalningsinformationen är korrekt</li>
-                        <li>Att betala alla avgifter i tid</li>
-                        <li>Att vi kan debitera ditt betalningsmedel för förnyelser</li>
-                    </ul>
-                    <p>Prenumerationer förnyas automatiskt tills de sägs upp. Du kan säga upp din prenumeration när som helst, men återbetalning görs normalt inte för delar av prenumerationsperioder.</p>
-                    <p>Vi förbehåller oss rätten att ändra priser och villkor för prenumerationer med 30 dagars varsel.</p>
-                    
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-red-600">7. Uppsägning</h2>
-                    <p>Du kan när som helst säga upp ditt konto genom att kontakta oss eller via kontoinställningarna. Vi förbehåller oss rätten att avsluta eller begränsa ditt konto utan föregående meddelande om du bryter mot dessa villkor.</p>
-                    <p>Vid uppsägning:</p>
-                    <ul class="list-disc pl-6 space-y-2 mt-2">
-                        <li>Försvinner din tillgång till tjänsterna omedelbart</li>
-                        <li>Återbetalning görs normalt inte</li>
-                        <li>Kan viss information bevaras enligt vår sekretesspolicy</li>
-                    </ul>
-                    
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-red-600">8. Ansvar och garantier</h2>
-                    <p>Tjänsterna tillhandahålls "som de är" utan några garantier, vare sig uttryckliga eller underförstådda. Bibelstudion garanterar inte:</p>
-                    <ul class="list-disc pl-6 space-y-2 mt-2">
-                        <li>Att tjänsterna alltid kommer att vara tillgängliga eller felfria</li>
-                        <li>Att innehållet alltid är korrekt, komplett eller aktuellt</li>
-                        <li>Resultat från användning av tjänsterna</li>
-                    </ul>
-                    <p>Bibelstudion ansvarar inte för indirekta skador eller förluster som uppstår från användning av tjänsterna.</p>
-                    
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-red-600">9. Tvistelösning</h2>
-                    <p>Dessa villkor regleras av svensk lag. Tvister ska i första hand lösas genom förhandlingar. Om förhandlingar inte leder till lösning ska tvisten avgöras av svensk domstol med Stockholms tingsrätt som första instans.</p>
-                    
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-red-600">10. Kontaktinformation</h2>
-                    <p>För frågor om dessa användarvillkor, vänligen kontakta oss:</p>
-                    <ul class="list-disc pl-6 space-y-2 mt-2">
-                        <li>E-post: <a href="mailto:kontakt@bibelstudion.se" class="text-red-500 hover:underline">kontakt@bibelstudion.se</a></li>
-                        <li>Post: Bibelstudion AB, Box 1234, 111 22 Stockholm</li>
-                        <li>Telefon: 08-123 45 67 (vardagar 9-17)</li>
-                    </ul>
-                    
-                    <div class="terms-highlight">
-                        <p>Genom att använda Bibelstudions tjänster bekräftar du att du har läst, förstått och accepterar dessa användarvillkor.</p>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Våra värderingar</h3>
+                        <ul class="text-gray-300 space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                                <span>Bibeltrogenhet - Vi håller fast vid Bibelns auktoritet som Guds Ord</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                                <span>Kvalitet - Vi strävar efter högsta möjliga kvalitet i allt vi gör</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                                <span>Tillgänglighet - Vi vill göra bibelstudier tillgängliga för alla</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                                <span>Innovation - Vi ständigt utvecklar våra metoder och plattformar</span>
+                            </li>
+                        </ul>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <p class="text-gray-300 italic">"Ordet är dig nära, i din mun och i ditt hjärta." (Rom 10:8)</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Related Links -->
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                <a href="sekretess.html" class="red-button text-white px-8 py-3 rounded font-bold w-full md:w-auto text-center">
-                    Sekretesspolicy
-                </a>
-                <a href="Cookie-installningar.html" class="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded font-bold w-full md:w-auto text-center">
-                    Cookie-inställningar
-                </a>
-                <a href="/kontakt" class="border border-gray-600 hover:bg-gray-800 text-white px-8 py-3 rounded font-bold w-full md:w-auto text-center">
-                    Kontakta oss
-                </a>
+            <!-- Leadership Section -->
+            <div class="corporate-card p-6 md:p-8 mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 text-red-600">Ledning</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <div class="w-24 h-24 bg-gray-700 rounded-full mb-4 flex items-center justify-center text-3xl font-bold">JD</div>
+                        <h3 class="text-xl font-semibold mb-2">Johannes Davidsson</h3>
+                        <p class="text-gray-400 mb-2">VD & Grundare</p>
+                        <p class="text-gray-300 text-sm">Johannes grundade Bibelstudion 2010 efter många år som pastor och bibelstudieledare. Han har en teologie kandidatexamen från Örebro Teologiska Högskola.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <div class="w-24 h-24 bg-gray-700 rounded-full mb-4 flex items-center justify-center text-3xl font-bold">EL</div>
+                        <h3 class="text-xl font-semibold mb-2">Elin Larsson</h3>
+                        <p class="text-gray-400 mb-2">Chefredaktör</p>
+                        <p class="text-gray-300 text-sm">Elin ansvarar för allt innehåll på Bibelstudion. Hon har arbetat som bibelöversättare och har en masterexamen i bibelvetenskap från Uppsala universitet.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <div class="w-24 h-24 bg-gray-700 rounded-full mb-4 flex items-center justify-center text-3xl font-bold">MK</div>
+                        <h3 class="text-xl font-semibold mb-2">Markus Karlsson</h3>
+                        <p class="text-gray-400 mb-2">Teknisk chef</p>
+                        <p class="text-gray-300 text-sm">Markus leder vårt teknikteam och säkerställer att plattformen fungerar smidigt på alla enheter. Han har en bakgrund som mjukvaruutvecklare hos flera stora techbolag.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Company Facts -->
+            <div class="corporate-card p-6 md:p-8 mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 text-red-600">Företagsfakta</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gray-800 p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-red-600 mb-2">2010</div>
+                        <p class="text-gray-300">Grundades</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-red-600 mb-2">25+</div>
+                        <p class="text-gray-300">Anställda</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-red-600 mb-2">500k+</div>
+                        <p class="text-gray-300">Månatliga användare</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-red-600 mb-2">10k+</div>
+                        <p class="text-gray-300">Studier tillgängliga</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="corporate-card p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-red-600">Kontakt</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Företagsinformation</h3>
+                        <ul class="text-gray-300 space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-building text-red-600 mt-1 mr-3"></i>
+                                <span>Bibelstudion AB<br>Org.nr: 556789-1234</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-3"></i>
+                                <span>Bibelgatan 12<br>123 45 Stockholm</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-phone text-red-600 mt-1 mr-3"></i>
+                                <span>08-123 45 67</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope text-red-600 mt-1 mr-3"></i>
+                                <span>info@bibelstudion.se</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Presskontakt</h3>
+                        <p class="text-gray-300 mb-4">För pressfrågor och intervjuförfrågningar, vänligen kontakta vår kommunikationsavdelning.</p>
+                        <button class="red-button text-white px-6 py-2 rounded font-semibold">
+                            <i class="fas fa-envelope mr-2"></i> Kontakta press
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -339,7 +343,7 @@
             <div>
                 <h3 class="text-gray-400 mb-4">Juridisk information</h3>
                 <ul class="space-y-2">
-                    <li><a href="anvandarvillkor.html" class="hover:underline">Användarvillkor</a></li>
+                    <li><a href="/anvandarvillkor" class="hover:underline">Användarvillkor</a></li>
                     <li><a href="sekretess.html" class="hover:underline">Sekretess</a></li>
                     <li><a href="Cookie-installningar.html" class="hover:underline">Cookie-inställningar</a></li>
                     <li><a href="corporate.html" class="hover:underline">Corporate Information</a></li>

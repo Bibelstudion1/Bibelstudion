@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="sv" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cookie-inställningar för Bibelstudion. Hantera dina cookie-preferenser för vår webbplats.">
+    <meta name="keywords" content="bibelstudion, cookies, cookie-inställningar, integritet, dataskydd, GDPR">
+    <meta name="author" content="Bibelstudion">
+    <meta property="og:title" content="Cookie-inställningar - Bibelstudion">
+    <meta property="og:description" content="Hantera dina cookie-preferenser för Bibelstudion">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bibelstudion.se/cookie-installningar.html">
+    <meta property="og:image" content="https://bibelstudion.se/images/og-cookies.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Cookie-inställningar - Bibelstudion</title>
+    <link rel="canonical" href="https://bibelstudion.se/cookie-installningar.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --netflix-red: #E50914;
+            --netflix-dark: #141414;
+        }
+        
+        html {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.8) 100%), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+            background-size: cover;
+            height: 40vh;
+        }
+        
+        .nav-gradient {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+        
+        .cookie-section {
+            background-color: var(--netflix-dark);
+        }
+        
+        .cookie-card {
+            background-color: rgba(20, 20, 20, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .red-button {
+            background-color: var(--netflix-red);
+            transition: background-color 0.2s ease;
+        }
+        
+        .red-button:hover {
+            background-color: #F6121D;
+        }
+        
+        .netflix-red {
+            color: var(--netflix-red);
+        }
+        
+        .footer-bg {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--netflix-dark);
+            z-index: 100;
+            padding-top: 4rem;
+            overflow-y: auto;
+        }
+        
+        .cookie-toggle {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+        
+        .cookie-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .cookie-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        
+        .cookie-slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .cookie-slider {
+            background-color: var(--netflix-red);
+        }
+        
+        input:checked + .cookie-slider:before {
+            transform: translateX(30px);
+        }
+        
+        @media (max-width: 1024px) {
+            .hero-section {
+                height: 35vh;
+            }
+            
+            .nav-links, .nav-search {
+                display: none;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 30vh;
+                background-position: 50% 50%;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-section {
+                height: 25vh;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="bg-black fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 md:px-12 py-4">
+        <!-- Gradient overlay (optional) -->
+        <div class="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-20 pointer-events-none"></div>
+        
+        <div class="flex items-center relative z-10">
+            <a href="/" class="flex items-center">
+              <h1 class="text-red-600 text-lg md:text-2xl font-bold mr-4 md:mr-12">BIBELSTUDION</h1>          
+            </a>
+            <ul class="nav-links hidden md:flex space-x-4 lg:space-x-6">
+                <li><a href="/" class="hover:text-gray-300">Hem</a></li>
+                <li><a href="/studier" class="hover:text-gray-300">Studier</a></li>
+                <li><a href="/amnen" class="hover:text-gray-300">Ämnen</a></li>
+                <li><a href="/bocker" class="hover:text-gray-300">Böcker</a></li>
+            </ul>
+        </div>
+        <div class="flex items-center space-x-2 md:space-x-4">
+            <div class="nav-search hidden md:block relative">
+                <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2"></i>
+                <input type="text" placeholder="Sök studier" class="bg-black bg-opacity-50 border border-gray-600 rounded px-10 py-1 text-sm focus:outline-none">
+            </div>
+            <div class="hamburger text-xl md:hidden">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="hidden md:flex items-center space-x-2 cursor-pointer">
+                <i class="fas fa-bell text-xl hover:text-gray-300"></i>
+                <div class="w-8 h-8 bg-red-600 rounded flex items-center justify-center">
+                    <span class="font-bold">B</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="px-6 py-4">
+            <div class="relative mb-6">
+                <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2"></i>
+                <input type="text" placeholder="Sök studier" class="w-full bg-gray-800 border border-gray-700 rounded px-10 py-2 focus:outline-none">
+            </div>
+            <ul class="space-y-4">
+                <li class="text-xl font-semibold border-b border-gray-700 pb-2"><a href="/">Hem</a></li>
+                <li class="text-xl font-semibold border-b border-gray-700 pb-2"><a href="/studier">Studier</a></li>
+                <li class="text-xl font-semibold border-b border-gray-700 pb-2"><a href="/amnen">Ämnen</a></li>
+                <li class="text-xl font-semibold border-b border-gray-700 pb-2"><a href="/bocker">Böcker</a></li>
+                <li class="text-xl font-semibold border-b border-gray-700 pb-2"><a href="/corporate">Corporate</a></li>
+                <li class="text-xl font-semibold border-b border-gray-700 pb-2"><a href="/cookie-installningar">Cookie-inställningar</a></li>
+            </ul>
+            <div class="mt-8">
+                <button class="w-full red-button text-white px-6 py-3 rounded font-bold">
+                    Logga in
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex flex-col justify-center px-4 md:px-12 pt-16">
+        <div class="hero-content max-w-4xl">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">Cookie-inställningar</h1>
+            <p class="text-lg md:text-xl mb-6">Hantera dina integritetsinställningar för Bibelstudion</p>
+        </div>
+    </section>
+
+    <!-- Cookie Content -->
+    <section class="cookie-section px-4 md:px-12 py-12">
+        <div class="max-w-6xl mx-auto">
+            <!-- Cookie Explanation -->
+            <div class="cookie-card p-6 md:p-8 mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-red-600">Om cookies</h2>
+                <div class="text-gray-300 space-y-4">
+                    <p>Vi använder cookies och liknande tekniker på Bibelstudion för att förbättra din upplevelse, analysera trafik och personalisera innehåll. Nedan kan du hantera dina cookie-inställningar.</p>
+                    
+                    <p>Cookies är små textfiler som lagras på din enhet när du besöker webbplatser. De hjälper oss att:</p>
+                    
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Komma ihåg dina inställningar och preferenser</li>
+                        <li>Förbättra webbplatsens funktionalitet och säkerhet</li>
+                        <li>Analysera hur vår webbplats används</li>
+                        <li>Visa relevanta rekommendationer och innehåll</li>
+                    </ul>
+                    
+                    <p>Genom att klicka på "Acceptera alla" godkänner du användningen av alla cookies enligt vår <a href="/sekretess" class="text-red-500 hover:underline">integritetspolicy</a>. Du kan ändra dina inställningar när som helst.</p>
+                </div>
+            </div>
+
+            <!-- Cookie Settings -->
+            <div class="cookie-card p-6 md:p-8 mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-red-600">Dina cookie-inställningar</h2>
+                
+                <div class="space-y-8">
+                    <!-- Essential Cookies -->
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-700 pb-6">
+                        <div class="mb-4 md:mb-0 md:w-2/3">
+                            <h3 class="text-xl font-semibold mb-2">Nödvändiga cookies</h3>
+                            <p class="text-gray-400">Dessa cookies är nödvändiga för att webbplatsen ska fungera och kan inte stängas av i våra system. De används vanligtvis som svar på åtgärder du utfört.</p>
+                        </div>
+                        <div class="flex items-center">
+                            <label class="cookie-toggle">
+                                <input type="checkbox" checked disabled>
+                                <span class="cookie-slider"></span>
+                            </label>
+                            <span class="ml-3 font-medium">Alltid på</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Performance Cookies -->
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-700 pb-6">
+                        <div class="mb-4 md:mb-0 md:w-2/3">
+                            <h3 class="text-xl font-semibold mb-2">Prestandacookies</h3>
+                            <p class="text-gray-400">Dessa cookies låter oss räkna besök och trafikkällor så vi kan mäta och förbättra prestandan för vår webbplats. De hjälper oss att veta vilka sidor som är mest och minst populära.</p>
+                        </div>
+                        <div class="flex items-center">
+                            <label class="cookie-toggle">
+                                <input type="checkbox" id="performance-cookies" checked>
+                                <span class="cookie-slider"></span>
+                            </label>
+                            <span class="ml-3 font-medium" id="performance-status">På</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Functional Cookies -->
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-700 pb-6">
+                        <div class="mb-4 md:mb-0 md:w-2/3">
+                            <h3 class="text-xl font-semibold mb-2">Funktionella cookies</h3>
+                            <p class="text-gray-400">Dessa cookies möjliggör förbättrad funktionalitet och anpassning, som videor och livechatt. De kan vara instiftade av oss eller av tredjepartsleverantörer vars tjänster vi har lagt till på våra sidor.</p>
+                        </div>
+                        <div class="flex items-center">
+                            <label class="cookie-toggle">
+                                <input type="checkbox" id="functional-cookies" checked>
+                                <span class="cookie-slider"></span>
+                            </label>
+                            <span class="ml-3 font-medium" id="functional-status">På</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Marketing Cookies -->
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div class="mb-4 md:mb-0 md:w-2/3">
+                            <h3 class="text-xl font-semibold mb-2">Marknadsföringscookies</h3>
+                            <p class="text-gray-400">Dessa cookies används för att spåra besökare över webbplatser. Avsikten är att visa annonser som är relevanta och engagerande för den enskilda användaren och därmed mer värdefulla för utgivare och tredjepartsannonsörer.</p>
+                        </div>
+                        <div class="flex items-center">
+                            <label class="cookie-toggle">
+                                <input type="checkbox" id="marketing-cookies">
+                                <span class="cookie-slider"></span>
+                            </label>
+                            <span class="ml-3 font-medium" id="marketing-status">Av</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cookie Actions -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <button id="accept-all" class="red-button text-white px-8 py-3 rounded font-bold w-full md:w-auto">
+                    Acceptera alla
+                </button>
+                <button id="save-settings" class="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded font-bold w-full md:w-auto">
+                    Spara inställningar
+                </button>
+                <button id="reject-all" class="border border-gray-600 hover:bg-gray-800 text-white px-8 py-3 rounded font-bold w-full md:w-auto">
+                    Avvisa alla
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-bg px-4 md:px-12 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-gray-400 mb-4">Om Bibelstudion</h3>
+                <ul class="space-y-2">
+                    <li><a href="/om-oss" class="hover:underline">Om oss</a></li>
+                    <li><a href="/jobba-hos-oss" class="hover:underline">Jobba hos oss</a></li>
+                    <li><a href="/kontakt" class="hover:underline">Kontakta oss</a></li>
+                    <li><a href="/press" class="hover:underline">Press</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-gray-400 mb-4">Hjälpcenter</h3>
+                <ul class="space-y-2">
+                    <li><a href="/konto" class="hover:underline">Konto</a></li>
+                    <li><a href="/abonnemang" class="hover:underline">Abonnemang</a></li>
+                    <li><a href="/betalning" class="hover:underline">Betalsätt</a></li>
+                    <li><a href="/faq" class="hover:underline">Vanliga frågor</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-gray-400 mb-4">Juridisk information</h3>
+                <ul class="space-y-2">
+                    <li><a href="/anvandarvillkor" class="hover:underline">Användarvillkor</a></li>
+                    <li><a href="sekretess.html" class="hover:underline">Sekretess</a></li>
+                    <li><a href="Cookie-installningar.html" class="hover:underline">Cookie-inställningar</a></li>
+                    <li><a href="corporate.html" class="hover:underline">Corporate Information</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-gray-400 mb-4">Följ oss</h3>
+                <div class="flex space-x-4">
+                    <a href="#" aria-label="Facebook" class="text-2xl hover:text-red-600"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram" class="text-2xl hover:text-red-600"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter" class="text-2xl hover:text-red-600"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube" class="text-2xl hover:text-red-600"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="mt-6">
+                    <button class="border border-gray-600 px-4 py-2 rounded hover:bg-gray-700">
+                        Språk
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-700">
+            <p class="text-gray-400 text-sm">© 2023 Bibelstudion AB. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            hamburger.addEventListener('click', function() {
+                mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.hamburger') && !event.target.closest('.mobile-menu') && mobileMenu.style.display === 'block') {
+                    mobileMenu.style.display = 'none';
+                }
+            });
+            
+            // Netflix-style logo hover effect
+            const logo = document.querySelector('h1');
+            logo.addEventListener('mouseenter', function() {
+                this.style.textShadow = '0 0 10px rgba(229, 9, 20, 0.7)';
+            });
+            logo.addEventListener('mouseleave', function() {
+                this.style.textShadow = 'none';
+            });
+            
+            // Cookie toggle functionality
+            const performanceCheckbox = document.getElementById('performance-cookies');
+            const functionalCheckbox = document.getElementById('functional-cookies');
+            const marketingCheckbox = document.getElementById('marketing-cookies');
+            
+            performanceCheckbox.addEventListener('change', function() {
+                document.getElementById('performance-status').textContent = this.checked ? 'På' : 'Av';
+            });
+            
+            functionalCheckbox.addEventListener('change', function() {
+                document.getElementById('functional-status').textContent = this.checked ? 'På' : 'Av';
+            });
+            
+            marketingCheckbox.addEventListener('change', function() {
+                document.getElementById('marketing-status').textContent = this.checked ? 'På' : 'Av';
+            });
+            
+            // Cookie action buttons
+            document.getElementById('accept-all').addEventListener('click', function() {
+                performanceCheckbox.checked = true;
+                functionalCheckbox.checked = true;
+                marketingCheckbox.checked = true;
+                
+                document.getElementById('performance-status').textContent = 'På';
+                document.getElementById('functional-status').textContent = 'På';
+                document.getElementById('marketing-status').textContent = 'På';
+                
+                alert('Alla cookies har accepterats. Tack för ditt samtycke!');
+            });
+            
+            document.getElementById('reject-all').addEventListener('click', function() {
+                performanceCheckbox.checked = false;
+                functionalCheckbox.checked = false;
+                marketingCheckbox.checked = false;
+                
+                document.getElementById('performance-status').textContent = 'Av';
+                document.getElementById('functional-status').textContent = 'Av';
+                document.getElementById('marketing-status').textContent = 'Av';
+                
+                alert('Alla valfria cookies har avvisats. Endast nödvändiga cookies kommer att användas.');
+            });
+            
+            document.getElementById('save-settings').addEventListener('click', function() {
+                const settings = {
+                    performance: performanceCheckbox.checked,
+                    functional: functionalCheckbox.checked,
+                    marketing: marketingCheckbox.checked
+                };
+                
+                // In a real implementation, you would save these settings to localStorage or send to server
+                localStorage.setItem('cookieSettings', JSON.stringify(settings));
+                
+                alert('Dina cookie-inställningar har sparats!');
+            });
+            
+            // Load saved cookie settings
+            const savedSettings = localStorage.getItem('cookieSettings');
+            if (savedSettings) {
+                const settings = JSON.parse(savedSettings);
+                performanceCheckbox.checked = settings.performance;
+                functionalCheckbox.checked = settings.functional;
+                marketingCheckbox.checked = settings.marketing;
+                
+                document.getElementById('performance-status').textContent = settings.performance ? 'På' : 'Av';
+                document.getElementById('functional-status').textContent = settings.functional ? 'På' : 'Av';
+                document.getElementById('marketing-status').textContent = settings.marketing ? 'På' : 'Av';
+            }
+            
+            // Responsive adjustments
+            function handleResize() {
+                if (window.innerWidth >= 768) {
+                    mobileMenu.style.display = 'none';
+                }
+            }
+            
+            window.addEventListener('resize', handleResize);
+            handleResize();
+        });
+    </script>
+</body>
+</html>
